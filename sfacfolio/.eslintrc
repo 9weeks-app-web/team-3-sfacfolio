@@ -1,0 +1,37 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@next/next/core-web-vitals",
+    "plugin:tailwindcss/recommended",
+    "prettier",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "rules": {
+    "react/react-in-jsx-scope": "off", //jsx파일에서 React를 import 하지 않아도 됨.
+    "no-unused-vars": "off", //타입스크립트 사용 시 interface의 변수명을 기본 eslint가 잡지 않도록 함.
+    "@typescript-eslint/no-unused-vars": "warn", // 대신 사용하지 않는 변수는 @typescript/eslint를 통해 잡아줌.
+    "react/require-default-props": "off",
+    "no-underscore-dangle": "off", // mongoDB _id 필드 때문에 설정(mongoDB 사용 가능성 고려)
+    "@typescript-eslint/no-explicit-any": "warn" // any 설정
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
