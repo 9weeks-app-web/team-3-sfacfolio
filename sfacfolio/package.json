@@ -1,0 +1,36 @@
+{
+  "name": "sfacfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.0.1",
+    "next": "14.0.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-redux": "^9.0.4",
+    "swiper": "^11.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "@typescript-eslint/parser": "^6.16.0",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "14.0.4",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.2",
+    "eslint-plugin-tailwindcss": "^3.13.0",
+    "postcss": "^8",
+    "prettier": "^3.1.1",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
+  }
+}
