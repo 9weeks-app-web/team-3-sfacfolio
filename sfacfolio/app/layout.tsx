@@ -4,8 +4,11 @@ import '@/style/globals.css';
 import Provider from './components/Provider';
 
 const pretendard = localFont({
-  src: '../public/fonts/PretendardVariable.woff2',
-  display: 'swap',
+  src: [
+    {
+      path: '../public/fonts/PretendardVariable.woff2',
+    },
+  ],
   variable: '--font-pretandard',
 });
 
@@ -21,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='ko'>
-      <body className={`${pretendard.variable} font-sans`}>
+      <body className={`${pretendard.variable} font-pretendard`}>
         <Provider>{children}</Provider>
       </body>
     </html>
