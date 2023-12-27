@@ -23,7 +23,7 @@ const config: Config = {
       screens: {
         desktop: '1440px',
       },
-      color: {
+      colors: {
         primary: {
           heavy: '#0059ff',
           weak: '#337aff',
