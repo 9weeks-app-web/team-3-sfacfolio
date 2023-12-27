@@ -9,17 +9,19 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-pretandard)'],
+        pretendard: ['var(--font-pretandard)'],
       },
       container: {
         screens: {
-          mobile: '767px',
           desktop: '1440px',
         },
+        padding: {
+          DEFAULT: '80px',
+        },
+        center: true,
       },
       screens: {
-        mobile: { max: '767px' }, // 모바일 화면: 360px ~ 767px
-        desktop: { min: '1440px' }, // 데스크탑 화면: 1200px 이상
+        desktop: '1440px',
       },
       color: {
         primary: {
