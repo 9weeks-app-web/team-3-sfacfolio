@@ -11,9 +11,15 @@ const config: Config = {
       fontFamily: {
         sans: ['var(--font-pretandard)'],
       },
+      container: {
+        screens: {
+          mobile: '767px',
+          desktop: '1440px',
+        },
+      },
       screens: {
         mobile: { max: '767px' }, // 모바일 화면: 360px ~ 767px
-        desktop: { min: '1200px' }, // 데스크탑 화면: 1200px 이상
+        desktop: { min: '1440px' }, // 데스크탑 화면: 1200px 이상
       },
       color: {
         primary: {
