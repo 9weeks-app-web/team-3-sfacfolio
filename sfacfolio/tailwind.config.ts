@@ -61,11 +61,8 @@ const config: Config = {
         black: '#000000',
       },
       fontSize: {
-        'web-title': '28px',
-        'web-subTitle': '24px',
-        'mo-title': '20px',
-        'mo-subTitle': '18px',
-        'mo-caption': '12px',
+        title: '28px',
+        subTitle: '24px',
         label1: '16px',
         label2: '14px',
         label3: '13px',
