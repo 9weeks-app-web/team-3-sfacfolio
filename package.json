@@ -16,12 +16,13 @@
     "react": "^18",
     "react-dom": "^18",
     "react-redux": "^9.0.4",
-    "swiper": "^11.0.5"
+    "react-slick": "^0.29.0"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-slick": "^0.23.13",
     "@typescript-eslint/eslint-plugin": "^6.16.0",
     "@typescript-eslint/parser": "^6.16.0",
     "autoprefixer": "^10.0.1",
