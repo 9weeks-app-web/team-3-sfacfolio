@@ -1,0 +1,7 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "material-icon-theme.folders.associations": {
+    "redux": "Functions",
+    "(route)": "Routes"
+  }
+}
