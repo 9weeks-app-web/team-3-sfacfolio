@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { communityIcons } from '../../../../../public/assets/images/CommunityIcons';
+import { communityIcons } from '@images/CommunityIcons';
 
 interface KeywordType {
   content: string;
@@ -14,7 +14,7 @@ function RealTimeKeywordItem({
   rank: number;
 }) {
   return (
-    <div className='pl-9 pr-6 py-4 flex justify-between items-center text-label1 font-medium'>
+    <div className='flex items-center justify-between py-4 pl-9 pr-6 text-label1 font-medium'>
       <div className='space-x-[38px]'>
         <span className={`${rank < 3 && 'text-primary-heavy'}`}>
           {rank + 1}
@@ -29,7 +29,7 @@ function RealTimeKeywordItem({
           <Image src={communityIcons.declinePolygon} alt='decline' />
         )}
         {keyword.rank === 'maintain' && (
-          <div className='w-[10px] h-[2px] bg-[#d9d9d9] rounded-sm' />
+          <div className='h-[2px] w-[10px] rounded-sm bg-[#d9d9d9]' />
         )}
       </span>
     </div>

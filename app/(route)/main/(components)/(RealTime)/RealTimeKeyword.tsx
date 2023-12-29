@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { communityIcons } from '../../../../../public/assets/images/CommunityIcons';
+import { communityIcons } from '@images/CommunityIcons';
 import RealTimeKeywordItem from './RealTimeKeywordItem';
 
 interface KeywordType {
@@ -25,7 +25,7 @@ function RealTimeKeyword({
   keywords = dummyKeywords,
 }: RealTImekeywordPropsType) {
   return (
-    <div className='w-[431px] border-2 rounded-lg leading-6 text-text-normal border-line-normal '>
+    <div className='w-[431px] rounded-lg border-2 border-line-normal leading-6 text-text-normal '>
       <div className='px-6 py-5 text-subTitle font-bold text-text-strong'>
         인기 키워드
       </div>

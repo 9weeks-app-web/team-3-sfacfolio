@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import { Icons } from '../../../../public/assets/images';
+import { Icons } from '@images';
 import CategoryButton from './CategoryButton';
 
 const categories = [

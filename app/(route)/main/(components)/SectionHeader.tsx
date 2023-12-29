@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { UrlObject } from 'url';
 import Image from 'next/image';
-import { Icons } from '../../../../public/assets/images';
+import { Icons } from '@images';
 
 interface SectionHeaderProps {
   title: string;

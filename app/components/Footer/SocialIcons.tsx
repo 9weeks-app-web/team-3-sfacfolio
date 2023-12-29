@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { socialIcons } from '../../../public/assets/images/SocialIcons';
+import { socialIcons } from '@images/SocialIcons';
 
 export default function SocialIcons() {
   return (
