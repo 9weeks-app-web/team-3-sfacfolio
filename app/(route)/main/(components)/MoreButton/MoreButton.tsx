@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import IconPlus from '../../../public/assets/images/IconPlus.svg';
+import IconPlus from '../../../../../public/assets/images/IconPlus.svg';
 
 interface MoreButtonProps {
   label: string;
