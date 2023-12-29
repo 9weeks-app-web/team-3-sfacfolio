@@ -1,10 +1,11 @@
 import Link from 'next/link';
+import { UrlObject } from 'url';
 import Image from 'next/image';
 import { Icons } from '../../../../public/assets/images';
 
 interface SectionHeaderProps {
   title: string;
-  more?: string;
+  more?: UrlObject;
 }
 
 function SectionHeader({ title, more }: SectionHeaderProps) {
