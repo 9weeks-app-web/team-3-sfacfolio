@@ -90,11 +90,13 @@ function CategoryButtonWrap() {
   return (
     <div className='relative w-full my-2'>
       {isAtStart ? null : (
-        <div className='h-full w-40 flex justify-start absolute top-[50%] -translate-y-[50%] left-0 cursor-pointer bg-gradient-to-l from-transparent to-white z-10'>
+        <div className='h-full flex justify-start absolute top-[50%] -translate-y-[50%] left-0 z-10'>
+          <div className='w-40 h-full bg-gradient-to-l from-transparent to-white pointer-events-none absolute top-[50%] -translate-y-[50%] left-0'></div>
           <Image
             src={Icons.categoryArrowLeft}
             alt='category slide prev button'
             onClick={() => handleScroll('prev')}
+            className='z-10 cursor-pointer'
           />
         </div>
       )}
@@ -116,11 +118,13 @@ function CategoryButtonWrap() {
       </div>
 
       {isAtEnd ? null : (
-        <div className='h-full w-40 flex justify-end absolute top-[50%] -translate-y-[50%] right-0 cursor-pointer bg-gradient-to-r from-transparent to-white z-10'>
+        <div className='h-full flex justify-end absolute top-[50%] -translate-y-[50%] right-0 z-10'>
+          <div className='w-40 h-full bg-gradient-to-r from-transparent to-white pointer-events-none absolute top-[50%] -translate-y-[50%] right-0'></div>
           <Image
             src={Icons.categoryArrowRight}
             alt='category slide next button'
             onClick={() => handleScroll('next')}
+            className='z-10 cursor-pointer'
           />
         </div>
       )}
