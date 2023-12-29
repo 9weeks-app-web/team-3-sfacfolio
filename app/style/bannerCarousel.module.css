@@ -20,6 +20,6 @@
   opacity: 1;
 }
 
-.wrapper :global .slick-dots li .slick-active button:before {
+.wrapper :global .slick-dots li.slick-active button:before {
   color: #000000;
 }

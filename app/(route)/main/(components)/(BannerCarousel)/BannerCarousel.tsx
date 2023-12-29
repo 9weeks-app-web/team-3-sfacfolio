@@ -2,6 +2,8 @@
 import Image from 'next/image';
 import Slider from 'react-slick';
 import styles from '@/style/bannerCarousel.module.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 interface BannerCarouselPropsType {
   banners?: string[];
