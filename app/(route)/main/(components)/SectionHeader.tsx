@@ -10,7 +10,7 @@ interface SectionHeaderProps {
 
 function SectionHeader({ title, more }: SectionHeaderProps) {
   return (
-    <div className='h-[56px] flex justify-between items-center'>
+    <div className='flex h-[56px] items-center justify-between'>
       <p className='text-title font-bold '>{title}</p>
       {more && (
         <Link

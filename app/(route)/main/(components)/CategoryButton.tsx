@@ -7,8 +7,8 @@ interface CategoryButtonProps {
 function CategoryButton({ title, active, onClick }: CategoryButtonProps) {
   return (
     <button
-      className={`text-label1 text-text-alternative px-[16px] py-[12px] border border-line-normal rounded-full transition-all	 ${
-        active && 'bg-black text-white border-black'
+      className={`rounded-full border border-line-normal px-[16px] py-[12px] text-label1 text-text-alternative transition-all	 ${
+        active && 'border-black bg-black text-white'
       }`}
       onClick={onClick}
     >
