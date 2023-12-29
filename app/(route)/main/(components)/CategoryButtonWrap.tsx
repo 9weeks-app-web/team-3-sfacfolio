@@ -88,10 +88,10 @@ function CategoryButtonWrap() {
   }, []);
 
   return (
-    <div className='relative w-full my-2'>
+    <div className='relative my-2 w-full'>
       {isAtStart ? null : (
-        <div className='h-full flex justify-start absolute top-[50%] -translate-y-[50%] left-0 z-10'>
-          <div className='w-40 h-full bg-gradient-to-l from-transparent to-white pointer-events-none absolute top-[50%] -translate-y-[50%] left-0'></div>
+        <div className='absolute left-0 top-[50%] z-10 flex h-full -translate-y-[50%] justify-start'>
+          <div className='pointer-events-none absolute left-0 top-[50%] h-full w-40 -translate-y-[50%] bg-gradient-to-l from-transparent to-white'></div>
           <Image
             src={Icons.categoryArrowLeft}
             alt='category slide prev button'
@@ -103,9 +103,9 @@ function CategoryButtonWrap() {
 
       <div
         ref={scrollContainer}
-        className='relative w-full overflow-x-auto hide-scrollbar scroll-smooth'
+        className='hide-scrollbar relative w-full overflow-x-auto scroll-smooth'
       >
-        <div className='w-max flex gap-2'>
+        <div className='flex w-max gap-2'>
           {categories.map(category => (
             <CategoryButton
               key={category.title}
@@ -118,8 +118,8 @@ function CategoryButtonWrap() {
       </div>
 
       {isAtEnd ? null : (
-        <div className='h-full flex justify-end absolute top-[50%] -translate-y-[50%] right-0 z-10'>
-          <div className='w-40 h-full bg-gradient-to-r from-transparent to-white pointer-events-none absolute top-[50%] -translate-y-[50%] right-0'></div>
+        <div className='absolute right-0 top-[50%] z-10 flex h-full -translate-y-[50%] justify-end'>
+          <div className='pointer-events-none absolute right-0 top-[50%] h-full w-40 -translate-y-[50%] bg-gradient-to-r from-transparent to-white'></div>
           <Image
             src={Icons.categoryArrowRight}
             alt='category slide next button'
