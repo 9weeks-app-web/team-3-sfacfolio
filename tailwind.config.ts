@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        pretendard: ['var(--font-pretandard)'],
+        pretendard: ['var(--font-pretendard)'],
       },
       container: {
         screens: {
