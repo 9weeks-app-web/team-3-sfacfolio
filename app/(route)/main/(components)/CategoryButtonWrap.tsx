@@ -25,6 +25,7 @@ function CategoryButtonWrap() {
   const [isScrolling, setIsScrolling] = useState(false);
   const [isAtStart, setIsAtStart] = useState(true);
   const [isAtEnd, setIsAtEnd] = useState(false);
+  const [activeCategory, setActiveCategory] = useState(categories[0].title);
 
   const updateScrollPosition = () => {
     const { current } = scrollContainer;
@@ -68,6 +69,10 @@ function CategoryButtonWrap() {
     }
   };
 
+  const handleCategoryClick = (title: string) => {
+    setActiveCategory(title);
+  };
+
   useEffect(() => {
     checkIfOverflow();
     window.addEventListener('resize', checkIfOverflow);
@@ -103,7 +108,8 @@ function CategoryButtonWrap() {
             <CategoryButton
               key={category.title}
               title={category.title}
-              active={category.active || false}
+              active={category.title === activeCategory}
+              onClick={() => handleCategoryClick(category.title)}
             />
           ))}
         </div>
