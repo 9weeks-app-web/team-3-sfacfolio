@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { socialIcons } from '../public/assets/images/SocialIcons';
+import { socialIcons } from '@images/SocialIcons';
 import Container from './components/Container';
 
 export default function Home() {

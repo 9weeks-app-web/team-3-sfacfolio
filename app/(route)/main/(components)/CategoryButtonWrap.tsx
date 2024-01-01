@@ -1,8 +1,9 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import { Icons } from '../../../../public/assets/images';
+import { Icons } from '@images';
 import CategoryButton from './CategoryButton';
+import FindProjectTag from './FindProjectCard/FindProjectTag';
 
 const categories = [
   { title: '디자인 전체', active: true },
@@ -19,7 +20,12 @@ const categories = [
   { title: '파인아트' },
 ];
 
-function CategoryButtonWrap() {
+interface CategoryButtonWrapProps {
+  type: 'button' | 'tag';
+  tags?: string[];
+}
+
+function CategoryButtonWrap({ type, tags }: CategoryButtonWrapProps) {
   const scrollContainer = useRef<HTMLDivElement>(null);
   const [isOverflow, setIsOverflow] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
@@ -90,8 +96,8 @@ function CategoryButtonWrap() {
   return (
     <div className='relative my-2 w-full'>
       {isAtStart ? null : (
-        <div className='absolute left-0 top-[50%] z-10 flex h-full -translate-y-[50%] justify-start'>
-          <div className='pointer-events-none absolute left-0 top-[50%] h-full w-40 -translate-y-[50%] bg-gradient-to-l from-transparent to-white'></div>
+        <div className='absolute left-0 top-[50%] z-10 flex h-full translate-y-[-50%] justify-start'>
+          <div className='pointer-events-none absolute left-0 top-[50%] h-full w-40 translate-y-[-50%] bg-gradient-to-l from-transparent to-white'></div>
           <Image
             src={Icons.categoryArrowLeft}
             alt='category slide prev button'
@@ -105,21 +111,29 @@ function CategoryButtonWrap() {
         ref={scrollContainer}
         className='hide-scrollbar relative w-full overflow-x-auto scroll-smooth'
       >
-        <div className='flex w-max gap-2'>
-          {categories.map(category => (
-            <CategoryButton
-              key={category.title}
-              title={category.title}
-              active={category.title === activeCategory}
-              onClick={() => handleCategoryClick(category.title)}
-            />
-          ))}
+        <div
+          className={`flex w-max ${type === 'button' ? 'gap-2' : 'gap-[9px]'}`}
+        >
+          {type === 'button'
+            ? categories.map(category => (
+                <CategoryButton
+                  key={category.title}
+                  title={category.title}
+                  active={category.title === activeCategory}
+                  onClick={() => handleCategoryClick(category.title)}
+                />
+              ))
+            : tags?.map(tag => <FindProjectTag tag={tag} key={tag} />)}
         </div>
       </div>
 
       {isAtEnd ? null : (
-        <div className='absolute right-0 top-[50%] z-10 flex h-full -translate-y-[50%] justify-end'>
-          <div className='pointer-events-none absolute right-0 top-[50%] h-full w-40 -translate-y-[50%] bg-gradient-to-r from-transparent to-white'></div>
+        <div className='absolute right-0 top-[50%] z-10 flex h-full translate-y-[-50%] justify-end'>
+          <div
+            className={`pointer-events-none absolute right-0 top-[50%] translate-y-[-50%] bg-gradient-to-r from-transparent to-white${
+              type === 'button' ? ' h-full w-40' : ' h-12 w-[84px]'
+            }`}
+          ></div>
           <Image
             src={Icons.categoryArrowRight}
             alt='category slide next button'

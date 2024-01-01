@@ -1,7 +1,7 @@
 import React from 'react';
 import UserImages from '../PortfoiloCardBody/UserImages';
-import IconHeart from '../../../../../../../public/assets/images/IconHeart.svg';
-import IconEye from '../../../../../../../public/assets/images/IconEye.svg';
+import IconHeart from '@images/IconHeart.svg';
+import IconEye from '@images/IconEye.svg';
 import Image from 'next/image';
 
 export default function PortfolioCardFooter({
