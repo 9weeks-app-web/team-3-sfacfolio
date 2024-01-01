@@ -38,7 +38,9 @@ export default function Card({
           >
             {badge}
           </div>
-          {body}
+          <div className={`${imageHover && 'hidden group-hover:block'}`}>
+            {body}
+          </div>
         </div>
       </div>
       {footer}

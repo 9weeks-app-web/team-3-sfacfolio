@@ -23,9 +23,14 @@ const categories = [
 interface CategoryButtonWrapProps {
   type: 'button' | 'tag';
   tags?: string[];
+  gradient?: string;
 }
 
-function CategoryButtonWrap({ type, tags }: CategoryButtonWrapProps) {
+function CategoryButtonWrap({
+  type,
+  tags,
+  gradient = ' to-white',
+}: CategoryButtonWrapProps) {
   const scrollContainer = useRef<HTMLDivElement>(null);
   const [isOverflow, setIsOverflow] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
@@ -94,10 +99,14 @@ function CategoryButtonWrap({ type, tags }: CategoryButtonWrapProps) {
   }, []);
 
   return (
-    <div className='relative my-2 w-full'>
+    <div className='relative mt-6 w-full'>
       {isAtStart ? null : (
         <div className='absolute left-0 top-[50%] z-10 flex h-full translate-y-[-50%] justify-start'>
-          <div className='pointer-events-none absolute left-0 top-[50%] h-full w-40 translate-y-[-50%] bg-gradient-to-l from-transparent to-white'></div>
+          <div
+            className={`pointer-events-none absolute left-0 top-[50%] translate-y-[-50%] bg-gradient-to-l from-transparent ${gradient} ${
+              type === 'button' ? ' h-full w-40' : ' h-12 w-[84px]'
+            }`}
+          ></div>
           <Image
             src={Icons.categoryArrowLeft}
             alt='category slide prev button'
@@ -130,7 +139,7 @@ function CategoryButtonWrap({ type, tags }: CategoryButtonWrapProps) {
       {isAtEnd ? null : (
         <div className='absolute right-0 top-[50%] z-10 flex h-full translate-y-[-50%] justify-end'>
           <div
-            className={`pointer-events-none absolute right-0 top-[50%] translate-y-[-50%] bg-gradient-to-r from-transparent to-white${
+            className={`pointer-events-none absolute right-0 top-[50%] translate-y-[-50%] bg-gradient-to-r from-transparent${gradient}${
               type === 'button' ? ' h-full w-40' : ' h-12 w-[84px]'
             }`}
           ></div>

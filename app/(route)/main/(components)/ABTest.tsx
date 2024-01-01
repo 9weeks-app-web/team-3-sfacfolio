@@ -28,6 +28,7 @@ function ABTest() {
             objectFit='contain'
             objectPosition='center'
             className='!relative'
+            loading='lazy'
           />
           <div
             className={`absolute left-0 top-0 hidden h-full w-full bg-primary-heavy opacity-40  ${
@@ -58,6 +59,7 @@ function ABTest() {
             objectFit='contain'
             objectPosition='center'
             className='!relative'
+            loading='lazy'
           />
           <div className='absolute left-0 top-0 hidden h-full w-full bg-primary-heavy opacity-40 group-hover:block'></div>
           <p
@@ -81,7 +83,7 @@ function ABTest() {
             }`}
           >
             <div
-              className='absolute left-0 top-0 h-full w-full bg-black px-[40px] py-[60px] text-white opacity-80
+              className='absolute left-0 top-0 h-full w-full bg-black/80 px-[40px] py-[60px] text-white
               '
             >
               <p className='mb-4 text-title font-bold'>정답은 A!</p>

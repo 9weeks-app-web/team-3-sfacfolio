@@ -5,12 +5,13 @@ import { Icons } from '@images';
 
 interface SectionHeaderProps {
   title: string;
-  more?: UrlObject;
+  more?: any;
+  className?: string;
 }
 
-function SectionHeader({ title, more }: SectionHeaderProps) {
+function SectionHeader({ title, more, className = '' }: SectionHeaderProps) {
   return (
-    <div className='flex h-[56px] items-center justify-between'>
+    <div className={`flex items-center justify-between ${className}`}>
       <p className='text-title font-bold '>{title}</p>
       {more && (
         <Link
