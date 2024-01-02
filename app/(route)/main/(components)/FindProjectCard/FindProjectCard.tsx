@@ -25,7 +25,7 @@ export interface FindProjectCardProps {
 
 function FindProjectCard({ mode = 'view' }: FindProjectCardProps) {
   return (
-    <div className='flex w-[603px] flex-col gap-[25px] rounded-lg bg-white p-6 shadow-[0px_0px_10px_0px_rgba(171,171,171,0.28)]'>
+    <div className='flex w-[603px] cursor-pointer flex-col gap-[25px] rounded-lg bg-white p-6 shadow-[0px_0px_10px_0px_rgba(171,171,171,0.28)]'>
       <div className='flex w-full items-center justify-between'>
         <span className='text-lg text-text-alternative'>IT/개발</span>
         <div className='flex items-center gap-2'>
