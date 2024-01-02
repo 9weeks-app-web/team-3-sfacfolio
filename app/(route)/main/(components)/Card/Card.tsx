@@ -1,10 +1,12 @@
 import Image from 'next/image';
 import React, { ReactElement } from 'react';
+import IconBookmark from '@images/IconBookmark.svg';
 
 interface CardProps {
   imageUrl: string;
   imageHover: boolean;
   badge: string;
+  share?: boolean;
   badgeColor: string;
   body: ReactElement;
   footer: ReactElement;
@@ -14,6 +16,7 @@ export default function Card({
   imageUrl,
   imageHover,
   badge,
+  share,
   badgeColor,
   body,
   footer,
@@ -38,6 +41,11 @@ export default function Card({
           >
             {badge}
           </div>
+          {share && (
+            <div className={`absolute right-4 top-4 h-6 w-6`}>
+              <Image src={IconBookmark} alt='bookmark' className='' />
+            </div>
+          )}
           <div className={`${imageHover && 'hidden group-hover:block'}`}>
             {body}
           </div>
