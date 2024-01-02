@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import '@/style/globals.css';
 import Provider from './components/Provider';
+import Footer from './components/Footer/Footer';
 
 const pretendard = localFont({
   src: [
@@ -9,7 +10,7 @@ const pretendard = localFont({
       path: '../public/fonts/PretendardVariable.woff2',
     },
   ],
-  variable: '--font-pretandard',
+  variable: '--font-pretendard',
 });
 
 export const metadata: Metadata = {
@@ -26,6 +27,7 @@ export default function RootLayout({
     <html lang='ko'>
       <body className={`${pretendard.variable} font-pretendard`}>
         <Provider>{children}</Provider>
+        <Footer />
       </body>
     </html>
   );
