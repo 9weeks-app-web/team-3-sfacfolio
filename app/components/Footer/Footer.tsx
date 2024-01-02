@@ -10,9 +10,7 @@ export default function Footer() {
       <div className='flex justify-between'>
         <FooterInfo />
         <div className='flex items-start gap-7'>
-          <div className='flex items-center justify-between'>
-            <SocialIcons />
-          </div>
+          <SocialIcons />
           <Image src={FooterLogo} alt='test' className='h-5' />
         </div>
       </div>

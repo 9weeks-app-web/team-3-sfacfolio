@@ -30,17 +30,13 @@ export default function FooterInfo() {
           </li>
         ))}
       </ul>
-      <ul
-        className={`max-w-[800px] flex-wrap gap-x-3 ${
-          open ? 'flex' : 'hidden'
-        }`}
-      >
-        {footerInfo2.map(item => (
-          <li key={item.id} className='flex'>
-            <span>{item.text}</span>
-          </li>
-        ))}
-      </ul>
+      {open && (
+        <ul className={`flex max-w-[800px] flex-wrap gap-x-3`}>
+          {footerInfo2.map(item => (
+            <li key={item.id}>{item.text}</li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }
