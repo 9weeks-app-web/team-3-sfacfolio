@@ -16,7 +16,7 @@ export default function SectionWrapper({
       <div className='container overflow-hidden'>{children}</div>
       {slider}
       {banner && (
-        <div className='container overflow-hidden mt-20'>{banner}</div>
+        <div className='container mt-20 overflow-hidden'>{banner}</div>
       )}
     </div>
   );
