@@ -20,19 +20,19 @@ function FolioHeader() {
 
   return (
     <div className='box-border flex h-14 w-full justify-between border-b-2 border-b-line-normal bg-background-secondary px-10'>
-      <div className='flex gap-6'>
+      <div className='flex'>
         <Image src={LogoFolio} alt='logo' width={63.76} height={16.14} />
-        <ul className='flex text-label1 leading-4 text-text-alternative'>
+        <ul className='ml-6 flex text-label1 leading-4 text-text-alternative'>
           {menuItems.map(item => (
             <li
               key={item.name}
-              className={`relative flex h-14 w-[72px] cursor-pointer items-center justify-center tracking-[-.16px] ${
+              className={`relative flex h-14 w-[88px] cursor-pointer items-center justify-center px-2 py-3 tracking-[-0.16px] ${
                 segment === item.segment
                   ? ' text-text-normal before:absolute before:bottom-0 before:block before:h-[2px] before:w-full before:bg-primary-heavy'
                   : ''
               }`}
             >
-              {item.name}
+              <span className='w-[72px] text-center'>{item.name}</span>
             </li>
           ))}
         </ul>
