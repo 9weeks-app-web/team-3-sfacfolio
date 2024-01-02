@@ -17,7 +17,7 @@ function Header() {
         <div className='mb-[-1px] h-[35.35px] w-24 cursor-pointer rounded-t-lg border-x border-t border-line-normal bg-white px-4 py-2'>
           <Image src={LogoFolio} alt='logo' width={63.76} height={16.14} />
         </div>
-        <div className='h-[34.35px] w-24 px-4  py-2'>
+        <div className='h-[34.35px] w-24 cursor-pointer px-4 py-2'>
           <Image src={LogoLog} alt='logo' width={41.59} height={16.14} />
         </div>
       </div>

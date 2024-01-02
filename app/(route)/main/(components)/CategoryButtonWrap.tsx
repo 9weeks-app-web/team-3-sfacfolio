@@ -5,38 +5,25 @@ import { Icons } from '@images';
 import CategoryButton from './CategoryButton';
 import FindProjectTag from './FindProjectCard/FindProjectTag';
 
-const categories = [
-  { title: '디자인 전체', active: true },
-  { title: 'UX/UI 디자인' },
-  { title: '그래픽 디자인' },
-  { title: '일러스트레이션 디자인' },
-  { title: '디지털아트' },
-  { title: '캐릭터 디자인' },
-  { title: '제품/패키지 디자인' },
-  { title: '포토그래피' },
-  { title: '브랜딩/편집' },
-  { title: '영상/모션그래픽' },
-  { title: '타이포그래피' },
-  { title: '파인아트' },
-];
-
 interface CategoryButtonWrapProps {
   type: 'button' | 'tag';
   tags?: string[];
   gradient?: string;
+  categories?: { title: string }[];
 }
 
 function CategoryButtonWrap({
   type,
   tags,
   gradient = ' to-white',
+  categories = [],
 }: CategoryButtonWrapProps) {
   const scrollContainer = useRef<HTMLDivElement>(null);
   const [isOverflow, setIsOverflow] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
   const [isAtStart, setIsAtStart] = useState(true);
   const [isAtEnd, setIsAtEnd] = useState(false);
-  const [activeCategory, setActiveCategory] = useState(categories[0].title);
+  const [activeCategory, setActiveCategory] = useState(categories[0]?.title);
 
   const updateScrollPosition = () => {
     const { current } = scrollContainer;
