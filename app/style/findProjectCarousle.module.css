@@ -1,0 +1,17 @@
+.sliderWrapper :global .slick-slider {
+  width: 100%;
+}
+
+.sliderWrapper :global .slick-track {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.sliderWrapper :global .slick-slide {
+  padding-right: 24px;
+  width: fit-content;
+}
+
+.sliderWrapper :global .slick-list {
+  overflow: visible;
+}

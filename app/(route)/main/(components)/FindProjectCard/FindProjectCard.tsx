@@ -19,7 +19,7 @@ const tags = [
   '더보기기기',
 ];
 
-interface FindProjectCardProps {
+export interface FindProjectCardProps {
   mode?: 'view' | 'apply';
 }
 
