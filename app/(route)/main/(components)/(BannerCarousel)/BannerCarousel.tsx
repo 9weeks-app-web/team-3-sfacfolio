@@ -18,20 +18,17 @@ function BannerCarousel({ banners }: BannerCarouselPropsType) {
     arrows: false,
     variableWidth: true,
     autoplay: true,
-    pauseOnHover: true,
+    centerMode: true,
   };
 
   return (
-    <div
-      className={`${styles.wrapper} max-w-[1440px] mx-auto  pl-20 pt-20 pb-[124px] bg-background-primary`}
-    >
+    <div className={`${styles.wrapper} pt-20 pb-[124px] bg-background-primary`}>
       <Slider {...settings}>
         {banners
           ? banners.map(banner => (
               <div
                 key={banner}
-                style={{ width: 604 }}
-                className='cursor-pointer h-[300px] bg-background-secondary rounded-lg'
+                className='cursor-pointer h-[302px] bg-background-secondary rounded-lg'
               >
                 <Image src={banner} alt='banner-image' objectFit='cover' />
               </div>
@@ -39,9 +36,10 @@ function BannerCarousel({ banners }: BannerCarouselPropsType) {
           : [1, 2, 3, 4, 5].map(i => (
               <div
                 key={i}
-                style={{ width: 604 }}
-                className='cursor-pointer h-[300px] bg-background-secondary rounded-lg'
-              ></div>
+                className='cursor-pointer h-[302px] bg-background-secondary rounded-lg'
+              >
+                {i}
+              </div>
             ))}
       </Slider>
     </div>
