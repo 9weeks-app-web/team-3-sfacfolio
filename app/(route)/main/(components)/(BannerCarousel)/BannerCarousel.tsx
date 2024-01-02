@@ -11,6 +11,7 @@ interface BannerCarouselPropsType {
 
 function BannerCarousel({ banners }: BannerCarouselPropsType) {
   const settings = {
+    //infinite: false,
     dots: true,
     speed: 500,
     slidesToShow: 3,
@@ -22,13 +23,13 @@ function BannerCarousel({ banners }: BannerCarouselPropsType) {
   };
 
   return (
-    <div className={`${styles.wrapper} pt-20 pb-[124px] bg-background-primary`}>
+    <div className={`${styles.wrapper} bg-background-primary pb-[124px] pt-20`}>
       <Slider {...settings}>
         {banners
           ? banners.map(banner => (
               <div
                 key={banner}
-                className='cursor-pointer h-[302px] bg-background-secondary rounded-lg'
+                className='h-[302px] cursor-pointer rounded-lg bg-background-secondary'
               >
                 <Image src={banner} alt='banner-image' objectFit='cover' />
               </div>
@@ -36,7 +37,7 @@ function BannerCarousel({ banners }: BannerCarouselPropsType) {
           : [1, 2, 3, 4, 5].map(i => (
               <div
                 key={i}
-                className='cursor-pointer h-[302px] bg-background-secondary rounded-lg'
+                className='h-[302px] cursor-pointer rounded-lg bg-background-secondary'
               >
                 {i}
               </div>

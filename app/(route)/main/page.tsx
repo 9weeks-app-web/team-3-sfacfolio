@@ -4,7 +4,6 @@ import BannerCarousel from './(components)/(BannerCarousel)/BannerCarousel';
 import SectionHeader from './(components)/SectionHeader';
 import SectionWrapper from './(components)/SectionWrapper';
 import SectionSliderWrapper from './(components)/SectionSliderWrapper';
-import Header from '@/components/Header';
 import CategoryButtonWrap from './(components)/CategoryButtonWrap';
 import PortfolioCard from './(components)/Card/PortfoiloCard/PortfolioCard';
 import JobOfferCard from './(components)/Card/JobOfferCard/JobOfferCard';
@@ -21,6 +20,7 @@ import {
   projectCategories,
   communityCategories,
 } from '@/constants';
+import Header from '@/components/Header/Header';
 
 function MainPage() {
   return (

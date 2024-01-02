@@ -2,7 +2,7 @@
   width: 100%;
 }
 
-.wrapper :global .slick-slider {
+.sliderWrapper :global .slick-list {
   overflow: visible;
 }
 
@@ -12,6 +12,10 @@
 
 .wrapper :global .slick-slide {
   margin-right: 24px;
+}
+
+.wrapper :global .slick-slide:last-of-type {
+  padding-right: 0;
 }
 
 .wrapper :global .slick-slide > div {

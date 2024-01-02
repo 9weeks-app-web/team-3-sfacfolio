@@ -12,6 +12,10 @@
   width: fit-content;
 }
 
+.sliderWrapper :global .slick-slide:last-of-type {
+  padding-right: 0;
+}
+
 .sliderWrapper :global .slick-list {
   overflow: visible;
 }

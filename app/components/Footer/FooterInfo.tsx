@@ -1,15 +1,42 @@
-import React from 'react';
-import { footerInfo } from '@/constants';
+'use client';
+
+import React, { useState } from 'react';
+import { footerInfo1, footerInfo2 } from '@/constants';
+import IconPolygon from '@images/IconPolygon.png';
+import Image from 'next/image';
 
 export default function FooterInfo() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <ul className='mb-[22px] flex max-w-[919px] flex-wrap gap-1.5'>
-      {footerInfo.map(item => (
-        <li key={item.id}>
-          {item.text}
-          <span className='ml-1.5'>{item.icon ?? '|'}</span>
-        </li>
-      ))}
-    </ul>
+    <div>
+      <ul className='mb-2 flex max-w-[800px] flex-wrap gap-x-2'>
+        {footerInfo1.map(item => (
+          <li key={item.id} className='flex'>
+            <span>{item.text}</span>
+            {item.id === 1 && (
+              <button
+                onClick={() => setOpen(prev => !prev)}
+                className='ml-1 flex items-center font-medium'
+              >
+                <span className='mr-1'>사업자 정보</span>
+                <Image
+                  src={IconPolygon}
+                  alt='polygon'
+                  className={`${open ? 'rotate-0' : 'rotate-180'}`}
+                />
+              </button>
+            )}
+          </li>
+        ))}
+      </ul>
+      {open && (
+        <ul className={`flex max-w-[800px] flex-wrap gap-x-3`}>
+          {footerInfo2.map(item => (
+            <li key={item.id}>{item.text}</li>
+          ))}
+        </ul>
+      )}
+    </div>
   );
 }
