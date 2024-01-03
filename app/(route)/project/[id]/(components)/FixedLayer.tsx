@@ -19,7 +19,7 @@ export default function FixedLayer({
   return (
     <div className='fixed bottom-5 left-1/2 flex w-[1280px] translate-x-[-50%] translate-y-[-50%] items-center justify-between rounded-xl bg-primary-assitive px-12 py-6'>
       <div>
-        <p className='text-[18px]'>{number}명이 지원했습니다.</p>
+        <p className='text-[18px] font-medium'>{number}명이 지원했습니다.</p>
         <p className='text-label3 text-secondary-weak'>{leftDay}</p>
       </div>
       <div className='flex flex-row items-center gap-[10px]'>
