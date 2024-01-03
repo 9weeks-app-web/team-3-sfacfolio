@@ -17,7 +17,7 @@ export default function ReplyBox({ comment }: CommentsBoxProps) {
         <div className='w-[calc(100%-4px)] pl-4'>
           <div className='mb-4 flex justify-between'>
             <div className='flex items-center justify-center'>
-              <ProfileImage width={50} height={50} />
+              <ProfileImage width={40} height={40} />
               <span className='ml-3 mr-6 text-label1 font-bold'>
                 {comment.username}
               </span>

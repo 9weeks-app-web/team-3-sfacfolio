@@ -14,7 +14,7 @@ export default function CommentsBox({ comment }: CommentsBoxProps) {
       <div className='w-full border-b border-line-normal px-14 py-6'>
         <div className='mb-4 flex justify-between'>
           <div className='flex items-center justify-center'>
-            <ProfileImage width={50} height={50} />
+            <ProfileImage width={40} height={40} />
             <span className='ml-3 mr-6 text-label1 font-bold'>
               {comment.username}
             </span>
