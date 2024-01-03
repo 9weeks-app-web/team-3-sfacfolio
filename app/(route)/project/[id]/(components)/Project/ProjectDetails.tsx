@@ -9,16 +9,19 @@ import ProjectDefaultThumbnail from '@images/ProjectDefaultThumbnail.svg';
 
 interface ProjectDetailsProps {
   data: ProjectDataType;
+  leftDay: string;
 }
 
-export default function ProjectDetails({ data }: ProjectDetailsProps) {
+export default function ProjectDetails({ data, leftDay }: ProjectDetailsProps) {
+  const number = data.participants.length;
+
   return (
     <>
       {/* 프로젝트 타이틀 */}
       <div>
         <div className='flex items-center justify-between'>
           <div className='flex gap-[10px]'>
-            <ProjectInfoLabel contents='마감 4일 전' type='period' />
+            <ProjectInfoLabel contents={leftDay} type='period' />
             <ProjectInfoLabel contents='사이드 프로젝트' />
             <ProjectInfoLabel contents='중급' />
           </div>
@@ -68,7 +71,7 @@ export default function ProjectDetails({ data }: ProjectDetailsProps) {
             />
             <ProjectInfoText
               type='모집인원'
-              value={data.numberOfParticipants}
+              value={`${number}명`}
               className='w-1/2'
             />
             <ProjectInfoText type='연락방법' value={data.contactMethod} />
