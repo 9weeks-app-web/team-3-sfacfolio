@@ -43,7 +43,6 @@ export interface ReplyCommentType {
 
 export interface CommentType {
   id: number;
-  image?: string;
   username: string;
   date: string;
   comment: string;
