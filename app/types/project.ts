@@ -8,13 +8,18 @@ export interface ProjectDataType {
   estimatedTime: string;
   progressStatus: string;
   applicationMethod: string;
-  numberOfParticipants: string;
+  participants: ParticipantsType[];
   contactMethod: ContactMethodType;
   requiredSkills: string[];
   recruitPositions: RecruitmentPositionType[];
   description: string;
   NumberOfApplicants: number;
   comments: CommentType[];
+}
+
+export interface ParticipantsType {
+  userName: string;
+  position: string;
 }
 
 export interface ContactMethodType {
