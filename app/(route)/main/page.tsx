@@ -25,7 +25,6 @@ import Header from '@/components/Header/Header';
 function MainPage() {
   return (
     <>
-      <Header />
       <BannerCarousel />
 
       {/* 포트폴리오 */}
