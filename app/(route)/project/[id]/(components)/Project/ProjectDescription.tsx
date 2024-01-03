@@ -17,7 +17,7 @@ function ProjectDescription({ description }: ProjectDescription) {
     <div>
       <ProjectSectionTitle title='프로젝트 소개' />
       <div
-        className='text-[18px]'
+        className='text-[18px] leading-8'
         dangerouslySetInnerHTML={{
           __html: DOMPurify.sanitize(String(description)),
         }}
