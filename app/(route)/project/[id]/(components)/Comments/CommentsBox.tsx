@@ -1,4 +1,4 @@
-import { CommentType } from './CommentsWrap';
+import { CommentType } from '@/types/project';
 
 import ProfileImage from '@/components/ProfileImage';
 import HeartIcon from '@/components/HeartIcon';

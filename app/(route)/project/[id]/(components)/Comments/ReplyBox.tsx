@@ -1,4 +1,4 @@
-import { ReplyCommentType } from './CommentsWrap';
+import { ReplyCommentType } from '@/types/project';
 
 import ProfileImage from '@/components/ProfileImage';
 import HeartIcon from '@/components/HeartIcon';

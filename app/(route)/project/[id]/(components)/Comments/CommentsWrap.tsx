@@ -1,22 +1,6 @@
+import { CommentType } from '@/types/project';
+
 import CommentsBox from './CommentsBox';
-
-export interface ReplyCommentType {
-  id: number;
-  username: string;
-  date: string;
-  comment: string;
-  likes: number;
-}
-
-export interface CommentType {
-  id: number;
-  image?: string;
-  username: string;
-  date: string;
-  comment: string;
-  likes: number;
-  reply: ReplyCommentType[];
-}
 
 interface CommentsWrapProps {
   comments: CommentType[];
