@@ -57,7 +57,7 @@ export default function ProjectInfoText({
   };
 
   return (
-    <div className={`flex w-full items-center ${className}`}>
+    <div className={`flex items-center ${className}`}>
       <span className='mr-5 text-[20px] font-bold'>{type}</span>
       <span className='flex flex-row gap-2'>{renderValue(value)}</span>
     </div>
