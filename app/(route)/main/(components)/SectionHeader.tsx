@@ -18,7 +18,7 @@ function SectionHeader({ title, more, className = '' }: SectionHeaderProps) {
           className='flex items-center text-[18px] text-text-alternative'
         >
           더보기
-          <Image src={MoreButton} alt='more-button' className='ml-1' />
+          <Image src={MoreButton} alt='more button' className='ml-1' />
         </Link>
       )}
     </div>
