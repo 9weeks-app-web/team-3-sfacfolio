@@ -1,7 +1,8 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import { Icons } from '@images';
+import CategoryArrowLeft from '@images/CategoryArrowLeft.svg';
+import CategoryArrowRight from '@images/CategoryArrowRight.svg';
 import CategoryButton from './CategoryButton';
 import FindProjectTag from './FindProjectCard/FindProjectTag';
 
@@ -95,7 +96,7 @@ function CategoryButtonWrap({
             }`}
           ></div>
           <Image
-            src={Icons.categoryArrowLeft}
+            src={CategoryArrowLeft}
             alt='category slide prev button'
             onClick={() => handleScroll('prev')}
             className='z-10 cursor-pointer'
@@ -131,7 +132,7 @@ function CategoryButtonWrap({
             }`}
           ></div>
           <Image
-            src={Icons.categoryArrowRight}
+            src={CategoryArrowRight}
             alt='category slide next button'
             onClick={() => handleScroll('next')}
             className='z-10 cursor-pointer'
