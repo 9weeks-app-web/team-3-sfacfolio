@@ -19,7 +19,13 @@ export default function ProfileImage({
         'w-[' + width + 'px]'
       } items-center justify-center overflow-hidden rounded-full border-2 border-white ${className}`}
     >
-      <Image src={url} alt='profile' width={width} height={height} />
+      <Image
+        src={url}
+        alt='profile'
+        width={width}
+        height={height}
+        style={{ height: height, width: width, objectFit: 'cover' }}
+      />
     </div>
   );
 }
