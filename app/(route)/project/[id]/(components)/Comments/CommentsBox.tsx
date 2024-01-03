@@ -9,7 +9,6 @@ interface CommentsBoxProps {
 }
 
 export default function CommentsBox({ comment }: CommentsBoxProps) {
-  console.log(comment.reply);
   return (
     <>
       <div className='w-full border-b border-line-normal px-14 py-6'>
