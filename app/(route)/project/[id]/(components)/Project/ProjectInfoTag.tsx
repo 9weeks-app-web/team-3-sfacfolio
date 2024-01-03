@@ -1,4 +1,4 @@
-interface ProjectInfoTagProps {
+export interface ProjectInfoTagProps {
   value: string;
   number?: string;
   isClosed?: boolean;

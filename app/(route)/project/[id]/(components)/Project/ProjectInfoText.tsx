@@ -35,21 +35,25 @@ export default function ProjectInfoText({
         );
       }
     }
-
+    //
     if (Array.isArray(val)) {
-      if (val.every(item => typeof item === 'string')) {
+      if (type === '필요기술') {
         // type이 "필요기술"일 때
-        return val.map(item => <ProjectInfoTag key={item} value={item} />);
-      } else if (val.every(item => 'position' in item && 'number' in item)) {
-        // type이 "모집직군"일 때
-        return val.map(item => (
-          <ProjectInfoTag
-            key={item.position}
-            value={item.position}
-            number={item.number}
-            isClosed={item.isRecruitClosed}
-          />
+        return val.map((item, i) => (
+          <ProjectInfoTag key={i} value={item as string} />
         ));
+      } else if (type === '모집직군') {
+        // type이 "모집직군"일 때
+        return (val as RecruitmentPositionType[]).map((item, i) => {
+          return (
+            <ProjectInfoTag
+              key={i}
+              value={item.position}
+              number={item.number.toString()}
+              isClosed={item.isRecruitClosed}
+            />
+          );
+        });
       }
     }
 
