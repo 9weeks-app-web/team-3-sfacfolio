@@ -4,7 +4,6 @@ import {
   collection,
   doc,
   getDoc,
-  onSnapshot,
   updateDoc,
 } from 'firebase/firestore';
 import { db } from '@/utils/firebase';
@@ -23,28 +22,6 @@ export const fetchProject = async (
   } else {
     throw new Error('해당하는 프로젝트가 없습니다.');
   }
-};
-
-// 프로젝트 데이터의 실시간 변경을 감시하며, 변경 사항이 있을 때마다 콜백 함수를 호출
-export const subscribeToProjectUpdates = (
-  projectId: string,
-  onUpdate: (project: ProjectDataType | undefined) => void,
-) => {
-  const projectRef = doc(db, 'project', projectId);
-
-  return onSnapshot(
-    projectRef,
-    doc => {
-      if (doc.exists()) {
-        onUpdate(doc.data() as ProjectDataType);
-      } else {
-        onUpdate(undefined);
-      }
-    },
-    error => {
-      console.error('Error fetching project:', error);
-    },
-  );
 };
 
 export const addComment = async (

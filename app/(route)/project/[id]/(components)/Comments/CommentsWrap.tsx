@@ -1,7 +1,7 @@
 import { CommentType } from '@/types/project';
 
 import { useForm } from 'react-hook-form';
-import { useMutation, useQueryClient } from 'react-query';
+import { UseQueryResult, useMutation, useQueryClient } from 'react-query';
 
 import ProjectSectionTitle from '../Project/ProjectSectionTitle';
 import CommentsListWrap from './CommentsListWrap';
@@ -12,11 +12,13 @@ import { useState } from 'react';
 export interface CommentsWrapProps {
   projectId?: string;
   comments: CommentType[];
+  refetch?: () => Promise<UseQueryResult<any, unknown>>;
 }
 
 export default function CommentsWrap({
   projectId,
   comments,
+  refetch,
 }: CommentsWrapProps) {
   const [commentCount, setCommentCount] = useState<number>(comments.length);
   const queryClient = useQueryClient();
@@ -35,6 +37,7 @@ export default function CommentsWrap({
         setCommentCount(prevCount => prevCount + 1);
         queryClient.invalidateQueries('comments');
         resetField('body');
+        refetch!();
       },
       onError: () => {
         alert('다시 시도해 주세요.');

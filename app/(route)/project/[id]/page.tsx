@@ -1,7 +1,7 @@
 'use client';
 
 import { useParams } from 'next/navigation';
-import { useQuery, useQueryClient } from 'react-query';
+import { UseQueryResult, useQuery } from 'react-query';
 
 import ProjectDetails from './(components)/Project/ProjectDetails';
 import ProjectDescription from './(components)/Project/ProjectDescription';
@@ -9,20 +9,19 @@ import ProjectApplication from './(components)/Project/ProjectApplication';
 import CommentsWrap from './(components)/Comments/CommentsWrap';
 import FixedLayer from './(components)/FixedLayer';
 
-import { fetchProject, subscribeToProjectUpdates } from '@/api/project';
+import { fetchProject } from '@/api/project';
 import { calculateDaysBeforeDeadline } from '@/utils/dateUtils';
 import { ProjectDataType } from '@/types/project';
 import Loader from '@/components/Loader';
-import { useEffect } from 'react';
 
 interface ProjectQueryResult {
   data: ProjectDataType | undefined;
   isLoading: boolean;
   isError: boolean;
+  refetch?: () => Promise<UseQueryResult<any, unknown>>;
 }
 
 export default function ProjectDetailPage() {
-  const queryClient = useQueryClient();
   const { id } = useParams();
   const projectId = Array.isArray(id) ? id[0] : id;
 
@@ -30,18 +29,10 @@ export default function ProjectDetailPage() {
     data: project,
     isLoading,
     isError,
+    refetch,
   } = useQuery(['project', projectId], () =>
     fetchProject(projectId),
   ) as ProjectQueryResult;
-
-  useEffect(() => {
-    const unsubscribe = subscribeToProjectUpdates(projectId, () => {
-      // Firestore에서 데이터가 변경될 때마다 쿼리를 무효화
-      queryClient.invalidateQueries(['project', projectId]);
-    });
-
-    return () => unsubscribe();
-  }, [projectId, queryClient]);
 
   if (isLoading) {
     return (
@@ -81,7 +72,11 @@ export default function ProjectDetailPage() {
         <hr />
 
         {/* 댓글 Wrapper */}
-        <CommentsWrap projectId={projectId} comments={project?.comments} />
+        <CommentsWrap
+          projectId={projectId}
+          comments={project?.comments}
+          refetch={refetch}
+        />
 
         {/* 지원하기 fixed div */}
         <FixedLayer participants={project?.participants} leftDay={leftDay} />
