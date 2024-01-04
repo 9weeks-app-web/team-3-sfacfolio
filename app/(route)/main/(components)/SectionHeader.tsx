@@ -4,7 +4,7 @@ import MoreButton from '@images/MoreButton.svg';
 
 interface SectionHeaderProps {
   title: string;
-  more?: any;
+  more?: string;
   className?: string;
 }
 
@@ -14,7 +14,7 @@ function SectionHeader({ title, more, className = '' }: SectionHeaderProps) {
       <p className='text-title font-bold '>{title}</p>
       {more && (
         <Link
-          href={more}
+          href={{ pathname: more }}
           className='flex items-center text-[18px] text-text-alternative'
         >
           더보기
