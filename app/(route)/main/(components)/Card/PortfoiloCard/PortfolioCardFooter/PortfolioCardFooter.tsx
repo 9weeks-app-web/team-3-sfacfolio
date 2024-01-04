@@ -1,8 +1,8 @@
 import React from 'react';
-import UserImages from '../PortfoiloCardBody/UserImages';
-import IconHeart from '@images/IconHeart.svg';
-import IconEye from '@images/IconEye.svg';
 import Image from 'next/image';
+import UserImages from '../PortfoiloCardBody/UserImages';
+import IconEye from '@images/IconEye.svg';
+import HeartIcon from '@/components/HeartIcon';
 
 export default function PortfolioCardFooter({
   참여인원,
@@ -26,7 +26,7 @@ export default function PortfolioCardFooter({
       <div className='ml-auto flex items-center gap-[14px] text-label2'>
         <div className='flex items-center'>
           <span className='mr-1'>
-            <Image src={IconHeart} alt='heart-icon' />
+            <HeartIcon size={20} color='#8E8E8E' />
           </span>
           <span>2,132</span>
         </div>
