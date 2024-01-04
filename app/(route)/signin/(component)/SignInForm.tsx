@@ -110,7 +110,7 @@ export default function SignInForm() {
   };
 
   return (
-    <div className='z-10 flex h-[calc(100vh-68px)] w-full items-center justify-center bg-white'>
+    <div className='z-10 flex h-full w-full items-center justify-center bg-white'>
       <form onSubmit={handleSubmit(onSubmit, onError)} className='w-[447px]'>
         <h4 className='mb-20 text-center text-title font-bold'>
           스나이퍼 팩토리에서 교육받고

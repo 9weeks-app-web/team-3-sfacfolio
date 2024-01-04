@@ -8,7 +8,7 @@ export default function StageThree() {
   const router = useRouter();
 
   return (
-    <div className='z-10 flex h-screen w-full items-center justify-center bg-white'>
+    <div className='z-10 flex h-full w-full items-center justify-center bg-white'>
       <div className='w-[447px]'>
         <div className='mb-[68px] w-full'>
           <Image

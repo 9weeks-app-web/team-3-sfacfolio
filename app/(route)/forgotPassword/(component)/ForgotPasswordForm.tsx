@@ -46,7 +46,7 @@ export default function ForgotPasswordForm() {
   };
 
   return (
-    <div className='z-10 flex h-[calc(100vh-68px)] w-full items-center justify-center bg-white'>
+    <div className='z-10 flex h-full w-full items-center justify-center bg-white'>
       <form onSubmit={handleSubmit(onSubmit, onError)} className='w-[447px]'>
         <div className='mb-[34px]'>
           <h4 className='text-title font-bold'>비밀번호 변경하기</h4>

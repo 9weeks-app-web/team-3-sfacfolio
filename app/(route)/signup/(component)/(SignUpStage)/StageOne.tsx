@@ -37,14 +37,14 @@ export default function StageOne({ setStage }: StageOneProps) {
   }, [allTerms]);
 
   return (
-    <div className='flex'>
-      <div className='relative h-screen w-[514px] shrink-0 bg-[#EBF2FF]'>
+    <div className='flex h-full'>
+      <div className='relative h-full w-[514px] shrink-0 bg-[#EBF2FF]'>
         <div className='absolute left-5 top-[109px] h-[700px] w-[700px]'>
           <Image src={SignUpStageOneImage} alt='login-image' fill />
         </div>
       </div>
 
-      <div className='z-10 flex h-screen w-full items-center justify-center bg-white'>
+      <div className='z-10 flex h-full w-full items-center justify-center bg-white'>
         <div className='w-[447px]'>
           <div className='mb-[34px]'>
             <h4 className='text-title font-bold'>환영합니다.</h4>

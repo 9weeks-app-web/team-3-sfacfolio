@@ -147,14 +147,14 @@ export default function StageTwo({ setStage }: StageTwoProps) {
   };
 
   return (
-    <div className='flex'>
-      <div className='relative h-screen w-[514px] shrink-0 bg-[#EBF2FF]'>
+    <div className='flex h-full'>
+      <div className='relative h-full w-[514px] shrink-0 bg-[#EBF2FF]'>
         <div className='absolute left-[-40px] top-[119px] h-[678px] w-[678px]'>
           <Image src={SignUpStageTwoImage} alt='login-image' fill />
         </div>
       </div>
 
-      <div className='z-10 flex h-screen w-full items-center justify-center bg-white'>
+      <div className='z-10 flex h-full w-full items-center justify-center bg-white'>
         <form onSubmit={handleSubmit(onSubmit, onError)} className='w-[447px]'>
           <div className='mb-[34px]'>
             <h4 className='text-title font-bold'>회원가입</h4>
@@ -212,7 +212,7 @@ export default function StageTwo({ setStage }: StageTwoProps) {
 
           <button
             type='submit'
-            className='mb-4 flex h-12 w-full items-center justify-center rounded-[8px] bg-primary-heavy py-4 text-white disabled:bg-slate-300'
+            className='flex h-12 w-full items-center justify-center rounded-[8px] bg-primary-heavy py-4 text-white disabled:bg-slate-300'
           >
             회원가입하기
           </button>
