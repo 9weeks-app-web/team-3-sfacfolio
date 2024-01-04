@@ -9,7 +9,7 @@ import Image from 'next/image';
 // h-[35.35px] rounded-t-lg border-x border-t border-line-normal bg-white
 function Header() {
   return (
-    <header className='w-full'>
+    <header className='fixed top-0 z-[100] w-full'>
       <div className='flex h-[49px] items-end border-b border-line-normal bg-background-primary'>
         <div className='h-[34.35px] px-[26.5px] py-2'>
           <Image src={LogoS} alt='logo' width={19} height={18.4} />

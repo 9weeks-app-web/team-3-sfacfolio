@@ -1,10 +1,13 @@
 'use client';
 import React from 'react';
-import { useSelectedLayoutSegment } from 'next/navigation';
+import { useRouter, useSelectedLayoutSegment } from 'next/navigation';
 import FolioHeaderInput from './FolioHeaderInput';
 import LoginButton from './LoginButton';
 import Image from 'next/image';
 import LogoFolio from '@images/LogoFolio.svg';
+import useAuthStatus from '@/hooks/useAuthStatus';
+import UploadButton from './UploadButton';
+import { auth } from '@/utils/firebase';
 
 const menuItems = [
   { name: '홈', segment: null }, // segment 'home'으로 수정 필요
@@ -17,6 +20,14 @@ const menuItems = [
 function FolioHeader() {
   // TODO: 경로 설정 방식 확인 후 segment에 따라 css 적용
   const segment = useSelectedLayoutSegment();
+  const router = useRouter();
+  const { loggedIn, setLoggedIn } = useAuthStatus();
+
+  const onLogout = () => {
+    auth.signOut();
+    setLoggedIn(false);
+    router.push('/signin');
+  };
 
   return (
     <div className='box-border flex h-14 w-full justify-between border-b-2 border-b-line-normal bg-background-secondary px-10'>
@@ -39,7 +50,13 @@ function FolioHeader() {
       </div>
       <div className='flex items-center gap-6'>
         <FolioHeaderInput />
-        <LoginButton />
+        {loggedIn ? <UploadButton /> : <LoginButton />}
+        {loggedIn && (
+          <div
+            onClick={onLogout}
+            className='h-10 w-10 cursor-pointer rounded-full bg-black'
+          ></div>
+        )}
       </div>
     </div>
   );
