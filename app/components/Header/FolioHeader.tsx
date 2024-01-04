@@ -21,7 +21,9 @@ function FolioHeader() {
   return (
     <div className='box-border flex h-14 w-full justify-between border-b-2 border-b-line-normal bg-background-secondary px-10'>
       <div className='flex'>
-        <Image src={LogoFolio} alt='logo' width={63.76} height={16.14} />
+        <Link href={{ pathname: '/main' }}>
+          <Image src={LogoFolio} alt='logo' width={63.76} height={16.14} />
+        </Link>
         <ul className='ml-6 flex text-label1 leading-4 text-text-alternative'>
           {menuItems.map(item => (
             <Link key={item.name} href={{ pathname: `/${item.segment}` }}>
