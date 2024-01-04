@@ -34,7 +34,6 @@ export interface RecruitmentPositionType {
 }
 
 export interface ReplyCommentType {
-  id: number;
   username: string;
   date: string;
   comment: string;
@@ -42,7 +41,6 @@ export interface ReplyCommentType {
 }
 
 export interface CommentType {
-  id: number;
   username: string;
   date: string;
   comment: string;
