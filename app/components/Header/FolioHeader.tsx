@@ -16,7 +16,7 @@ const menuItems = [
   { name: '홈', segment: 'main' },
   { name: '포트폴리오', segment: 'portfolio' },
   { name: '프로젝트', segment: 'project' },
-  { name: '채용', segment: 'recruit' },
+  { name: '채용', segment: 'career' },
   { name: '커뮤니티', segment: 'community' },
   { name: 'A/B 퀴즈', segment: 'quiz' },
 ];
@@ -51,7 +51,14 @@ function FolioHeader() {
                     : ''
                 }`}
               >
-                <span className='w-[72px] text-center'>{item.name}</span>
+                <span
+                  className={`w-[72px] text-center ${
+                    pathname.startsWith(`/${item.segment}`) &&
+                    'font-bold text-primary-heavy'
+                  }`}
+                >
+                  {item.name}
+                </span>
               </li>
             </Link>
           ))}
