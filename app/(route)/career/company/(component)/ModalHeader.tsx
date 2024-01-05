@@ -5,12 +5,22 @@ import IconClose from '@images/IconClose.svg';
 interface ModalHeaderProps {
   title: string;
   number?: number;
+  onClose: () => void;
+  onReset: () => void;
 }
 
-export default function ModalHeader({ title, number }: ModalHeaderProps) {
+export default function ModalHeader({
+  title,
+  number,
+  onClose,
+  onReset,
+}: ModalHeaderProps) {
   return (
     <div className='flex justify-between border-b border-line-normal px-6 py-4'>
-      <div className='flex cursor-pointer items-center justify-center gap-1'>
+      <div
+        className='flex cursor-pointer items-center justify-center gap-1'
+        onClick={onReset}
+      >
         <Image src={IconReset} alt='reset button' />
         <span className='text-caption2 font-medium text-text-alternative'>
           초기화
@@ -25,7 +35,7 @@ export default function ModalHeader({ title, number }: ModalHeaderProps) {
         )}
       </div>
       <div className='cursor-pointer'>
-        <Image src={IconClose} alt='close button' />
+        <Image src={IconClose} alt='close button' onClick={onClose} />
       </div>
     </div>
   );

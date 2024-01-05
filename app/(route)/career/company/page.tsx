@@ -9,8 +9,8 @@ import ModalYears from './(component)/ModalYears';
 
 export default function CompanyPage() {
   const [currentModal, setCurrentModal] = useState<
-    null | 'years' | 'locations' | 'job' | 'tech'
-  >('years');
+    null | '경력' | '지역' | '직무' | '테크'
+  >('경력');
   const [years, setYears] = useState<{ start: number; end: number }>({
     start: 1,
     end: 9,
@@ -19,26 +19,44 @@ export default function CompanyPage() {
   const [job, setJob] = useState<string[] | 'all'>('all');
   const [tech, setTech] = useState<string[] | 'all'>(['health']);
 
+  const onClose = () => setCurrentModal(null);
+
   return (
     <div className='flex gap-3 p-3'>
       <div className='relative h-[46px]'>
-        <button className='border p-2'>지역</button>
-        {currentModal === 'locations' && (
-          <ModalLocations data={locations} setData={setLocations} />
+        <button className='border p-2' onClick={() => setCurrentModal('지역')}>
+          지역
+        </button>
+        {currentModal === '지역' && (
+          <ModalLocations
+            data={locations}
+            setData={setLocations}
+            onClose={onClose}
+          />
         )}
       </div>
       <div className='relative h-[46px]'>
-        <button className='border p-2'>직무</button>
-        {currentModal === 'job' && <ModalJob data={job} setData={setJob} />}
+        <button className='border p-2' onClick={() => setCurrentModal('직무')}>
+          직무
+        </button>
+        {currentModal === '직무' && (
+          <ModalJob data={job} setData={setJob} onClose={onClose} />
+        )}
       </div>
       <div className='relative h-[46px]'>
-        <button className='border p-2'>테크</button>
-        {currentModal === 'tech' && <ModalTech data={tech} setData={setTech} />}
+        <button className='border p-2' onClick={() => setCurrentModal('테크')}>
+          테크
+        </button>
+        {currentModal === '테크' && (
+          <ModalTech data={tech} setData={setTech} onClose={onClose} />
+        )}
       </div>
       <div className='relative h-[46px]'>
-        <button className='border p-2'>경력</button>
-        {currentModal === 'years' && (
-          <ModalYears data={years} setData={setYears} />
+        <button className='border p-2' onClick={() => setCurrentModal('경력')}>
+          경력
+        </button>
+        {currentModal === '경력' && (
+          <ModalYears data={years} setData={setYears} onClose={onClose} />
         )}
       </div>
     </div>
