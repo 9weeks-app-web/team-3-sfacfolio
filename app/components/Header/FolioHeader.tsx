@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter, useSelectedLayoutSegment } from 'next/navigation';
 import FolioHeaderInput from './FolioHeaderInput';
 import LoginButton from './LoginButton';
 import Image from 'next/image';
 import LogoFolio from '@images/LogoFolio.svg';
 import Link from 'next/link';
+import useAuthStatus from '@/hooks/useAuthStatus';
+import UploadButton from './UploadButton';
+import { auth } from '@/utils/firebase';
 
 const menuItems = [
   { name: '홈', segment: 'main' },
@@ -17,7 +20,15 @@ const menuItems = [
 
 function FolioHeader() {
   const pathname = usePathname();
+  const router = useRouter();
+  const { loggedIn, setLoggedIn } = useAuthStatus();
 
+  const onLogout = () => {
+    auth.signOut();
+    setLoggedIn(false);
+    router.push('/signin');
+  };
+  
   return (
     <div className='box-border flex h-14 w-full justify-between border-b-2 border-b-line-normal bg-background-secondary px-10'>
       <div className='flex'>
@@ -43,7 +54,13 @@ function FolioHeader() {
       </div>
       <div className='flex items-center gap-6'>
         <FolioHeaderInput />
-        <LoginButton />
+        {loggedIn ? <UploadButton /> : <LoginButton />}
+        {loggedIn && (
+          <div
+            onClick={onLogout}
+            className='h-10 w-10 cursor-pointer rounded-full bg-black'
+          ></div>
+        )}
       </div>
     </div>
   );

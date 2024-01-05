@@ -28,7 +28,9 @@ export default function RootLayout({
     <html lang='ko'>
       <body className={`${pretendard.variable} font-pretendard`}>
         <Header />
-        <Provider>{children}</Provider>
+        <Provider>
+          <main className='h-full pb-[68px] pt-[105px]'>{children}</main>
+        </Provider>
         <Footer />
       </body>
     </html>
