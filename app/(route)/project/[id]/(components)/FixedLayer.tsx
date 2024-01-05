@@ -3,7 +3,7 @@ import { ParticipantsType } from '@/types/project';
 import Image from 'next/image';
 
 import IconShare from '@images/IconShare.svg';
-import HeartIcon from '@/components/HeartIcon';
+import HeartIcon from '@/components/Icons/HeartIcon';
 
 export interface ProjectApplicationProps {
   participants: ParticipantsType[];
