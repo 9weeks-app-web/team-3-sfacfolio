@@ -1,9 +1,9 @@
-interface HeartIconProps {
-  size: number;
-  color: string;
+export interface IconProps {
+  size?: number;
+  color?: string;
 }
 
-export default function HeartIcon({ size, color }: HeartIconProps) {
+export default function HeartIcon({ size, color }: IconProps) {
   return (
     <svg
       width={size}
