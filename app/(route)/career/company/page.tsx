@@ -7,15 +7,25 @@ import ModalJob from './(component)/ModalJob';
 import ModalTech from './(component)/ModalTech';
 import ModalYears from './(component)/ModalYears';
 
+interface LocationType {
+  location: string;
+  subLocation: string;
+}
+
+export interface YearsType {
+  start: number;
+  end: number;
+}
+
 export default function CompanyPage() {
   const [currentModal, setCurrentModal] = useState<
     null | '경력' | '지역' | '직무' | '테크'
-  >('직무');
-  const [years, setYears] = useState<{ start: number; end: number }>({
+  >('지역');
+  const [years, setYears] = useState<YearsType>({
     start: 1,
     end: 9,
   });
-  const [locations, setLocations] = useState<string[]>([]);
+  const [locations, setLocations] = useState<LocationType[]>([]);
   const [job, setJob] = useState<string[]>([]);
   const [tech, setTech] = useState<string[]>([]);
 

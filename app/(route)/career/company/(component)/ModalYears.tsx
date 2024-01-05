@@ -4,10 +4,11 @@ import '@/style/rc-slider.css';
 
 import ModalLayout from './ModalLayout';
 import ModalHeader from './ModalHeader';
+import { YearsType } from '../page';
 
 interface ModalProps {
-  data: { start: number; end: number };
-  setData: Dispatch<SetStateAction<{ start: number; end: number }>>;
+  data: YearsType;
+  setData: Dispatch<SetStateAction<YearsType>>;
   onClose: () => void;
 }
 
