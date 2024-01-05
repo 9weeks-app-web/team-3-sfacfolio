@@ -16,14 +16,16 @@ export default function LocationItem({
       <p className='mr-1 h-full text-label2 font-bold text-primary-heavy'>
         {location}
       </p>
-      <p className='mr-1.5 h-full text-label2 font-bold text-primary-heavy'>
+      <p className='h-full text-label2 font-bold text-primary-heavy'>
         {subLocation}
       </p>
-      <Image
-        src={IconCategoryDelete}
-        alt='delete button'
-        className='cursor-pointer'
-      />
+      {subLocation !== '전국' && (
+        <Image
+          src={IconCategoryDelete}
+          alt='delete button'
+          className='ml-1.5 cursor-pointer'
+        />
+      )}
     </div>
   );
 }
