@@ -34,7 +34,7 @@ export default function ModalHeader({
           </span>
         )}
       </div>
-      <div className='cursor-pointer'>
+      <div className='flex cursor-pointer items-center'>
         <Image src={IconClose} alt='close button' onClick={onClose} />
       </div>
     </div>
