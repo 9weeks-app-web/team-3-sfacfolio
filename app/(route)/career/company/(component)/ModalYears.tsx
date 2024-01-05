@@ -16,7 +16,7 @@ export default function ModalYears({ data, setData, onClose }: ModalProps) {
   const [tempData, setTempData] = useState(data);
 
   const onReset = () => {
-    setData({ start: 1, end: 9 });
+    setTempData({ start: 1, end: 9 });
   };
 
   const onApply = () => {
