@@ -2,10 +2,15 @@ import React from 'react';
 
 interface ModalWrapProps {
   type?: string;
+  onApply: () => void;
   children: React.ReactNode;
 }
 
-export default function ModalLayout({ type, children }: ModalWrapProps) {
+export default function ModalLayout({
+  type,
+  onApply,
+  children,
+}: ModalWrapProps) {
   const [header, ...rest] = React.Children.toArray(children);
 
   return type === 'fixed' ? (
@@ -34,7 +39,10 @@ export default function ModalLayout({ type, children }: ModalWrapProps) {
       <div className='p-6'>
         {rest}
         <div className='flex w-full justify-end border-t border-line-normal pt-6'>
-          <button className='h-12 w-[312px] rounded-lg bg-primary-heavy font-bold text-white'>
+          <button
+            className='h-12 w-[312px] rounded-lg bg-primary-heavy font-bold text-white'
+            onClick={onApply}
+          >
             적용하기
           </button>
         </div>
