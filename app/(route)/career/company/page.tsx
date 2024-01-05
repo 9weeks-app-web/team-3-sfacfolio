@@ -10,14 +10,14 @@ import ModalYears from './(component)/ModalYears';
 export default function CompanyPage() {
   const [currentModal, setCurrentModal] = useState<
     null | '경력' | '지역' | '직무' | '테크'
-  >('경력');
+  >('직무');
   const [years, setYears] = useState<{ start: number; end: number }>({
     start: 1,
     end: 9,
   });
-  const [locations, setLocations] = useState<string[] | 'all'>('all');
-  const [job, setJob] = useState<string[] | 'all'>('all');
-  const [tech, setTech] = useState<string[] | 'all'>(['health']);
+  const [locations, setLocations] = useState<string[]>([]);
+  const [job, setJob] = useState<string[]>([]);
+  const [tech, setTech] = useState<string[]>([]);
 
   const onClose = () => setCurrentModal(null);
 
