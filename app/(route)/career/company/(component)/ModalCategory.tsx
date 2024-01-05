@@ -1,7 +1,7 @@
 import { IconProps } from '@/components/Icons/HeartIcon';
 
 interface ModalCategoryProps {
-  icon: React.ElementType<IconProps>;
+  icon?: React.ElementType<IconProps>;
   value: string;
   active?: boolean;
   onClick: (categoryValue: string) => void;
