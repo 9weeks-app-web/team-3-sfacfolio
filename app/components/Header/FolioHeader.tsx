@@ -1,14 +1,16 @@
 'use client';
 import React from 'react';
-import { usePathname, useRouter, useSelectedLayoutSegment } from 'next/navigation';
-import FolioHeaderInput from './FolioHeaderInput';
-import LoginButton from './LoginButton';
 import Image from 'next/image';
 import LogoFolio from '@images/LogoFolio.svg';
 import Link from 'next/link';
 import useAuthStatus from '@/hooks/useAuthStatus';
-import UploadButton from './UploadButton';
 import { auth } from '@/utils/firebase';
+import IconAdd from '@images/IconAdd.svg';
+import HeaderButton from './HeaderButton';
+import Bell from '@images/Bell.svg';
+import Search from '@images/Search.svg';
+import { usePathname, useRouter } from 'next/navigation';
+import FolioHeaderInput from './FolioHeaderInput'; // TODO: 컴포넌트 안쓰게 되면 삭제
 
 const menuItems = [
   { name: '홈', segment: 'main' },
@@ -16,6 +18,7 @@ const menuItems = [
   { name: '프로젝트', segment: 'project' },
   { name: '채용', segment: 'recruit' },
   { name: '커뮤니티', segment: 'community' },
+  { name: 'A/B 퀴즈', segment: 'quiz' },
 ];
 
 function FolioHeader() {
@@ -28,21 +31,23 @@ function FolioHeader() {
     setLoggedIn(false);
     router.push('/signin');
   };
-  
+
   return (
-    <div className='box-border flex h-14 w-full justify-between border-b-2 border-b-line-normal bg-background-secondary px-10'>
-      <div className='flex'>
-        <Link href={{ pathname: '/main' }}>
-          <Image src={LogoFolio} alt='logo' width={63.76} height={16.14} />
-        </Link>
+    <div className='box-border flex h-[62px] w-full justify-between border-b-2 border-b-line-normal bg-background-secondary px-20'>
+      <div className='flex items-center'>
+        <div className='px-4'>
+          <Link href={{ pathname: '/main' }}>
+            <Image src={LogoFolio} alt='logo' width={87} height={24.3} />
+          </Link>
+        </div>
         <ul className='ml-6 flex text-label1 leading-4 text-text-alternative'>
           {menuItems.map(item => (
             <Link key={item.name} href={{ pathname: `/${item.segment}` }}>
               <li
                 key={item.name}
-                className={`relative flex h-14 w-[88px] cursor-pointer items-center justify-center px-2 py-3 tracking-[-0.16px] ${
+                className={`relative flex h-[62px] w-[88px] cursor-pointer items-center justify-center px-2 py-3 tracking-[-0.16px] ${
                   pathname.startsWith(`/${item.segment}`)
-                    ? ' text-text-normal before:absolute before:bottom-0 before:block before:h-[2px] before:w-full before:bg-primary-heavy'
+                    ? ' text-text-alternative before:absolute before:bottom-[-1px] before:block before:h-[2px] before:w-full before:bg-primary-heavy'
                     : ''
                 }`}
               >
@@ -52,14 +57,28 @@ function FolioHeader() {
           ))}
         </ul>
       </div>
-      <div className='flex items-center gap-6'>
-        <FolioHeaderInput />
-        {loggedIn ? <UploadButton /> : <LoginButton />}
+      <div className='flex h-[62px] items-center gap-4'>
+        <button>
+          <Image src={Search} alt='search' width={24} height={24} />
+        </button>
+        <button>
+          <Image src={Bell} alt='bell' width={24} height={24} />
+        </button>
         {loggedIn && (
           <div
             onClick={onLogout}
             className='h-10 w-10 cursor-pointer rounded-full bg-black'
           ></div>
+        )}
+        {loggedIn ? (
+          <HeaderButton href={'/'} className='py-[9px] text-caption1'>
+            <Image src={IconAdd} width={14} height={14} alt='add-icon' />
+            <span>작업물 올리기</span>
+          </HeaderButton>
+        ) : (
+          <HeaderButton href={'/signin'} className='font-bold'>
+            로그인
+          </HeaderButton>
         )}
       </div>
     </div>
