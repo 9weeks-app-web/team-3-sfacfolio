@@ -23,7 +23,10 @@ export default function ModalLayout({
         <div className='p-6'>
           {rest}
           <div className='w-full pt-6'>
-            <button className='h-12 w-full rounded-lg bg-primary-heavy font-bold text-white'>
+            <button
+              className='h-12 w-full rounded-lg bg-primary-heavy font-bold text-white'
+              onClick={onApply}
+            >
               적용하기
             </button>
           </div>

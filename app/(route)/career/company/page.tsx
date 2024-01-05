@@ -7,7 +7,7 @@ import ModalJob from './(component)/ModalJob';
 import ModalTech from './(component)/ModalTech';
 import ModalYears from './(component)/ModalYears';
 
-interface LocationType {
+export interface LocationType {
   location: string;
   subLocation: string;
 }
