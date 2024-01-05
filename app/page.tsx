@@ -1,9 +1,5 @@
-import MainPage from './(route)/main/page';
+import { redirect } from 'next/navigation';
 
-export default function Home() {
-  return (
-    <main>
-      <MainPage />
-    </main>
-  );
+export default async function Home() {
+  redirect('/main');
 }
