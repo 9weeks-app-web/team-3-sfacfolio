@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import UserImages from '../PortfoiloCardBody/UserImages';
 import IconEye from '@images/IconEye.svg';
-import HeartIcon from '@/components/HeartIcon';
+import HeartIcon from '@/components/Icons/HeartIcon';
 
 export default function PortfolioCardFooter({
   참여인원,

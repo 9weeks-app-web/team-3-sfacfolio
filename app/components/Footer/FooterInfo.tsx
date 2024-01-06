@@ -6,7 +6,7 @@ import IconPolygon from '@images/IconPolygon.png';
 import Image from 'next/image';
 
 export default function FooterInfo() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   return (
     <div>

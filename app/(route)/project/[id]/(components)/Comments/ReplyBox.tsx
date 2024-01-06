@@ -1,7 +1,7 @@
 import { ReplyCommentType } from '@/types/project';
 
 import ProfileImage from '@/components/ProfileImage';
-import HeartIcon from '@/components/HeartIcon';
+import HeartIcon from '@/components/Icons/HeartIcon';
 
 interface CommentsBoxProps {
   comment: ReplyCommentType;
