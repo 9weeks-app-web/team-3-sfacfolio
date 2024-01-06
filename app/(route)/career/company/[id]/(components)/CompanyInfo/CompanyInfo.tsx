@@ -4,7 +4,7 @@ import CompanyDetailKeyword from './Section/CompanyDetailKeyword';
 import CompanyDetailText from './Section/CompanyDetailText';
 import CompanyDetailLocation from './Section/CompanyDetailLocation';
 import { companyDetailSections } from '@/constants';
-import { CompanyHireType } from '../../page';
+import { CompanyHireType } from '@/types/hire';
 
 function CompanyInfo({ data }: { data: CompanyHireType }) {
   return (

@@ -3,7 +3,7 @@ import CompanyDetailButton from './CompanyDetailButton';
 import CompanyDetailRange from './CompanyDetailRange';
 import CompanyDetailLink from './CompanyDetailLink';
 import BannerImage from '@images/BannerImage.png';
-import { CompanyHireType } from '../../page';
+import { CompanyHireType } from '@/types/hire';
 
 function CompanySticky({ data }: { data: CompanyHireType }) {
   return (

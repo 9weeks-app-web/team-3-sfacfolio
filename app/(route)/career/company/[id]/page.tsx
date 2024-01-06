@@ -1,66 +1,46 @@
+'use client';
+import { useParams } from 'next/navigation';
 import CompanyInfo from './(components)/CompanyInfo/CompanyInfo';
 import CompanySticky from './(components)/CompanySticky/CompanySticky';
+import { useQuery } from 'react-query';
+import { fetchHire } from '@/api/hire';
+import Loader from '@/components/Loader';
+import { CompanyHireType } from '@/types/hire';
 
-export interface CompanyHireType {
-  id: string;
-  company: string;
-  companyAvatar?: string;
-  notice: string;
-  isHire: boolean;
-  images: string[];
-  keywords: string[];
-  requirement: string;
-  condition: string;
-  applyMethod: string;
-  applyPage?: string;
-  welfare: string;
-  location: { country: string; region: string; address: string };
+interface HireQueryResult {
+  data: CompanyHireType;
+  isLoading: boolean;
+  isError: boolean;
 }
 
-const dummyCompanyHire: CompanyHireType = {
-  id: '1',
-  company: '하이브',
-  notice: '[HYBE OSB] 그래픽 디자인(BX Desugner)',
-  isHire: true,
-  images: [
-    '/assets/images/BannerImage.png',
-    '/assets/images/BannerImage.png',
-    '/assets/images/BannerImage.png',
-    '/assets/images/BannerImage.png',
-    '/assets/images/BannerImage.png',
-    '/assets/images/BannerImage.png',
-  ],
-  keywords: [
-    '연봉상위1%',
-    '누적투자100억이상',
-    '인원급성장',
-    '301~1,000명',
-    '설립10년이상',
-    '육아휴직',
-    '출산휴가',
-    '음료',
-    'IT,컨텐츠',
-  ],
-  requirement: '기업 자격 요건 내용',
-  condition: '기업 근무 조건 내용',
-  applyMethod: '진행절차 및 방법 내용',
-  applyPage: '/',
-  welfare: '기업 복지 관련 내용',
-  location: {
-    country: '한국',
-    region: '서울',
-    address: '서울특별시 용산구 한강대로 42',
-  },
-};
-
 function CareerCompanyDetailPage() {
+  const { id } = useParams();
+
+  const { data, isLoading, isError } = useQuery(['hire', id], () =>
+    fetchHire(Array.isArray(id) ? id[0] : id),
+  ) as HireQueryResult;
+
   return (
-    <div className='bg-background-primary '>
-      <div className='container pt-12 pb-[124px] flex justify-between'>
-        <CompanyInfo data={dummyCompanyHire} />
-        <CompanySticky data={dummyCompanyHire} />
-      </div>
-    </div>
+    <>
+      {isLoading ? (
+        <div className='container flex h-screen items-center justify-center p-5 text-center'>
+          <Loader />
+        </div>
+      ) : isError ? (
+        <div className='container flex h-screen items-center justify-center p-5 text-center'>
+          데이터 로드 중 오류가 생겼습니다.
+          <br />
+          다시 시도해 주세요.
+        </div>
+      ) : (
+        <div className='bg-background-primary '>
+          <div className='container pt-12 pb-[124px] flex justify-between'>
+            <CompanyInfo data={data} />
+            <CompanySticky data={data} />
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 
