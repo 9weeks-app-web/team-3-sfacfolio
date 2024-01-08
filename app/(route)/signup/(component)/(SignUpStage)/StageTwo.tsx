@@ -154,7 +154,7 @@ export default function StageTwo({ setStage }: StageTwoProps) {
         </div>
       </div>
 
-      <div className='z-10 flex h-full w-full items-center justify-center bg-white'>
+      <div className='z-10 flex h-[calc(100vh-170px)] w-full items-center justify-center bg-white'>
         <form onSubmit={handleSubmit(onSubmit, onError)} className='w-[447px]'>
           <div className='mb-[34px]'>
             <h4 className='text-title font-bold'>회원가입</h4>
