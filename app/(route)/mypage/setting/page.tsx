@@ -5,33 +5,12 @@ import SettingWrap from './(components)/SettingWrap';
 import ToggleSwitch from './(components)/ToggleSwitch';
 import SettingToggle from './(components)/SettingToggle';
 
-interface ToggleStates {
-  notificationsEnabled: boolean;
-  privatePortfolio: boolean;
-
-  followNotifications: boolean;
-  portfolioViewsNotifications: boolean;
-  communityPostNotifications: boolean;
-  projectViewsNotifications: boolean;
-
-  jobOfferNotifications: boolean;
-  emailFeedbackNotifications: boolean;
-  projectOfferNotifications: boolean;
-
-  inquiryResponseNotifications: boolean;
-  announcementsNotifications: boolean;
-
-  proposalReceivingSettings: boolean;
-
-  emailProjectOffers: boolean;
-  messageProjectOffers: boolean;
-
-  emailJobOffers: boolean;
-  messageJobOffers: boolean;
+interface toggleType {
+  [key: string]: boolean;
 }
 
 export default function SettingPage() {
-  const [toggleStates, setToggleStates] = useState<ToggleStates>({
+  const [toggleStates, setToggleStates] = useState<toggleType>({
     notificationsEnabled: false,
     privatePortfolio: false,
     followNotifications: false,
