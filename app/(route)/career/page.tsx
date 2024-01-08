@@ -16,7 +16,7 @@ import CompanyCardCarousel from './(component)/CompanyCard/CompanyCardCarousel';
 export default function page() {
   return (
     <>
-      <div className='flex justify-center pt-[9px]'>
+      <div className='flex justify-center'>
         <Image
           src={careerBanner}
           alt='banner'
