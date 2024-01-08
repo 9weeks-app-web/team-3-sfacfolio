@@ -16,7 +16,7 @@ function TechPage() {
           objectFit='cover'
         />
       </div>
-      <div className='mt-[60px] w-full max-w-screen-desktop px-20'>
+      <div className='container mt-[60px] px-20'>
         <h2 className='py-2 text-title font-bold'>
           반려동물 1000만시대, 펫테크 기업
         </h2>
