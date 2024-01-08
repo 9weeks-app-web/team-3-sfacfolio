@@ -37,7 +37,7 @@ export default function StageOne({ setStage }: StageOneProps) {
   }, [allTerms]);
 
   return (
-    <div className='flex h-full'>
+    <div className='flex h-[calc(100vh-170px)]'>
       <div className='relative h-full w-[514px] shrink-0 bg-[#EBF2FF]'>
         <div className='absolute left-5 top-[109px] h-[700px] w-[700px]'>
           <Image src={SignUpStageOneImage} alt='login-image' fill />

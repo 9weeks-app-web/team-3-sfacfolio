@@ -5,7 +5,7 @@ import SignInForm from './(component)/SignInForm';
 
 function SigninPage() {
   return (
-    <div className='flex h-full'>
+    <div className='flex h-[calc(100vh-170px)]'>
       <div className='relative h-full w-[514px] shrink-0 bg-[#EBF2FF]'>
         <div className='absolute left-5 top-[85px] h-[700px] w-[700px]'>
           <Image src={LoginImage} alt='login-image' fill />

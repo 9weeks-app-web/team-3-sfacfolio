@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import LogoFolio from '@images/LogoFolio.svg';
 import Link from 'next/link';
@@ -32,6 +32,8 @@ function FolioHeader() {
     router.push('/signin');
   };
 
+  // useEffect(() => {}, [loggedIn]);
+
   return (
     <div className='box-border flex h-[62px] w-full justify-between border-b-2 border-b-line-normal bg-background-secondary px-20'>
       <div className='flex items-center'>
@@ -47,7 +49,7 @@ function FolioHeader() {
                 key={item.name}
                 className={`relative flex h-[62px] w-[88px] cursor-pointer items-center justify-center px-2 py-3 tracking-[-0.16px] ${
                   pathname.startsWith(`/${item.segment}`)
-                    ? ' text-text-alternative before:absolute before:bottom-[-1px] before:block before:h-[2px] before:w-full before:bg-primary-heavy'
+                    ? ' font-bold text-primary-heavy before:absolute before:bottom-[-1px] before:block before:h-[2px] before:w-full before:bg-primary-heavy'
                     : ''
                 }`}
               >
