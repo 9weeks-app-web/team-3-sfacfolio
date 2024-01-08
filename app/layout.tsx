@@ -29,7 +29,7 @@ export default function RootLayout({
       <body className={`${pretendard.variable} font-pretendard`}>
         <Header />
         <Provider>
-          <main className='h-full pb-[68px] pt-[105px]'>{children}</main>
+          <main className='h-auto pb-[68px] pt-[102px]'>{children}</main>
         </Provider>
         <Footer />
       </body>

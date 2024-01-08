@@ -9,12 +9,14 @@ import FindProjectTag from './FindProjectCard/FindProjectTag';
 interface CategoryButtonWrapProps {
   type: 'button' | 'tag';
   tags?: string[];
+  className?: string;
   gradient?: string;
   categories?: { title: string }[];
 }
 
 function CategoryButtonWrap({
   type,
+  className,
   tags,
   gradient = ' to-white',
   categories = [],
@@ -116,6 +118,7 @@ function CategoryButtonWrap({
                 <CategoryButton
                   key={category.title}
                   title={category.title}
+                  className={className}
                   active={category.title === activeCategory}
                   onClick={() => handleCategoryClick(category.title)}
                 />

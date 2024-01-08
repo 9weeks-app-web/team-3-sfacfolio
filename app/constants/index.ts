@@ -60,6 +60,17 @@ export const communityCategories = [
   { title: '교육과정' },
 ];
 
+export const careerCategories = [
+  { title: '키워드 전체' },
+  { title: '#유연한' },
+  { title: '#컨셉추얼' },
+  { title: '#분석적' },
+  { title: '#창의적' },
+  { title: '#혁신적' },
+  { title: '#사용자중심' },
+  { title: '#융합적' },
+];
+
 export const companyDetailSections = [
   { label: '기업의 키워드', id: 'keyword' },
   { label: '자격 요건', id: 'requirement' },
