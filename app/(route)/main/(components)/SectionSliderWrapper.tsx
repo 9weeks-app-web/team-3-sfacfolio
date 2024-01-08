@@ -1,5 +1,5 @@
 interface SectionWrapperProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
   slider?: React.ReactNode;
   banner?: React.ReactNode;

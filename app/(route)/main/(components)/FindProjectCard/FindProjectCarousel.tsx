@@ -18,7 +18,7 @@ const settings = {
 function FindProjectCarousel({ mode = 'view' }: FindProjectCardProps) {
   return (
     <div
-      className={`${styles.sliderWrapper} w-full px-[calc((100%-1280px)/2)] py-4`}
+      className={`${styles.sliderWrapper} w-full px-[calc((100%-1280px)/2)]`}
     >
       <Slider {...settings}>
         {[1, 2, 3, 4, 5].map(n => (

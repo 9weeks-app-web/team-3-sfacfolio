@@ -59,3 +59,14 @@ export const communityCategories = [
   { title: '자유 게시판' },
   { title: '교육과정' },
 ];
+
+export const careerCategories = [
+  { title: '키워드 전체' },
+  { title: '#유연한' },
+  { title: '#컨셉추얼' },
+  { title: '#분석적' },
+  { title: '#창의적' },
+  { title: '#혁신적' },
+  { title: '#사용자중심' },
+  { title: '#융합적' },
+];

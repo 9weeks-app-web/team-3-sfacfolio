@@ -6,7 +6,7 @@ const nextConfig = {
 
   // 임시로 설정
   images: {
-    domains: ['s3-alpha-sig.figma.com'],
+    domains: ['s3-alpha-sig.figma.com', 'plus.unsplash.com'],
     remotePatterns: [
       {
         protocol: 'https',

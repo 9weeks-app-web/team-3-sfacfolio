@@ -20,6 +20,7 @@ import {
   projectCategories,
   communityCategories,
 } from '@/constants';
+import { JobOfferDummy } from '@/dummy';
 
 function MainPage() {
   return (
@@ -102,10 +103,9 @@ function MainPage() {
           categories={portfolioCategories}
         />
         <CardContainer>
-          <JobOfferCard dDay={20} />
-          <JobOfferCard dDay={20} />
-          <JobOfferCard dDay={20} />
-          <JobOfferCard dDay={20} />
+          {JobOfferDummy.map(jobOffer => (
+            <JobOfferCard key={jobOffer.id} {...jobOffer} />
+          ))}
         </CardContainer>
         <MoreButton label='채용 정보 더보기' />
       </SectionWrapper>
