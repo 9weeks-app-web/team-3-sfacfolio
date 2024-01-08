@@ -37,7 +37,7 @@ export default function Card({
 
         <div className='absolute inset-0 flex h-full flex-col justify-end p-4'>
           <div
-            className={`absolute left-4 top-4 inline-block rounded-[4px] p-3 text-label2 font-bold leading-[14px] text-white ${badgeColor}`}
+            className={`absolute left-4 top-4 inline-block rounded-[4px] p-3 text-label2 font-bold leading-[14px] text-white shadow-lg ${badgeColor}`}
           >
             {badge}
           </div>
