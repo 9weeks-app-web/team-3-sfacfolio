@@ -47,7 +47,7 @@ function FolioHeader() {
                 key={item.name}
                 className={`relative flex h-[62px] w-[88px] cursor-pointer items-center justify-center px-2 py-3 tracking-[-0.16px] ${
                   pathname.startsWith(`/${item.segment}`)
-                    ? ' text-text-alternative before:absolute before:bottom-[-1px] before:block before:h-[2px] before:w-full before:bg-primary-heavy'
+                    ? ' font-bold text-primary-heavy before:absolute before:bottom-[-1px] before:block before:h-[2px] before:w-full before:bg-primary-heavy'
                     : ''
                 }`}
               >

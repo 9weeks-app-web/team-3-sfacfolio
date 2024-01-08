@@ -5,7 +5,7 @@ import FolioHeader from './FolioHeader';
 function Header() {
   return (
     <header className='fixed top-0 z-[100] w-full'>
-      <div className='flex h-10 items-end border-b border-line-normal bg-background-primary px-20 text-text-alternative'>
+      <div className='flex h-10 items-end border-b border-line-normal bg-background-primary px-20 text-caption1 text-text-alternative'>
         <div className='flex h-[35px] w-[72px] items-center justify-center py-2'>
           스팩
         </div>
