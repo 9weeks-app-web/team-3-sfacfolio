@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import LogoFolio from '@images/LogoFolio.svg';
 import Link from 'next/link';
@@ -31,6 +31,8 @@ function FolioHeader() {
     setLoggedIn(false);
     router.push('/signin');
   };
+
+  // useEffect(() => {}, [loggedIn]);
 
   return (
     <div className='box-border flex h-[62px] w-full justify-between border-b-2 border-b-line-normal bg-background-secondary px-20'>

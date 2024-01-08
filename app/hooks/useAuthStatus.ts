@@ -9,6 +9,8 @@ export default function useAuthStatus() {
     onAuthStateChanged(auth, user => {
       if (user) {
         setLoggedIn(true);
+      } else {
+        setLoggedIn(false);
       }
     });
   }, []);

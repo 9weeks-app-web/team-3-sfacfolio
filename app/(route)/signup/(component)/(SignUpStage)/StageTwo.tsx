@@ -30,7 +30,7 @@ interface StageTwoProps {
 
 export default function StageTwo({ setStage }: StageTwoProps) {
   const [checkedDuplicate, setCheckedDuplicate] = useState(false);
-  const { register, handleSubmit, reset, getValues } = useForm<FormData>({
+  const { register, handleSubmit, setValue, getValues } = useForm<FormData>({
     defaultValues: {
       email: '',
       name: '',
@@ -93,6 +93,8 @@ export default function StageTwo({ setStage }: StageTwoProps) {
         photoPath: '',
         createdAt: Timestamp.fromDate(new Date()),
       });
+
+      await auth.signOut();
       setStage(prev => prev + 1);
     } catch (error) {
       if (error instanceof Error) {
@@ -116,8 +118,8 @@ export default function StageTwo({ setStage }: StageTwoProps) {
     }
   };
 
-  const checkDuplicate: SubmitHandler<FormData> = async data => {
-    const { name } = data;
+  const checkDuplicate = async () => {
+    const { name } = getValues();
     try {
       const q = query(collection(db, 'users'), where('name', '==', name));
       const data = await getDocs(q);
@@ -129,20 +131,13 @@ export default function StageTwo({ setStage }: StageTwoProps) {
         setCheckedDuplicate(true);
       } else {
         alert('이미 존재하는 닉네임 입니다.');
-        reset();
+        setValue('name', '');
+        setCheckedDuplicate(false);
       }
     } catch (error) {
       if (error instanceof Error) {
         alert(error.message);
       }
-    }
-  };
-
-  const onCheckDuplicateError = (error: FieldErrors<FormData>) => {
-    if (error.name) {
-      alert(error.name.message);
-    } else {
-      alert('사용 가능한 닉네임 입니다.');
     }
   };
 
@@ -184,7 +179,7 @@ export default function StageTwo({ setStage }: StageTwoProps) {
               />
               <button
                 type='button'
-                onClick={handleSubmit(checkDuplicate, onCheckDuplicateError)}
+                onClick={checkDuplicate}
                 className='w-[120px] shrink-0 rounded-[8px] bg-text-normal py-3 font-bold text-white'
               >
                 중복 확인
