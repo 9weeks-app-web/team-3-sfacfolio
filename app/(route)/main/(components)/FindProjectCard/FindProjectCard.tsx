@@ -5,7 +5,7 @@ import Eye from '@images/Eye.svg';
 import ArrowDown from '@images/ArrowDown.svg';
 
 import CategoryButtonWrap from '../CategoryButtonWrap';
-import HeartIcon from '@/components/HeartIcon';
+import HeartIcon from '@/components/Icons/HeartIcon';
 
 const tags = [
   '개발자',

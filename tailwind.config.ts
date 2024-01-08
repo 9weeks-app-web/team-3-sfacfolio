@@ -69,6 +69,7 @@ const config: Config = {
         body: '16px',
         caption1: '14px',
         caption2: '13px',
+        caption3: '12px',
       },
     },
   },

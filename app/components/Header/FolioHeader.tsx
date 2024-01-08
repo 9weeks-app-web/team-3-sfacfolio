@@ -51,7 +51,14 @@ function FolioHeader() {
                     : ''
                 }`}
               >
-                <span className='w-[72px] text-center'>{item.name}</span>
+                <span
+                  className={`w-[72px] text-center ${
+                    pathname.startsWith(`/${item.segment}`) &&
+                    'font-bold text-primary-heavy'
+                  }`}
+                >
+                  {item.name}
+                </span>
               </li>
             </Link>
           ))}
