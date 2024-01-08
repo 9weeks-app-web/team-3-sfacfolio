@@ -59,3 +59,12 @@ export const communityCategories = [
   { title: '자유 게시판' },
   { title: '교육과정' },
 ];
+
+export const companyDetailSections = [
+  { label: '기업의 키워드', id: 'keyword' },
+  { label: '자격 요건', id: 'requirement' },
+  { label: '근무 조건', id: 'condition' },
+  { label: '진혈절차 및 접수방법 ', id: 'applymethod' },
+  { label: '기업 복지', id: 'welfare' },
+  { label: '기업 위치', id: 'location' },
+];
