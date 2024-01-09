@@ -1,10 +1,9 @@
-import { Dispatch, SetStateAction } from 'react';
 import { menuType } from '../page';
 
 interface CommunityMenuProps {
   menu: menuType[];
   currentMenu: string;
-  setCurrentMenu: Dispatch<SetStateAction<string>>;
+  setCurrentMenu: (menu: string) => void;
 }
 
 export default function CommunityMenu({

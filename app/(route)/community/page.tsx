@@ -1,17 +1,19 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useQuery } from 'react-query';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 import RealTimeKeyword from '../../components/RealTime/RealTimeKeyword';
 import CommunityBanner from './(components)/CommunityBanner';
 import CommunityMenu from './(components)/CommunityMenu';
 import CommunitySearch from './(components)/CommunitySearch';
 import CommunityPostList from './(components)/CommunityPostList';
-
-import { CommunityPostDummy, PopularKeywordsDummy_COMMUNITY } from '@/dummy';
 import CommunityPagination from './(components)/CommunityPagination';
-import { useRouter, useSearchParams } from 'next/navigation';
-import { CommunityPostType } from '@/types';
+
+import { PopularKeywordsDummy_COMMUNITY } from '@/dummy';
+import { fetchDummyPosts } from '@/api/community';
+import Loader from '@/components/Loader';
 
 export interface menuType {
   name: string;
@@ -25,76 +27,53 @@ const menu = [
   { name: '스팩 후기', path: 'review' },
 ];
 
-// 상수와 헬퍼 함수 정의
-const ITEMS_PER_PAGE = 10;
-
-const sortByViews = (posts: CommunityPostType[]) => {
-  return posts.slice().sort((a, b) => b.views - a.views);
-};
-
-const sortByCreatedAt = (posts: CommunityPostType[]) => {
-  return posts
-    .slice()
-    .sort(
-      (a, b) =>
-        new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
-    );
-};
-
-const findCurrentMenuItem = (currentMenu: string) =>
-  menu.find(item => item.name === currentMenu) || menu[0];
-
-const filterAndSortPosts = (
-  currentMenu: string,
-  posts: CommunityPostType[],
-) => {
-  if (currentMenu === '실시간 인기 글') {
-    return sortByViews(posts);
-  } else {
-    const filteredPosts = posts.filter(post => post.category === currentMenu);
-    return sortByCreatedAt(filteredPosts);
-  }
-};
-
 export default function page() {
-  const [currentMenu, setCurrentMenu] = useState('실시간 인기 글');
-  const posts = CommunityPostDummy;
-
   const router = useRouter();
+  const [currentMenu, setCurrentMenu] = useState('실시간 인기 글');
+
   const params = useSearchParams();
-  const currentPage = params.get('page') || '1';
+  const currentPage = parseInt(params.get('page') || '1');
+  const currentCategory = params.get('category') || 'hot';
 
-  // 현재 메뉴와 관련된 게시글 필터링 및 정렬
-  const currentMenuItem = findCurrentMenuItem(currentMenu);
-  const sortedAndFilteredPosts = filterAndSortPosts(
-    currentMenuItem.name,
-    posts,
+  // React Query를 사용하여 더미 데이터 가져오기
+  const queryKey = [`posts-${currentCategory}-${currentPage}`];
+  const { data, isLoading, isError } = useQuery(
+    queryKey,
+    () => fetchDummyPosts(currentPage, currentMenu),
+    { keepPreviousData: true },
   );
+  console.log(data);
 
-  // 페이지네이션 계산
-  const totalPage = Math.ceil(sortedAndFilteredPosts.length / ITEMS_PER_PAGE);
-  const startIndex = (parseInt(currentPage) - 1) * ITEMS_PER_PAGE;
-  const endIndex = startIndex + ITEMS_PER_PAGE;
-  const visiblePosts = sortedAndFilteredPosts.slice(startIndex, endIndex);
-
-  // URL 생성 함수
-  const constructPathname = () => {
-    const currentMenuItem = menu.find(item => item.name === currentMenu);
-    const categoryPath = currentMenuItem ? currentMenuItem.path : 'hot';
-    return {
-      pathname: '/community',
-      query: { category: categoryPath, page: currentPage },
-    };
+  // 메뉴 변경 시 라우터 업데이트
+  const changeMenu = (menuName: string) => {
+    const menuItem = menu.find(item => item.name === menuName);
+    if (menuItem) {
+      setCurrentMenu(menuName);
+      router.push(`/community?category=${menuItem.path}&page=1`);
+    }
   };
 
-  // 메뉴 변경 시 URL 업데이트
-  useEffect(() => {
-    // currentMenu와 관련된 menu path 찾기
-    const currentMenuItem = menu.find(item => item.name === currentMenu);
-    const categoryPath = currentMenuItem ? currentMenuItem.path : 'hot';
+  // 페이지네이션 변경 시 라우터 업데이트
+  const changePage = (page: number) => {
+    router.push(`/community?category=${currentCategory}&page=${page}`);
+  };
 
-    router.push(`/community?category=${categoryPath}&page=${currentPage}`);
-  }, [currentMenu, currentPage, router]);
+  if (isLoading) {
+    return (
+      <div className='container flex h-screen items-center justify-center p-5 text-center'>
+        <Loader />
+      </div>
+    );
+  }
+  if (!data || isError) {
+    return (
+      <div className='container flex h-screen items-center justify-center p-5 text-center'>
+        데이터 로드 중 오류가 생겼습니다.
+        <br />
+        다시 시도해 주세요.
+      </div>
+    );
+  }
 
   return (
     <>
@@ -107,7 +86,7 @@ export default function page() {
           <CommunityMenu
             menu={menu}
             currentMenu={currentMenu}
-            setCurrentMenu={setCurrentMenu}
+            setCurrentMenu={changeMenu}
           />
           <RealTimeKeyword
             keywords={PopularKeywordsDummy_COMMUNITY}
@@ -119,12 +98,12 @@ export default function page() {
         <article className='w-[954px]'>
           <CommunitySearch />
 
-          <CommunityPostList currentMenu={currentMenu} posts={visiblePosts} />
+          <CommunityPostList currentMenu={currentMenu} posts={data.posts} />
 
           <CommunityPagination
-            total={totalPage}
-            page={currentPage}
-            pathname={constructPathname()}
+            total={data.totalPages}
+            page={currentPage.toString()}
+            changePage={changePage}
           />
         </article>
       </div>
