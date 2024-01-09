@@ -3,12 +3,14 @@ import React from 'react';
 interface ModalWrapProps {
   type?: string;
   onApply: () => void;
+  onClose: () => void;
   children: React.ReactNode;
 }
 
 export default function ModalLayout({
   type,
   onApply,
+  onClose,
   children,
 }: ModalWrapProps) {
   const [header, ...rest] = React.Children.toArray(children);
@@ -41,9 +43,15 @@ export default function ModalLayout({
       {/* modal contents */}
       <div className='p-6'>
         {rest}
-        <div className='flex w-full justify-end border-t border-line-normal pt-6'>
+        <div className='flex w-full justify-end gap-2 border-t border-line-normal pt-6'>
           <button
-            className='h-12 w-[312px] rounded-lg bg-primary-heavy font-bold text-white'
+            className='h-12 w-[140px] rounded-lg border border-primary-heavy bg-white font-bold text-primary-heavy'
+            onClick={onClose}
+          >
+            취소
+          </button>
+          <button
+            className='h-12 w-[140px] rounded-lg border border-primary-heavy bg-primary-heavy font-bold text-white'
             onClick={onApply}
           >
             적용하기

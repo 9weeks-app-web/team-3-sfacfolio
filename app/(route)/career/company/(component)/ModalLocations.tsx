@@ -101,7 +101,7 @@ export default function ModalLocations({ data, setData, onClose }: ModalProps) {
   };
 
   return (
-    <ModalLayout onApply={onApply} type='fixed'>
+    <ModalLayout onApply={onApply} onClose={onClose} type='fixed'>
       <ModalHeader
         title='지역'
         number={tempData.length === 0 ? 1 : tempData.length}
