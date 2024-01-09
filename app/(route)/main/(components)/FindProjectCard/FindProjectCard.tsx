@@ -1,11 +1,11 @@
 import React from 'react';
 import FindProjectCardLabel from './FindProjectCardLabel';
 import Image from 'next/image';
-import Eye from '@images/Eye.svg';
 import ArrowDownButton from '@images/ArrowDownButton.svg';
 
 import CategoryButtonWrap from '../CategoryButtonWrap';
 import HeartIcon from '@/components/Icons/HeartIcon';
+import EyeIcon from '@/components/Icons/EyeIcon';
 
 const tags = [
   '개발자',
@@ -70,7 +70,7 @@ function FindProjectCard({ mode = 'view' }: FindProjectCardProps) {
               <span>1,522</span>
             </div>
             <div className='flex items-center gap-1'>
-              <Image src={Eye} alt='view' height={20} width={20} />
+              <EyeIcon size={20} color='#8A8A8A' />
               <span>1,598</span>
             </div>
           </div>
