@@ -8,8 +8,6 @@ import Search from '@images/Search.svg';
 export default function CommunitySearch() {
   const { register, handleSubmit } = useForm();
 
-  console.log(register);
-
   return (
     <form
       className='my-[60px] flex h-12 w-full items-center gap-4 rounded-lg bg-background-primary px-4 py-2'
