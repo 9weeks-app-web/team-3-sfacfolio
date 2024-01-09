@@ -5,7 +5,6 @@ export const fetchDummyPosts = async (
   category: string,
   itemsPerPage = 10,
 ) => {
-  console.log(category, page);
   // 필터링 로직
   const filteredPosts =
     category === '실시간 인기 글'

@@ -42,7 +42,6 @@ export default function page() {
     () => fetchDummyPosts(currentPage, currentMenu),
     { keepPreviousData: true },
   );
-  console.log(data);
 
   // 메뉴 변경 시 라우터 업데이트
   const changeMenu = (menuName: string) => {
