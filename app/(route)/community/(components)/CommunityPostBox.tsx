@@ -14,15 +14,15 @@ interface CommunityPostBoxProps {
 
 export default function CommunityPostBox({ post }: CommunityPostBoxProps) {
   const content =
-    post.content.length >= 70
-      ? post.content.substr(0, 70) + '...'
+    post.content.length >= 60
+      ? post.content.substr(0, 60) + '...'
       : post.content;
 
   const date = timeAgo(post.createdAt);
 
   return (
     <div
-      className={`${styles.communityPostBox} w-full cursor-pointer rounded-lg border border-line-normal px-[22px] py-4 hover:bg-background-primary`}
+      className={`${styles.communityPostBox} w-full cursor-pointer rounded-lg border border-line-normal bg-white px-[22px] py-4 hover:bg-background-primary`}
     >
       <div className='flex w-full items-center'>
         <div className='w-[calc(100%-60px)] pr-4'>

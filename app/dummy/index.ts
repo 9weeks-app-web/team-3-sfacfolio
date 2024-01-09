@@ -81,17 +81,7 @@ export const JobOfferDummy = [
   },
 ];
 
-export const PopularKeywordsDummy_MAIN: KeywordType[] = [
-  { content: '대외활동', rank: 'rise' },
-  { content: 'UX디자인', rank: 'maintain' },
-  { content: '인턴 프로그램', rank: 'decline' },
-  { content: '재택 근무', rank: 'rise' },
-  { content: '에이전시', rank: 'decline' },
-  { content: '포트폴리오', rank: 'rise' },
-  { content: '디자이너', rank: 'rise' },
-];
-
-export const PopularKeywordsDummy_COMMUNITY: KeywordType[] = [
+export const PopularKeywordsDummy: KeywordType[] = [
   { content: '대외활동', rank: 'rise' },
   { content: 'UX디자인', rank: 'maintain' },
   { content: '인턴 프로그램', rank: 'decline' },
@@ -105,6 +95,27 @@ export const PopularKeywordsDummy_COMMUNITY: KeywordType[] = [
 ];
 
 export const CommunityPostDummy: CommunityPostType[] = [
+  {
+    title: '혹시 이번에 웅진씽크빅 합격 연락 받은사람?ㅜㅠ',
+    content:
+      '내가 이것저것 대외활동도 하고 면접도 나쁘지 않았는데, 아직 결과 안온듯,,ㅜㅠ 문자 받은사람있으신가요?',
+    tags: ['회사', '취업', '인턴', '신입', '채용', '면접'],
+    category: '질의응답',
+    createdAt: '2024-01-02 18:30',
+    likes: 224,
+    comments: [
+      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
+      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
+      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
+      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
+      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
+      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
+      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
+      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
+      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
+    ],
+    views: 2680,
+  },
   {
     title: 'UXUI 인턴형 프로그램 1기 후기',
     content:

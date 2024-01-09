@@ -11,7 +11,6 @@ import CommunitySearch from './(components)/CommunitySearch';
 import CommunityPostList from './(components)/CommunityPostList';
 import CommunityPagination from './(components)/CommunityPagination';
 
-import { PopularKeywordsDummy_COMMUNITY } from '@/dummy';
 import { fetchDummyPosts } from '@/api/community';
 import Loader from '@/components/Loader';
 
@@ -87,10 +86,7 @@ export default function page() {
             currentMenu={currentMenu}
             setCurrentMenu={changeMenu}
           />
-          <RealTimeKeyword
-            keywords={PopularKeywordsDummy_COMMUNITY}
-            type='community'
-          />
+          <RealTimeKeyword type='community' />
         </section>
 
         {/* post article */}
