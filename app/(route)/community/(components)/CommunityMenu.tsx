@@ -1,20 +1,20 @@
-'use client';
+import { Dispatch, SetStateAction } from 'react';
+import { menuType } from '../page';
 
-import { useState } from 'react';
+interface CommunityMenuProps {
+  menu: menuType[];
+  currentMenu: string;
+  setCurrentMenu: Dispatch<SetStateAction<string>>;
+}
 
-const menu = [
-  { name: '실시간 인기 글', path: '' },
-  { name: '질의응답', path: '' },
-  { name: '자유게시판', path: '' },
-  { name: '스팩 후기', path: '' },
-];
-
-export default function CommunityMenu() {
-  const [currentMenu, setCurrentMenu] = useState('실시간 인기 글');
-
+export default function CommunityMenu({
+  menu,
+  currentMenu,
+  setCurrentMenu,
+}: CommunityMenuProps) {
   return (
     <ul className='my-[60px] w-[267px]'>
-      {menu.map(item => {
+      {menu.map((item: menuType) => {
         return (
           <li
             key={item.name}
