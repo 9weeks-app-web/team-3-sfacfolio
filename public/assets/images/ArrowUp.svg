@@ -1,0 +1,10 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon/Up1">
+<mask id="mask0_905_7727" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+<rect id="Bound Box" width="16" height="16" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_905_7727)">
+<path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M1.52925 12.4627C1.7896 12.7364 2.2117 12.7364 2.47205 12.4627L8.00065 6.65036L13.5292 12.4627C13.7896 12.7364 14.2117 12.7364 14.4721 12.4627C14.7324 12.189 14.7324 11.7452 14.4721 11.4715L8.00065 4.66797L1.52924 11.4715C1.2689 11.7452 1.2689 12.189 1.52925 12.4627Z" fill="#0059FF"/>
+</g>
+</g>
+</svg>

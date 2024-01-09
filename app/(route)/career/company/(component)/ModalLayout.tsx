@@ -34,7 +34,7 @@ export default function ModalLayout({
       </div>
     </div>
   ) : (
-    <div className='absolute top-[calc(46px+16px)] w-[790px] rounded-lg border border-line-normal bg-white shadow-[0_4px_8px_0_rgba(0,0,0,0.15)]'>
+    <div className='absolute top-[calc(46px+16px)] z-[1] w-[790px] rounded-lg border border-line-normal bg-white shadow-[0_4px_8px_0_rgba(0,0,0,0.15)]'>
       {/* modal header */}
       {header}
 

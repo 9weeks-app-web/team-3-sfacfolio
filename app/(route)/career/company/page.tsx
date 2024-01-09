@@ -66,6 +66,7 @@ export default function CompanyPage() {
             <div className='relative h-[46px]'>
               <CompanyFilterButton
                 text={'지역'}
+                currentModal={currentModal}
                 onClick={() => setCurrentModal('지역')}
                 selectedFilter={locations}
               />
@@ -80,6 +81,7 @@ export default function CompanyPage() {
             <div className='relative h-[46px]'>
               <CompanyFilterButton
                 text={'직무'}
+                currentModal={currentModal}
                 onClick={() => setCurrentModal('직무')}
                 selectedFilter={job}
               />
@@ -90,6 +92,7 @@ export default function CompanyPage() {
             <div className='relative h-[46px]'>
               <CompanyFilterButton
                 text={'테크'}
+                currentModal={currentModal}
                 onClick={() => setCurrentModal('테크')}
                 selectedFilter={tech}
               />
@@ -100,6 +103,7 @@ export default function CompanyPage() {
             <div className='relative h-[46px]'>
               <CompanyFilterButton
                 text={'경력'}
+                currentModal={currentModal}
                 onClick={() => setCurrentModal('경력')}
                 selectedFilter={years}
               />
