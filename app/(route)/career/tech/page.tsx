@@ -3,6 +3,7 @@ import React from 'react';
 import TechBanner from '@images/TechBanner.svg';
 import JobOfferCard from '@/(route)/main/(components)/Card/JobOfferCard/JobOfferCard';
 import CardContainer from '@/(route)/main/(components)/Card/CardContainer';
+import { JobOfferDummy } from '@/dummy';
 
 function TechPage() {
   return (
@@ -15,7 +16,7 @@ function TechPage() {
           objectFit='cover'
         />
       </div>
-      <div className='mt-[60px] w-full max-w-screen-desktop px-20'>
+      <div className='container mt-[60px] px-20'>
         <h2 className='py-2 text-title font-bold'>
           반려동물 1000만시대, 펫테크 기업
         </h2>
@@ -29,10 +30,16 @@ function TechPage() {
           </p>
         </div>
         <CardContainer>
-          <JobOfferCard dDay={20} />
-          <JobOfferCard dDay={20} />
-          <JobOfferCard dDay={20} />
-          <JobOfferCard dDay={20} />
+          {JobOfferDummy.map(job => (
+            <JobOfferCard
+              key={job.id}
+              category={job.category}
+              career={job.career}
+              title={job.title}
+              imageUrl={job.imageUrl}
+              company={job.company}
+            />
+          ))}
         </CardContainer>
       </div>
     </div>

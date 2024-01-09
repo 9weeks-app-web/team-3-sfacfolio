@@ -113,12 +113,12 @@ export default function ModalLocations({ data, setData, onClose }: ModalProps) {
           국가
         </p>
         <select className='w-full	appearance-none rounded-lg border border-line-normal bg-background-secondary px-6 py-3 text-[18px] font-medium text-text-normal outline-none'>
-          <option selected>한국</option>
+          <option defaultValue='한국'>한국</option>
         </select>
       </div>
       <div className='mb-6 flex w-full'>
         <div className='w-1/2'>
-          <p className='mb-3 text-[20px] font-medium text-text-alternative'>
+          <div className='mb-3 text-[20px] font-medium text-text-alternative'>
             지역
             <ul className='custom-scrollbar h-[260px] w-full overflow-auto rounded-l-lg border border-line-normal bg-background-primary'>
               <li
@@ -147,10 +147,10 @@ export default function ModalLocations({ data, setData, onClose }: ModalProps) {
                 </li>
               ))}
             </ul>
-          </p>
+          </div>
         </div>
         <div className='w-1/2'>
-          <p className='mb-3 text-[20px] font-medium text-text-alternative'>
+          <div className='mb-3 text-[20px] font-medium text-text-alternative'>
             상세지역
             <ul className='custom-scrollbar h-[260px] w-full overflow-auto rounded-r-lg border border-line-normal bg-background-primary'>
               {selectedLocation === '전국' ? (
@@ -187,7 +187,7 @@ export default function ModalLocations({ data, setData, onClose }: ModalProps) {
                 </>
               )}
             </ul>
-          </p>
+          </div>
         </div>
       </div>
       <div className='w-full rounded bg-background-primary p-2'>
