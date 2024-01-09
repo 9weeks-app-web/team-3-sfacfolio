@@ -1,5 +1,5 @@
 function RealTimeContainer({ children }: { children: React.ReactNode }) {
-  return <div className='flex justify-between mt-8'>{children}</div>;
+  return <div className='mt-8 flex justify-between'>{children}</div>;
 }
 
 export default RealTimeContainer;

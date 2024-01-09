@@ -22,7 +22,6 @@ import {
 } from '@/constants';
 
 import { JobOfferDummy } from '@/dummy';
-import { PopularKeywordsDummy_MAIN } from '@/dummy';
 
 function MainPage() {
   return (
@@ -88,17 +87,16 @@ function MainPage() {
         <ABTest />
       </SectionWrapper>
 
-      <SectionWrapper>
-        <SectionHeader title='실시간 인기 커뮤니티' more='/' />
-        <CategoryButtonWrap type='button' categories={communityCategories} />
+      <SectionWrapper className='bg-background-primary'>
+        <SectionHeader title='실시간 인기 커뮤니티' more='/community' />
         <RealTimeContainer>
-          <RealTimeCommunity title='핫한 게시글' />
-          <RealTimeKeyword keywords={PopularKeywordsDummy_MAIN} />
+          <RealTimeCommunity />
+          <RealTimeKeyword type='main' />
         </RealTimeContainer>
       </SectionWrapper>
 
       {/* 채용 공고 */}
-      <SectionWrapper className='bg-background-primary'>
+      <SectionWrapper>
         <SectionHeader title='새로 올라온 채용 공고' />
         <CategoryButtonWrap
           type='button'
