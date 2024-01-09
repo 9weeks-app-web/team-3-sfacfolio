@@ -1,3 +1,5 @@
+import { KeywordType } from '@/types';
+
 export const JobOfferDummy = [
   {
     id: 1,
@@ -77,4 +79,27 @@ export const JobOfferDummy = [
       'https://s3-alpha-sig.figma.com/img/8b27/1ee9/fe6823b98f8d9fee57e77bba684c73ea?Expires=1704672000&Signature=ffM3ljiy7OPBL8yB7tYEnZNDknefqPnBgYqcaAROD~0TVszWb8upkU3ofaBqfZntftOjRTS5bD9hzcaFUXRxaV1cGuY8M5RcKXPJLPpd0gzEBUz3vCHVwkcQbA~4DyBmdyfZpBSo0zLjsSWXC8mwaDArvVqUI92wy5jjZNd7IMb1ZpNSjvvbTOQUT2WIjwX97KdJLOAve56W0Y~aK1DUpnPZd4OUEUj44foFQT5prMsb6-37Pu8QPWfKcqj5ryMv-BvuWpgrktZMSqUyH-Mboc-uf2yvDgM6GwbSVlhI9OATOm-ogOE5utAdF8zLsN3mWxpa6T0aJBaDiORfouCJIA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
     company: '이랜드리테일',
   },
+];
+
+export const PopularKeywordsDummy_MAIN: KeywordType[] = [
+  { content: '대외활동', rank: 'rise' },
+  { content: 'UX디자인', rank: 'maintain' },
+  { content: '인턴 프로그램', rank: 'decline' },
+  { content: '재택 근무', rank: 'rise' },
+  { content: '에이전시', rank: 'decline' },
+  { content: '포트폴리오', rank: 'rise' },
+  { content: '디자이너', rank: 'rise' },
+];
+
+export const PopularKeywordsDummy_COMMUNITY: KeywordType[] = [
+  { content: '대외활동', rank: 'rise' },
+  { content: 'UX디자인', rank: 'maintain' },
+  { content: '인턴 프로그램', rank: 'decline' },
+  { content: '재택 근무', rank: 'rise' },
+  { content: '에이전시', rank: 'decline' },
+  { content: '포트폴리오', rank: 'rise' },
+  { content: '디자이너', rank: 'rise' },
+  { content: '취업', rank: 'rise' },
+  { content: '부트캠프 후기', rank: 'rise' },
+  { content: '개발자 모집', rank: 'rise' },
 ];

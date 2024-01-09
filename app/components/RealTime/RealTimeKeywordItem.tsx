@@ -9,17 +9,33 @@ interface KeywordType {
 function RealTimeKeywordItem({
   keyword,
   rank,
+  type,
 }: {
   keyword: KeywordType;
   rank: number;
+  type?: string;
 }) {
   return (
-    <div className='flex items-center justify-between py-4 pl-9 pr-6 text-label1 font-medium'>
+    <div
+      className={`flex items-center justify-between  text-label1 font-medium ${
+        type === 'community' ? 'px-6 py-3.5' : 'py-4 pl-9 pr-6'
+      }`}
+    >
       <div className='space-x-[38px]'>
-        <span className={`${rank < 3 && 'text-primary-heavy'}`}>
+        <span
+          className={`${
+            rank < 3 ? 'text-primary-heavy' : 'text-text-alternative'
+          }`}
+        >
           {rank + 1}
         </span>
-        <span className='text-[18px]'>{keyword.content}</span>
+        <span
+          className={`font-medium ${
+            type === 'community' ? 'text-label1' : 'text-[18px]'
+          }`}
+        >
+          {keyword.content}
+        </span>
       </div>
       <span>
         {keyword.rank === 'rise' && (

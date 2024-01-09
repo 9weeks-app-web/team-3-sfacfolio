@@ -37,6 +37,11 @@ interface ProjectType {
   };
 }
 
+export interface KeywordType {
+  content: string;
+  rank: 'rise' | 'maintain' | 'decline';
+}
+
 // 댓글 테이블
 interface DesignSniperCommentItemType {
   id: string;
