@@ -25,6 +25,6 @@ export const getYearsFilterItems = (selectedFilter: YearsType) => {
   if (start === 0 && end === 0) return '신입';
   else if (start === 0 && start < end) return `신입 - ${end}년`;
   else if (start < end) return `${start}년 - ${end}년`;
-  else if (start === end) return `${start}년 이상`;
+  else if (start === end) return `${start}년`;
   else return '';
 };
