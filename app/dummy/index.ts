@@ -128,7 +128,7 @@ export const CommunityPostDummy: CommunityPostType[] = [
       '내가 대학교에서 졸준위했는데 다같이 작업하긴 했는데 거의 내 디자인임. 그래서 포폴에 넣을건데 상관없나?',
     tags: ['디자인', '포트폴리오', '졸업전시'],
     category: '자유게시판',
-    createdAt: '2024-01-09 17:20',
+    createdAt: '2024-01-09 18:20',
     likes: 23,
     comments: [
       { name: '', content: '', createdAt: '', likes: 0, comments: [] },

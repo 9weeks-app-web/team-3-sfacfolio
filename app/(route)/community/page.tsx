@@ -1,14 +1,14 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
 
 import RealTimeKeyword from '../../components/RealTime/RealTimeKeyword';
 import CommunityBanner from './(components)/CommunityBanner';
 import CommunityMenu from './(components)/CommunityMenu';
 import CommunitySearch from './(components)/CommunitySearch';
+import CommunityPostList from './(components)/CommunityPostList';
 
-import { PopularKeywordsDummy_COMMUNITY } from '@/dummy';
+import { CommunityPostDummy, PopularKeywordsDummy_COMMUNITY } from '@/dummy';
 
 export interface menuType {
   name: string;
@@ -24,6 +24,7 @@ const menu = [
 
 export default function page() {
   const [currentMenu, setCurrentMenu] = useState('실시간 인기 글');
+  const posts = CommunityPostDummy;
 
   return (
     <>
@@ -48,7 +49,7 @@ export default function page() {
         <article className='w-[954px]'>
           <CommunitySearch />
 
-          <p>실시간 인기 글</p>
+          <CommunityPostList currentMenu={currentMenu} posts={posts} />
         </article>
       </div>
     </>
