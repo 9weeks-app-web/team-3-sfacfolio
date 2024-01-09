@@ -4,8 +4,8 @@ import { UseFormRegisterReturn } from 'react-hook-form';
 interface InputWithLabelProps {
   label: string;
   type: 'text' | 'name' | 'email' | 'password';
-  placeholder: string;
-  register: UseFormRegisterReturn<
+  placeholder?: string;
+  register?: UseFormRegisterReturn<
     'email' | 'name' | 'password' | 'confirmedPassword"'
   >;
   className?: string;
@@ -22,7 +22,7 @@ export default function InputWithLabel({
     <div className={`${className} flex flex-col gap-3`}>
       <label
         htmlFor={'email'}
-        className='text-[18px] font-bold text-text-assitive'
+        className='text-[18px] font-bold text-text-alternative'
       >
         {label}
       </label>
