@@ -37,6 +37,11 @@ interface ProjectType {
   };
 }
 
+export interface KeywordType {
+  content: string;
+  rank: 'rise' | 'maintain' | 'decline';
+}
+
 // 댓글 테이블
 interface DesignSniperCommentItemType {
   id: string;
@@ -59,13 +64,26 @@ interface DesignSniperType {
   b: number;
 }
 
-interface CommunityType {
-  id: string;
-  categoray: string;
-  likeCount: number;
-  comments: string[]; // TODO: 댓글 구성 확인 후 type 정의 필요
+export interface CommunityPostType {
+  id?: string;
   title: string;
+  content: string;
+  tags: string[];
+  category: '질의응답' | '자유게시판' | '스팩 후기';
+  createdAt: string;
+  likes: number;
+  comments: CommunityCommentType[];
+  views: number;
+  thumbnail?: string;
 }
+
+interface CommunityCommentType {
+  name: string;
+  content: string;
+  createdAt: string;
+  likes: number;
+  comments: string[];
+} // TODO: 타입 재설정 필요
 
 interface JobOpeningType {
   id: string;

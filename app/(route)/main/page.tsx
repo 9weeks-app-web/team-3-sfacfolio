@@ -7,9 +7,9 @@ import SectionSliderWrapper from './(components)/SectionSliderWrapper';
 import CategoryButtonWrap from './(components)/CategoryButtonWrap';
 import PortfolioCard from './(components)/Card/PortfoiloCard/PortfolioCard';
 import JobOfferCard from './(components)/Card/JobOfferCard/JobOfferCard';
-import RealTimeContainer from './(components)/(RealTime)/RealTimeContainer';
-import RealTimeCommunity from './(components)/(RealTime)/RealTimeCommunity';
-import RealTimeKeyword from './(components)/(RealTime)/RealTimeKeyword';
+import RealTimeContainer from '../../components/RealTime/RealTimeContainer';
+import RealTimeCommunity from '../../components/RealTime/RealTimeCommunity';
+import RealTimeKeyword from '../../components/RealTime/RealTimeKeyword';
 import CardContainer from './(components)/Card/CardContainer';
 import ABTest from './(components)/ABTest';
 import FindProjectCarousel from './(components)/FindProjectCard/FindProjectCarousel';
@@ -20,7 +20,9 @@ import {
   projectCategories,
   communityCategories,
 } from '@/constants';
+
 import { JobOfferDummy } from '@/dummy';
+import { PopularKeywordsDummy_MAIN } from '@/dummy';
 
 function MainPage() {
   return (
@@ -91,7 +93,7 @@ function MainPage() {
         <CategoryButtonWrap type='button' categories={communityCategories} />
         <RealTimeContainer>
           <RealTimeCommunity title='핫한 게시글' />
-          <RealTimeKeyword />
+          <RealTimeKeyword keywords={PopularKeywordsDummy_MAIN} />
         </RealTimeContainer>
       </SectionWrapper>
 
