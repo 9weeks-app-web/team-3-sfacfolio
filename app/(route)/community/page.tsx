@@ -1,8 +1,10 @@
+import Image from 'next/image';
 import RealTimeKeyword from '../../components/RealTime/RealTimeKeyword';
 import CommunityBanner from './(components)/CommunityBanner';
+import CommunityMenu from './(components)/CommunityMenu';
+import CommunitySearch from './(components)/CommunitySearch';
 
 import { PopularKeywordsDummy_COMMUNITY } from '@/dummy';
-import CommunityMenu from './(components)/CommunityMenu';
 
 export default function page() {
   return (
@@ -10,7 +12,7 @@ export default function page() {
       {/* main banner */}
       <CommunityBanner />
 
-      <div className='container'>
+      <div className='container flex justify-between '>
         {/* side section */}
         <section className=''>
           <CommunityMenu />
@@ -21,7 +23,9 @@ export default function page() {
         </section>
 
         {/* post article */}
-        <article></article>
+        <article className='w-[954px]'>
+          <CommunitySearch />
+        </article>
       </div>
     </>
   );
