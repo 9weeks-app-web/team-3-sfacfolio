@@ -26,13 +26,15 @@ export default function page() {
           placeholder='blur'
         ></Image>
       </div>
-      <SectionWrapper>
-        <SectionHeader title='대기업을 노리는 스팩이들을 위해' />
-        <SectionSliderWrapper
-          className='mt-6'
-          slider={<CompanyCardCarousel />}
+      <SectionSliderWrapper
+        className='py-[80px]'
+        slider={<CompanyCardCarousel />}
+      >
+        <SectionHeader
+          title='대기업을 노리는 스팩이들을 위해'
+          className='mb-6'
         />
-      </SectionWrapper>
+      </SectionSliderWrapper>
       <SectionWrapper className='bg-background-primary'>
         <SectionHeader title='오직 스팩이들을 위한! 신상 New 채용공고' />
         <CategoryButtonWrap
