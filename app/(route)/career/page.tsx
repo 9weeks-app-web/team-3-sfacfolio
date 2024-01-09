@@ -27,7 +27,7 @@ export default function page() {
         ></Image>
       </div>
       <SectionSliderWrapper
-        className='py-[80px]'
+        className='overflow-hidden py-[80px]'
         slider={<CompanyCardCarousel />}
       >
         <SectionHeader
