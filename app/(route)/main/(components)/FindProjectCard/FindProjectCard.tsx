@@ -2,7 +2,7 @@ import React from 'react';
 import FindProjectCardLabel from './FindProjectCardLabel';
 import Image from 'next/image';
 import Eye from '@images/Eye.svg';
-import ArrowDown from '@images/ArrowDown.svg';
+import ArrowDownButton from '@images/ArrowDownButton.svg';
 
 import CategoryButtonWrap from '../CategoryButtonWrap';
 import HeartIcon from '@/components/Icons/HeartIcon';
@@ -61,7 +61,7 @@ function FindProjectCard({ mode = 'view' }: FindProjectCardProps) {
           </ul>
           <span>모집현황</span>
           <span>0/3</span>
-          <Image src={ArrowDown} alt='arrow' height={16} width={16} />
+          <Image src={ArrowDownButton} alt='arrow' height={16} width={16} />
         </div>
         {mode === 'view' ? (
           <div className='flex  gap-[14px]'>

@@ -7,7 +7,7 @@ import ModalJob from './(component)/ModalJob';
 import ModalTech from './(component)/ModalTech';
 import ModalYears from './(component)/ModalYears';
 import CompanyFilterButton from './(component)/CompanyFilterButton';
-import ArrowDown from '@images/ArrowDown.svg';
+import ArrowDownButton from '@images/ArrowDownButton.svg';
 import Image from 'next/image';
 import CardContainer from '@/(route)/main/(components)/Card/CardContainer';
 import { JobOfferDummy } from '@/dummy';
@@ -112,7 +112,7 @@ export default function CompanyPage() {
             <span className='text-lg text-text-alternative'>정렬방식</span>
             <button className='flex items-center gap-1'>
               <span>최신 순</span>
-              <Image src={ArrowDown} width={20} height={20} alt='down' />
+              <Image src={ArrowDownButton} width={20} height={20} alt='down' />
             </button>
           </div>
         </div>
