@@ -1,10 +1,10 @@
 import { IconProps } from './HeartIcon';
 
-export default function CameraIcon({ color }: IconProps) {
+export default function CameraIcon({ color, size = 18 }: IconProps) {
   return (
     <svg
-      width='18'
-      height='16'
+      width={size}
+      height={size}
       viewBox='0 0 18 16'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
