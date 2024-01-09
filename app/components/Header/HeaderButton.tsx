@@ -11,7 +11,7 @@ function HeaderButton({ children, href, className }: HeaderButtonProps) {
   return (
     <Link href={{ pathname: href }}>
       <button
-        className={`flex h-10 w-[124px] items-center justify-center gap-2.5 rounded-lg border border-primary-weak text-primary-heavy ${className}`}
+        className={`flex h-10 w-[124px] items-center justify-center gap-2.5 rounded-lg border border-primary-weak bg-primary-heavy text-white ${className}`}
       >
         {children}
       </button>
