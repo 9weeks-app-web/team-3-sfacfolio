@@ -60,11 +60,12 @@ function MainPage() {
         className='overflow-hidden bg-background-primary pt-20'
         slider={<FindProjectCarousel />}
       >
-        <SectionHeader title='FIND 프로젝트' className='mb-[50px]' more='/' />
+        <SectionHeader title='FIND 프로젝트' className='mb-[46px]' more='/' />
         <CategoryButtonWrap
           type='button'
           gradient=' to-background-primary'
           categories={projectCategories}
+          className='mb-4'
         />
       </SectionSliderWrapper>
       <SectionSliderWrapper
@@ -73,7 +74,7 @@ function MainPage() {
         banner={<ProjectMatchingBanner />}
       >
         <SectionHeader
-          title='바로 시작할 수 있는 프로젝트'
+          title='Speed Match Up'
           className='mb-[20px] mt-[50px]'
           more='/'
         />
