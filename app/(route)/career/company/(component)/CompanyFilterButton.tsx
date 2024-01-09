@@ -60,7 +60,7 @@ function CompanyFilterButton<T extends FilterCategory>({
       <span className='text-text-normal'>{text}</span>
       <span className='font-bold text-primary-heavy'>{selectedFilterText}</span>
       <Image
-        src={currentModal === text ? ArrowDown : ArrowUp}
+        src={currentModal === text ? ArrowUp : ArrowDown}
         alt='arrow icon'
         className='pb-1'
       />
