@@ -84,7 +84,7 @@ export default function page() {
               width={0}
               height={0}
               sizes='100%'
-              style={{ height: '100%', width: '100%', objectFit: 'cover' }}
+              className='h-full w-full object-cover'
             />
 
             <div className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2'>
@@ -95,7 +95,7 @@ export default function page() {
                   width={0}
                   height={0}
                   sizes='100%'
-                  style={{ height: '100%', width: '100%', objectFit: 'cover' }}
+                  className='h-full w-full object-cover'
                 />
               </div>
 
@@ -106,7 +106,7 @@ export default function page() {
                   type='file'
                   accept='image/*'
                   onChange={handleProfileChange}
-                  style={{ display: 'none' }}
+                  className='hidden'
                 />
               </label>
             </div>
@@ -118,7 +118,7 @@ export default function page() {
                 type='file'
                 accept='image/*'
                 onChange={handleBackgroundChange}
-                style={{ display: 'none' }}
+                className='hidden'
               />
             </label>
           </div>
