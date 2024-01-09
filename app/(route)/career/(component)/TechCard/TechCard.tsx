@@ -1,13 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Image from 'next/image';
 import TechCardLogo1 from '@images/TechCardLogo1.svg';
 import TechCardLogo2 from '@images/TechCardLogo2.svg';
 import TechCardLogo3 from '@images/TechCardLogo3.svg';
 import TechCardLogo4 from '@images/TechCardLogo4.svg';
-import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 export default function TechCard() {
+  const router = useRouter();
+  const [isDragging, setIsDragging] = useState(false);
+  const [startPos, setStartPos] = useState({ x: 0, y: 0 });
+
+  const handleMouseDown = (event: React.MouseEvent<HTMLDivElement>) => {
+    setStartPos({ x: event.clientX, y: event.clientY });
+    setIsDragging(false);
+  };
+
+  const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
+    const threshold = 10; // 드래그로 간주하기 위한 최소 거리
+    if (!isDragging) {
+      const dx = Math.abs(event.clientX - startPos.x);
+      const dy = Math.abs(event.clientY - startPos.y);
+      if (dx > threshold || dy > threshold) {
+        setIsDragging(true);
+      }
+    }
+  };
+
+  const handleClick = () => {
+    if (!isDragging) {
+      router.push('/career/tech');
+    } else {
+      setIsDragging(false);
+    }
+  };
+
   return (
-    <div className='h-[302px] w-[490px] cursor-pointer overflow-hidden rounded-[8px] bg-white'>
+    <div
+      className='h-[302px] w-[490px] cursor-pointer overflow-hidden rounded-[8px] bg-white'
+      onMouseDown={handleMouseDown}
+      onMouseMove={handleMouseMove}
+      onClick={handleClick}
+    >
       <div className='relative h-[180px]'>
         <div className='relative h-full w-full overflow-hidden'>
           <Image
