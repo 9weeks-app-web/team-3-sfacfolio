@@ -322,4 +322,17 @@ export const CommunityPostDummy: CommunityPostType[] = [
     thumbnail:
       'https://images.unsplash.com/photo-1609921212029-bb5a28e60960?q=80&w=2052&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
+  {
+    title: 'UXUI 인턴형 프로그램 1기 후기',
+    content:
+      '이번에 인턴형 프로그램 1기에 참여한 무순죽순채순입니다. 10월부터 사전 직무교육 후에 팀 프로젝트를 진행했습니다.',
+    tags: ['UX', '디자인', '인턴형프로그램', '후기', '취업', 'UI'],
+    category: '스팩 후기',
+    createdAt: '2024-01-02 18:30',
+    likes: 10,
+    comments: [
+      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
+    ],
+    views: 500,
+  },
 ];
