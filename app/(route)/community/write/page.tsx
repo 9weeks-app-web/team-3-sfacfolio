@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
 import CategorySelector from './(components)/CategorySelector';
 import ToggleSwitch from '@/(route)/mypage/setting/(components)/ToggleSwitch';
-import IconEdit from '@images/IconEdit.svg';
+import IconEdit2 from '@images/IconEdit2.svg';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { Timestamp, addDoc, collection } from 'firebase/firestore';
@@ -99,7 +99,7 @@ export default function page() {
               type='submit'
               className='flex h-[48px] w-[120px] items-center justify-center rounded-[8px] border bg-primary-heavy py-4 font-bold text-white'
             >
-              <Image src={IconEdit} alt='logo-edit' className='mr-2' />
+              <Image src={IconEdit2} alt='logo-edit' className='mr-2' />
               <span>게시하기</span>
             </button>
           </div>
