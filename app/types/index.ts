@@ -109,6 +109,6 @@ export interface ProfileOfferType {
   period: string;
   budget?: string;
   link?: string;
-  pdf?: string;
+  file?: string;
   progressStatus?: string;
 }

@@ -18,7 +18,7 @@ export const profileOfferDummy: ProfileOfferType[] = [
     budget: '2,000,000원',
     period: '2024.01.10 - 2024.03.01',
     link: 'http://www.naver-uxwriting.com',
-    pdf: '네이버치지직_외주제안서_UX디자이너.pdf',
+    file: '네이버치지직_외주제안서_UX디자이너.pdf',
   },
   {
     id: 2,
@@ -54,7 +54,7 @@ export const profileOfferDummy: ProfileOfferType[] = [
     budget: '2,000,000원',
     period: '2024.01.10 - 2024.03.01',
     link: 'http://www.payco.com',
-    pdf: '페이코_채용제안서.pdf',
+    file: '페이코_채용제안서.pdf',
   },
   {
     id: 4,
@@ -73,7 +73,7 @@ export const profileOfferDummy: ProfileOfferType[] = [
     budget: '2,000,000원',
     period: '2024.01.10 - 2024.03.01',
     link: 'http://www.fint.com',
-    pdf: '핀트_채용제안서.pdf',
+    file: '핀트_채용제안서.pdf',
   },
   {
     id: 5,
