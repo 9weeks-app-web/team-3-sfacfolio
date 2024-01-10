@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 import Image from 'next/image';
 import Search from '@images/Search.svg';
 
-export default function CommunitySearch() {
+export default function SearchInput() {
   const { register, handleSubmit } = useForm();
 
   return (

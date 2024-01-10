@@ -3,7 +3,7 @@ import FindProjectCardLabel from './FindProjectCardLabel';
 import Image from 'next/image';
 import ArrowDownButton from '@images/ArrowDownButton.svg';
 
-import CategoryButtonWrap from '../CategoryButtonWrap';
+import CategoryButtonWrap from '../../../../components/CategoryButtonWrap';
 import HeartIcon from '@/components/Icons/HeartIcon';
 import EyeIcon from '@/components/Icons/EyeIcon';
 

@@ -6,7 +6,7 @@ import SectionHeader from '../main/(components)/SectionHeader';
 import SectionWrapper from '../main/(components)/SectionWrapper';
 import CardContainer from '../main/(components)/Card/CardContainer';
 import JobOfferCard from '../main/(components)/Card/JobOfferCard/JobOfferCard';
-import CategoryButtonWrap from '../main/(components)/CategoryButtonWrap';
+import CategoryButtonWrap from '../../components/CategoryButtonWrap';
 import { careerCategories, portfolioCategories } from '@/constants';
 import SectionSliderWrapper from '@/(route)/main/(components)/SectionSliderWrapper';
 import MoreButton from '../main/(components)/MoreButton';

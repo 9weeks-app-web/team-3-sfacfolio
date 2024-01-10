@@ -1,13 +1,13 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useQuery } from 'react-query';
 import { useRouter, useSearchParams } from 'next/navigation';
 
 import RealTimeKeyword from '../../components/RealTime/RealTimeKeyword';
 import CommunityBanner from './(components)/CommunityBanner';
 import CommunityMenu from './(components)/CommunityMenu';
-import CommunitySearch from './(components)/CommunitySearch';
+import SearchInput from '../../components/SearchInput';
 import CommunityPostList from './(components)/CommunityPostList';
 import CommunityPagination from './(components)/CommunityPagination';
 
@@ -91,7 +91,7 @@ export default function page() {
 
         {/* post article */}
         <article className='w-[954px]'>
-          <CommunitySearch />
+          <SearchInput />
 
           <CommunityPostList currentMenu={currentMenu} posts={data.posts} />
 

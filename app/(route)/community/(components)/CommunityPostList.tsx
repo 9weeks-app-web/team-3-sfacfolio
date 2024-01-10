@@ -1,6 +1,6 @@
 import CommunityPostBox from './CommunityPostBox';
 import CommunityWriteButton from './CommunityWriteButton';
-import CategoryButtonWrap from '@/(route)/main/(components)/CategoryButtonWrap';
+import CategoryButtonWrap from '@/components/CategoryButtonWrap';
 
 import { CommunityPostType } from '@/types';
 import { communityFilterCategories } from '@/constants';

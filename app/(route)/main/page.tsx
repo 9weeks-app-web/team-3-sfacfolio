@@ -4,7 +4,7 @@ import BannerCarousel from './(components)/(BannerCarousel)/BannerCarousel';
 import SectionHeader from './(components)/SectionHeader';
 import SectionWrapper from './(components)/SectionWrapper';
 import SectionSliderWrapper from './(components)/SectionSliderWrapper';
-import CategoryButtonWrap from './(components)/CategoryButtonWrap';
+import CategoryButtonWrap from '../../components/CategoryButtonWrap';
 import PortfolioCard from './(components)/Card/PortfoiloCard/PortfolioCard';
 import JobOfferCard from './(components)/Card/JobOfferCard/JobOfferCard';
 import RealTimeContainer from '../../components/RealTime/RealTimeContainer';
