@@ -9,7 +9,7 @@ import CommunityBanner from './(components)/CommunityBanner';
 import CommunityMenu from './(components)/CommunityMenu';
 import SearchInput from '../../components/SearchInput';
 import CommunityPostList from './(components)/CommunityPostList';
-import CommunityPagination from './(components)/CommunityPagination';
+import CommunityPagination from '../../components/Pagination';
 
 import { fetchDummyPosts } from '@/api/community';
 import Loader from '@/components/Loader';
