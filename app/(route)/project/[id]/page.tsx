@@ -9,7 +9,7 @@ import ProjectApplication from './(components)/Project/ProjectApplication';
 import CommentsWrap from './(components)/Comments/CommentsWrap';
 import FixedLayer from './(components)/FixedLayer';
 
-import calculateDaysBeforeDeadline from '@/utils/dateUtils';
+import { calculateDaysBeforeDeadline } from '@/utils/dateUtils';
 import { fetchProject } from '@/api/project';
 import { ProjectDataType } from '@/types/project';
 import Loader from '@/components/Loader';
