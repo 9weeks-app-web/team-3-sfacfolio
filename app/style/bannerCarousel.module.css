@@ -4,34 +4,45 @@
 
 .sliderWrapper :global .slick-list {
   overflow: visible;
+  margin: 0 -12px;
 }
 
 .wrapper :global .slick-track {
   display: flex;
 }
 
-.wrapper :global .slick-slide {
-  margin-right: 24px;
-}
-
-.wrapper :global .slick-slide:last-of-type {
-  padding-right: 0;
+.wrapper :global .slick-slide > div {
+  margin: 0 12px;
 }
 
 .wrapper :global .slick-slide > div {
-  width: 580px;
+  width: 1184px;
 }
 
-.wrapper :global .slick-dots {
-  top: 320px;
+.wrapper :global .custom_dots {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  right: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.wrapper :global .slick-dots li button:before {
-  font-size: 12px;
-  color: #e1e1e1;
-  opacity: 1;
+.wrapper :global .custom_dots li {
+  display: flex;
+  align-items: center;
 }
 
-.wrapper :global .slick-dots li.slick-active button:before {
-  color: #000000;
+.wrapper :global .custom_dots li button {
+  color: transparent;
+  width: 10px;
+  height: 10px;
+  background-color: #8a8a8a;
+  border-radius: 100%;
+}
+
+.wrapper :global .custom_dots li.slick-active button {
+  background-color: #ffffff;
 }
