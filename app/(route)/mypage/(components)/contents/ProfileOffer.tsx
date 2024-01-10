@@ -1,6 +1,13 @@
+'use client';
+
+import { useState } from 'react';
+
 import CategoryButtonWrap from '@/components/CategoryButtonWrap';
-import { profileOfferDummy } from '@/dummy/ProfileOffer';
 import ProfileOfferBox from './ProfileOfferBox';
+
+import { profileOfferDummy } from '@/dummy/profileOffer';
+import ProfileOfferModal from './ProfileOfferModal';
+import { ProfileOfferType } from '@/types';
 
 const offerCategories = [
   { title: '제안 전체' },
@@ -9,15 +16,34 @@ const offerCategories = [
 ];
 
 export default function ProfileOffer() {
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const [selectedOffer, setSelectedOffer] = useState<ProfileOfferType | null>(
+    null,
+  );
+
+  const onClose = () => {
+    setIsModalOpen(false);
+    setSelectedOffer(null);
+  };
+
   return (
-    <div>
+    <>
       <CategoryButtonWrap type='button' categories={offerCategories} />
 
       <div className='mt-9 flex flex-col gap-4'>
         {profileOfferDummy.map((item, i) => (
-          <ProfileOfferBox offer={item} key={i} />
+          <ProfileOfferBox
+            offer={item}
+            key={i}
+            setIsModalOpen={setIsModalOpen}
+            setSelectedOffer={setSelectedOffer}
+          />
         ))}
       </div>
-    </div>
+
+      {isModalOpen && (
+        <ProfileOfferModal offer={selectedOffer} onClose={onClose} />
+      )}
+    </>
   );
 }
