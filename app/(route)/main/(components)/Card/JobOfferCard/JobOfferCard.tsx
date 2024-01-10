@@ -10,12 +10,14 @@ interface JobOfferCardProps {
   imageUrl: string;
   dDay?: number;
   company: string;
+  logo: string;
 }
 
 export default function JobOfferCard({
   imageUrl,
   dDay,
   company,
+  logo,
   ...props
 }: JobOfferCardProps) {
   return (
@@ -25,7 +27,7 @@ export default function JobOfferCard({
       badge={dDay ? `D-` + dDay : '상시'}
       share={true}
       body={<JobOfferCardBody {...props} />}
-      footer={<JobOfferCardFooter company={company} />}
+      footer={<JobOfferCardFooter company={company} logo={logo} />}
     />
   );
 }
