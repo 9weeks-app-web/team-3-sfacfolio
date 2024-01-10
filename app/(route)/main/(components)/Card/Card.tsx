@@ -29,7 +29,7 @@ export default function Card({
           className={`before:absolute before:inset-0 before:rounded-[8px]  ${
             imageHover
               ? 'before:bg-black/0 before:transition before:duration-300 group-hover:before:bg-black/60'
-              : 'before:bg-black/60'
+              : 'from-black/0 to-black/60 before:bg-gradient-to-b'
           } `}
         ></div>
 
