@@ -101,6 +101,8 @@ export interface ProfileOfferType {
   name: string;
   date: string;
   thumbnail: string;
+  tech: string;
+  job: string;
   message: string;
   workingMethod: string;
   client: string;
