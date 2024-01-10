@@ -1,0 +1,48 @@
+.wrapper :global .slick-slider {
+  width: 100%;
+}
+
+.sliderWrapper :global .slick-list {
+  overflow: visible;
+  margin: 0 -12px;
+}
+
+.wrapper :global .slick-track {
+  display: flex;
+}
+
+.wrapper :global .slick-slide > div {
+  margin: 0 12px;
+}
+
+.wrapper :global .slick-slide > div {
+  width: 1440px;
+}
+
+.wrapper :global .custom_dots {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  right: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.wrapper :global .custom_dots li {
+  display: flex;
+  align-items: center;
+}
+
+.wrapper :global .custom_dots li button {
+  color: transparent;
+  width: 10px;
+  height: 10px;
+  background-color: #8a8a8a;
+  border-radius: 100%;
+}
+
+.wrapper :global .custom_dots li.slick-active button {
+  background-color: #ffffff;
+}
