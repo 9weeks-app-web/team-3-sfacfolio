@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { useQuery } from 'react-query';
 
 import SearchInput from '@/components/SearchInput';
+import DropDownFilterProps from '@/components/DropDownFilter';
 import Banner from './(components)/Banner';
 import SpacQuizBox from './(components)/SpacQuizBox';
 import Pagination from '@/components/Pagination';
@@ -53,14 +54,7 @@ export default function pages() {
 
       <div className='flex items-center justify-between'>
         <p className='text-title font-bold'>A/B 퀴즈</p>
-
-        <div className='flex items-center gap-[11px]'>
-          <span className='text-lg text-text-alternative'>정렬방식</span>
-          <button className='flex items-center gap-1'>
-            <span>최신 순</span>
-            <Image src={ArrowDownButton} width={20} height={20} alt='down' />
-          </button>
-        </div>
+        <DropDownFilterProps filterCategory='정렬방식' filterOption='인기 순' />
       </div>
 
       <Banner />
