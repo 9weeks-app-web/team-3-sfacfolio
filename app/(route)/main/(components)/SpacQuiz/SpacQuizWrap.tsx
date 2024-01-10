@@ -7,6 +7,7 @@ export default function SpacQuizWrap() {
       {SpacQuizDummy.slice(0, 4).map((item, i) => (
         <SpacQuizBox
           key={i}
+          id={item.id}
           title={item.title}
           date={item.date}
           image={item.image}

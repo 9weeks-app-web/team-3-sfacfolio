@@ -13,71 +13,85 @@ import SpacQuiz12 from '@images/SpacQuiz/SpacQuiz12.png';
 
 export const SpacQuizDummy = [
   {
+    id: 1,
     title: ['모바일 환경에', ' 적절한 것은? (2)'],
     date: '2023년 1월 둘째 주',
     image: SpacQuiz1,
   },
   {
+    id: 2,
     title: ['커뮤니티 환경에', ' 적절한 것은?'],
     date: '2023년 8월 셋째 주',
     image: SpacQuiz2,
   },
   {
+    id: 3,
     title: ['웹 환경에', ' 적절한 것은? (2)'],
     date: '2023년 7월 둘째 주',
     image: SpacQuiz3,
   },
   {
+    id: 4,
     title: ['미디어 플랫폼에', ' 적절한 것은?'],
     date: '2023년 6월 둘째 주',
     image: SpacQuiz4,
   },
   {
+    id: 5,
     title: ['동기부여 플랫폼에', ' 적절한 것은?'],
     date: '2023년 6월 첫째 주',
     image: SpacQuiz5,
   },
   {
+    id: 6,
     title: ['환경 설정에', ' 적절한 것은?'],
     date: '2023년 6월 첫째 주',
     image: SpacQuiz6,
   },
   {
+    id: 7,
     title: ['웹 환경에', ' 적절한 것은? (1)'],
     date: '2023년 5월 둘째 주',
     image: SpacQuiz7,
   },
   {
+    id: 8,
     title: ['모바일 환경에', ' 적절한 것은? (1)'],
     date: '2023년 5월 첫째 주',
     image: SpacQuiz8,
   },
   {
+    id: 9,
     title: ['쇼핑 플랫폼에', ' 적절한 것은? (1)'],
     date: '2023년 4월 둘째 주',
     image: SpacQuiz9,
   },
   {
+    id: 10,
     title: ['금융 서비스에', ' 적절한 것은?'],
     date: '2023년 3월 둘째 주',
     image: SpacQuiz10,
   },
   {
+    id: 11,
     title: ['에러 피드백,', ' 적절한 것은? (2)'],
     date: '2023년 3월 첫째 주',
     image: SpacQuiz11,
   },
   {
+    id: 12,
     title: ['에러 피드백,', ' 적절한 것은? (1)'],
     date: '2023년 2월 첫째 주',
     image: SpacQuiz12,
   },
   {
+    id: 13,
     title: ['에러 피드백,', ' 적절한 것은? (2)'],
     date: '2023년 3월 첫째 주',
     image: SpacQuiz11,
   },
   {
+    id: 14,
     title: ['에러 피드백,', ' 적절한 것은? (1)'],
     date: '2023년 2월 첫째 주',
     image: SpacQuiz12,
