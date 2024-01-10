@@ -1,30 +1,111 @@
+import Image from 'next/image';
 import React from 'react';
 
-export default function UserImages({ 참여인원 }: { 참여인원: number }) {
-  if (참여인원 === 1) {
-    return <div className='h-[100%] w-[100%] bg-black'></div>;
-  } else if (참여인원 === 2) {
+interface UserImagesProps {
+  workers: {
+    id: number;
+    name: string;
+    userImage: string;
+  }[];
+}
+
+export default function UserImages({ workers }: UserImagesProps) {
+  if (workers.length === 1) {
+    return (
+      <div className='relative h-[100%] w-[100%]'>
+        <Image
+          src={workers[0].userImage}
+          alt='user-image'
+          fill
+          objectFit='cover'
+        />
+      </div>
+    );
+  } else if (workers.length === 2) {
     return (
       <>
-        <div className='h-[100%] w-[50%] bg-black'></div>
-        <div className='h-[100%] w-[50%] bg-blue-400'></div>
+        <div className='relative h-[100%] w-[50%]'>
+          <Image
+            src={workers[0].userImage}
+            alt='user-image'
+            fill
+            objectFit='cover'
+          />
+        </div>
+        <div className='relative h-[100%] w-[50%]'>
+          <Image
+            src={workers[1].userImage}
+            alt='user-image'
+            fill
+            objectFit='cover'
+          />
+        </div>
       </>
     );
-  } else if (참여인원 === 3) {
+  } else if (workers.length === 3) {
     return (
       <>
-        <div className='h-[50%] w-[50%] bg-black'></div>
-        <div className='h-[50%] w-[50%] bg-blue-400'></div>
-        <div className='h-[50%] w-[100%] bg-red-400'></div>
+        <div className='relative h-[50%] w-[50%]'>
+          <Image
+            src={workers[0].userImage}
+            alt='user-image'
+            fill
+            objectFit='cover'
+          />
+        </div>
+        <div className='relative h-[50%] w-[50%]'>
+          <Image
+            src={workers[1].userImage}
+            alt='user-image'
+            fill
+            objectFit='cover'
+          />
+        </div>
+        <div className='relative h-[50%] w-[100%]'>
+          <Image
+            src={workers[2].userImage}
+            alt='user-image'
+            fill
+            objectFit='cover'
+          />
+        </div>
       </>
     );
   } else {
     return (
       <>
-        <div className='h-[50%] w-[50%] bg-black'></div>
-        <div className='h-[50%] w-[50%] bg-blue-400'></div>
-        <div className='h-[50%] w-[50%] bg-red-400'></div>
-        <div className='h-[50%] w-[50%] bg-green-400'></div>
+        <div className='relative h-[50%] w-[50%]'>
+          <Image
+            src={workers[0].userImage}
+            alt='user-image'
+            fill
+            objectFit='cover'
+          />
+        </div>
+        <div className='relative h-[50%] w-[50%]'>
+          <Image
+            src={workers[1].userImage}
+            alt='user-image'
+            fill
+            objectFit='cover'
+          />
+        </div>
+        <div className='relative h-[50%] w-[50%]'>
+          <Image
+            src={workers[2].userImage}
+            alt='user-image'
+            fill
+            objectFit='cover'
+          />
+        </div>
+        <div className='relative h-[50%] w-[50%]'>
+          <Image
+            src={workers[3].userImage}
+            alt='user-image'
+            fill
+            objectFit='cover'
+          />
+        </div>
       </>
     );
   }
