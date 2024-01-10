@@ -13,11 +13,10 @@ import RealTimeKeyword from '../../components/RealTime/RealTimeKeyword';
 import CardContainer from './(components)/Card/CardContainer';
 import FindProjectCarousel from './(components)/FindProjectCard/FindProjectCarousel';
 import ProjectMatchingBanner from './(components)/FindProjectCard/ProjectMatchingBanner';
-
 import { portfolioCategories, projectCategories } from '@/constants';
-
 import { JobOfferDummy } from '@/dummy';
 import SpacQuizWrap from './(components)/SpacQuiz/SpacQuizWrap';
+import PortfolioCardCarousel from './(components)/PortfolioCard/PortfolioCardCarousel';
 
 function MainPage() {
   return (
@@ -51,6 +50,12 @@ function MainPage() {
         </CardContainer>
         <MoreButton label='포트폴리오 더보기' />
       </SectionWrapper>
+
+      {/* 스팩폴리오 Pick */}
+      <SectionSliderWrapper
+        className='relative overflow-hidden bg-background-primary py-[80px]'
+        slider={<PortfolioCardCarousel />}
+      ></SectionSliderWrapper>
 
       {/* 프로젝트 */}
       <SectionSliderWrapper
