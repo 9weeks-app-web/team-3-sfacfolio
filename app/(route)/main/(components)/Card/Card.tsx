@@ -7,7 +7,6 @@ interface CardProps {
   imageHover: boolean;
   badge: string;
   share?: boolean;
-  badgeColor: string;
   body: ReactElement;
   footer: ReactElement;
 }
@@ -17,7 +16,6 @@ export default function Card({
   imageHover,
   badge,
   share,
-  badgeColor,
   body,
   footer,
 }: CardProps) {
@@ -37,7 +35,7 @@ export default function Card({
 
         <div className='absolute inset-0 flex h-full flex-col justify-end p-4'>
           <div
-            className={`absolute left-4 top-4 inline-block rounded-[4px] p-3 text-label2 font-bold leading-[14px] text-white shadow-lg ${badgeColor} ${
+            className={`absolute left-4 top-4 inline-block rounded-[4px] bg-white/20 p-3 text-label2 font-bold leading-[14px] text-white shadow-lg ${
               imageHover && 'opacity-0 duration-300 group-hover:opacity-100'
             }`}
           >

@@ -24,7 +24,6 @@ export default function JobOfferCard({
       imageHover={false}
       badge={dDay ? `D-` + dDay : '상시'}
       share={true}
-      badgeColor='bg-white/20'
       body={<JobOfferCardBody {...props} />}
       footer={<JobOfferCardFooter company={company} />}
     />
