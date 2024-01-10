@@ -12,7 +12,7 @@ export default function CommunityPagination({
   const currentPage = parseInt(page);
 
   return (
-    <div className='mt-[80px] flex items-center justify-between'>
+    <div className='mt-6 flex items-center justify-between'>
       <div>
         {currentPage > 1 && (
           <span

@@ -14,7 +14,7 @@ function Modal({ children }: { children: React.ReactNode }) {
 
   return (
     <div
-      className='z-20 overflow-auto fixed top-0 left-0 flex justify-center pt-20 pb-[355px]  w-screen h-screen bg-[rgba(0,0,0,0.8)]'
+      className='z-[200] overflow-y-scroll fixed top-0 left-0 flex justify-center pt-20 pb-[355px] w-screen h-screen bg-[rgba(0,0,0,0.8)]'
       ref={overlay}
       onClick={onDismiss}
     >

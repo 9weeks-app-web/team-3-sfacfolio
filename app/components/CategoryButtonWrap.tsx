@@ -4,7 +4,7 @@ import Image from 'next/image';
 import CategoryArrowLeft from '@images/CategoryArrowLeft.svg';
 import CategoryArrowRight from '@images/CategoryArrowRight.svg';
 import CategoryButton from './CategoryButton';
-import FindProjectTag from './FindProjectCard/FindProjectTag';
+import FindProjectTag from '../(route)/main/(components)/FindProjectCard/FindProjectTag';
 
 interface CategoryButtonWrapProps {
   type: 'button' | 'tag';

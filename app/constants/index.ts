@@ -60,6 +60,13 @@ export const communityCategories = [
   { title: '교육과정' },
 ];
 
+export const communityFilterCategories = [
+  { title: '최신순' },
+  { title: '정확도순' },
+  { title: '댓글 많은순' },
+  { title: '좋아요순' },
+];
+
 export const careerCategories = [
   { title: '키워드 전체' },
   { title: '#유연한' },

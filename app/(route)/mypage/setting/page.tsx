@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import SettingWrap from './(components)/SettingWrap';
-import ToggleSwitch from './(components)/ToggleSwitch';
+import ToggleSwitch from '../../../components/ToggleSwitch';
 import SettingToggle from './(components)/SettingToggle';
 
 interface toggleType {

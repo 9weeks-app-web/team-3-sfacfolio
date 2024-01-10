@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
 import CategorySelector from './(components)/CategorySelector';
-import ToggleSwitch from '@/(route)/mypage/setting/(components)/ToggleSwitch';
+import ToggleSwitch from '@/components/ToggleSwitch';
 import IconEdit2 from '@images/IconEdit2.svg';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';

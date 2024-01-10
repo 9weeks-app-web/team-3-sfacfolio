@@ -4,7 +4,7 @@ import BannerCarousel from './(components)/(BannerCarousel)/BannerCarousel';
 import SectionHeader from './(components)/SectionHeader';
 import SectionWrapper from './(components)/SectionWrapper';
 import SectionSliderWrapper from './(components)/SectionSliderWrapper';
-import CategoryButtonWrap from './(components)/CategoryButtonWrap';
+import CategoryButtonWrap from '../../components/CategoryButtonWrap';
 import PortfolioCard from './(components)/Card/PortfoiloCard/PortfolioCard';
 import JobOfferCard from './(components)/Card/JobOfferCard/JobOfferCard';
 import RealTimeContainer from '../../components/RealTime/RealTimeContainer';
@@ -13,44 +13,32 @@ import RealTimeKeyword from '../../components/RealTime/RealTimeKeyword';
 import CardContainer from './(components)/Card/CardContainer';
 import FindProjectCarousel from './(components)/FindProjectCard/FindProjectCarousel';
 import ProjectMatchingBanner from './(components)/FindProjectCard/ProjectMatchingBanner';
-
 import { portfolioCategories, projectCategories } from '@/constants';
-
-import { JobOfferDummy } from '@/dummy';
+import { JobOfferDummy, PortfolioDummy } from '@/dummy';
 import SpacQuizWrap from './(components)/SpacQuiz/SpacQuizWrap';
+import PortfolioCardCarousel from './(components)/PortfolioCard/PortfolioCardCarousel';
 
 function MainPage() {
   return (
     <>
       <BannerCarousel />
 
-      {/* 포트폴리오 */}
+      {/* 맞춤 추천 포트폴리오 */}
       <SectionWrapper>
         <SectionHeader title='스팩폴리오 PICK!' />
         <CategoryButtonWrap type='button' categories={portfolioCategories} />
         <CardContainer>
-          <PortfolioCard />
-          <PortfolioCard />
-          <PortfolioCard />
-          <PortfolioCard />
+          {PortfolioDummy.map(portfolio => (
+            <PortfolioCard key={portfolio.id} {...portfolio} />
+          ))}
         </CardContainer>
       </SectionWrapper>
 
-      <SectionWrapper>
-        <SectionHeader title='인기급상승 포트폴리오' />
-        <CategoryButtonWrap type='button' categories={portfolioCategories} />
-        <CardContainer>
-          <PortfolioCard />
-          <PortfolioCard />
-          <PortfolioCard />
-          <PortfolioCard />
-          <PortfolioCard />
-          <PortfolioCard />
-          <PortfolioCard />
-          <PortfolioCard />
-        </CardContainer>
-        <MoreButton label='포트폴리오 더보기' />
-      </SectionWrapper>
+      {/* 스팩폴리오 Pick */}
+      <SectionSliderWrapper
+        className='relative overflow-hidden bg-background-primary py-[80px]'
+        slider={<PortfolioCardCarousel />}
+      ></SectionSliderWrapper>
 
       {/* 프로젝트 */}
       <SectionSliderWrapper
