@@ -8,7 +8,7 @@ export const JobOfferDummy = [
     category: 'UX',
     career: ['신입', '1~3년차'],
     imageUrl:
-      'https://s3-alpha-sig.figma.com/img/8b27/1ee9/fe6823b98f8d9fee57e77bba684c73ea?Expires=1704672000&Signature=ffM3ljiy7OPBL8yB7tYEnZNDknefqPnBgYqcaAROD~0TVszWb8upkU3ofaBqfZntftOjRTS5bD9hzcaFUXRxaV1cGuY8M5RcKXPJLPpd0gzEBUz3vCHVwkcQbA~4DyBmdyfZpBSo0zLjsSWXC8mwaDArvVqUI92wy5jjZNd7IMb1ZpNSjvvbTOQUT2WIjwX97KdJLOAve56W0Y~aK1DUpnPZd4OUEUj44foFQT5prMsb6-37Pu8QPWfKcqj5ryMv-BvuWpgrktZMSqUyH-Mboc-uf2yvDgM6GwbSVlhI9OATOm-ogOE5utAdF8zLsN3mWxpa6T0aJBaDiORfouCJIA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+      'https://s3-alpha-sig.figma.com/img/f43c/2eb4/be33f8076106fc2e58de3b4a5f35075d?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=IpwKEzMwU~4tpJHY-Jl9YLmAyBZ9-w7ahSR22vjeS2k768qQY2XI2pSW80M3vFYTOVnVCQAFVAeB9L~EV9sNZx1uW0~QQtt1Qv5Vbtc3ojK2bj7MlNRquFEAWvFcG8CQuIdo5k9XRiLc1Uzy4t~SnJF3gD6eN9Tz5jcv8OnmcxVicHLtoPwFmZHQUiEn8dLU1LXTLUCHOTZMi4jjVGcyXJXdseJeh0suNGq8BWufZfK09f~thE34Nr5rkkvtAI8o0T5UnTmrP~~grMucyUj8hqjfwVxD61It~5oOo5a1NviMK~qtowbtAdCxQyhe-CCNRqxx~eNvhC88OXQJasphpg__',
     company: 'SK이노베이션',
   },
   {
@@ -19,7 +19,7 @@ export const JobOfferDummy = [
     category: 'VMD',
     career: ['신입'],
     imageUrl:
-      'https://s3-alpha-sig.figma.com/img/8b27/1ee9/fe6823b98f8d9fee57e77bba684c73ea?Expires=1704672000&Signature=ffM3ljiy7OPBL8yB7tYEnZNDknefqPnBgYqcaAROD~0TVszWb8upkU3ofaBqfZntftOjRTS5bD9hzcaFUXRxaV1cGuY8M5RcKXPJLPpd0gzEBUz3vCHVwkcQbA~4DyBmdyfZpBSo0zLjsSWXC8mwaDArvVqUI92wy5jjZNd7IMb1ZpNSjvvbTOQUT2WIjwX97KdJLOAve56W0Y~aK1DUpnPZd4OUEUj44foFQT5prMsb6-37Pu8QPWfKcqj5ryMv-BvuWpgrktZMSqUyH-Mboc-uf2yvDgM6GwbSVlhI9OATOm-ogOE5utAdF8zLsN3mWxpa6T0aJBaDiORfouCJIA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+      'https://s3-alpha-sig.figma.com/img/c41a/d6f0/22ceed93ded28ac06724035f8a6d3a77?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Xtwr3lGxqKinlwRrIS~FCZ8uBgwmNFoD-ymw-gJD8tiOMKv9M-6NcwVgx5Gq6xLiYPYNmwgxJWApTSMDIBPjpKYkINnc4-5TBp2NlFrmNO4273aMg4EOVGsAUYeW1xNTPBVcOdL1hJyxvtZIdmBu4jSCowREFRt3Om1A0ciJruB2bBVy2a8pXkGe7wMKHdAQG1jizxkHEcyik1sX6ANrz2fj0vWf18XHGIYqINwY1qFck6xu9f2I~f-1WeraO6e-tJZckFwA61M5kIzEBPayWwx-23MJm5NwRTniWWK7BMmdRcjy8UHTiNwFf7Wa10nJrhvZxtrZ8SG3RXhWsimjaA__',
     company: '카카오',
   },
   {
@@ -29,7 +29,7 @@ export const JobOfferDummy = [
     category: 'VMD',
     career: ['5년차 이상'],
     imageUrl:
-      'https://s3-alpha-sig.figma.com/img/8b27/1ee9/fe6823b98f8d9fee57e77bba684c73ea?Expires=1704672000&Signature=ffM3ljiy7OPBL8yB7tYEnZNDknefqPnBgYqcaAROD~0TVszWb8upkU3ofaBqfZntftOjRTS5bD9hzcaFUXRxaV1cGuY8M5RcKXPJLPpd0gzEBUz3vCHVwkcQbA~4DyBmdyfZpBSo0zLjsSWXC8mwaDArvVqUI92wy5jjZNd7IMb1ZpNSjvvbTOQUT2WIjwX97KdJLOAve56W0Y~aK1DUpnPZd4OUEUj44foFQT5prMsb6-37Pu8QPWfKcqj5ryMv-BvuWpgrktZMSqUyH-Mboc-uf2yvDgM6GwbSVlhI9OATOm-ogOE5utAdF8zLsN3mWxpa6T0aJBaDiORfouCJIA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+      'https://s3-alpha-sig.figma.com/img/1f30/a7dd/3b1bc3c3ec5f8e221e9cc0a94678b501?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZHTIIYOQ40Pgg0W5KBZ0XgX8Vk6ue3X6M3H9LCLURZCM9dwufSxV9ZChJ4TshKGelf1kKWOBAcameO4ISp0bahL18UOsBLTgp0Y93tdMEG7nxY-zokAm0ARsR~lc7PilbY3c5tnJZMLBq6VJoMLWPdqJWJM5TSHXOIGXiiJgqrXmCaRh0DIFkCbEyE~wPLVJ23tq-OPTdoGt8Pj3t4gZD~cgvCNiFu06M87gkdlGUj~Da9db6Y89kJEjdZgy6DGXEvzNQECqtjUEOoPPIdbjJIRob4kITH~k-L9JSYA7nQMDdaVvm6vvyjiViTP8U8e8S7lAssTAALGRq-X1vbqsvA__',
     company: '삼성웰스토리',
   },
   {
@@ -38,46 +38,45 @@ export const JobOfferDummy = [
     category: '광고',
     career: ['신입'],
     imageUrl:
-      'https://s3-alpha-sig.figma.com/img/8b27/1ee9/fe6823b98f8d9fee57e77bba684c73ea?Expires=1704672000&Signature=ffM3ljiy7OPBL8yB7tYEnZNDknefqPnBgYqcaAROD~0TVszWb8upkU3ofaBqfZntftOjRTS5bD9hzcaFUXRxaV1cGuY8M5RcKXPJLPpd0gzEBUz3vCHVwkcQbA~4DyBmdyfZpBSo0zLjsSWXC8mwaDArvVqUI92wy5jjZNd7IMb1ZpNSjvvbTOQUT2WIjwX97KdJLOAve56W0Y~aK1DUpnPZd4OUEUj44foFQT5prMsb6-37Pu8QPWfKcqj5ryMv-BvuWpgrktZMSqUyH-Mboc-uf2yvDgM6GwbSVlhI9OATOm-ogOE5utAdF8zLsN3mWxpa6T0aJBaDiORfouCJIA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+      'https://s3-alpha-sig.figma.com/img/afe2/764b/68bb371da6928c4b0eb7f91c543bf0be?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=VQYcHFUFnZ8KE4TYwpCFbPjOgzz3emC5ijp88-KDv3GHUaLPCc~-AUXp6z-pAzorwBCUL5EQD8JdmCOS-JYM3a2Z8TMRu7nUdPM8ZYH7lcEsl~13HTFbFVgReWy0UF92U9sAhEOq~I6Qjb-mlazAVtkiMcD6~71hbO72SAiRatmcNUTEBxyMjwPLhu~BLvfbTpGDEeOdXAjY0oQZqfIXHW6xUPGwu7q5cpPFoQr89YUvj6FOzjtHqgcMGVUXRY90JGBo74Ofw2MUO2CwIiLr~8gko9VUdhVUh451iRWKdUKob4V5s~QWlPNr47H7WNHmMsAjZ2WmBBqK8p25gMWQGA__',
     company: '이랜드리테일',
   },
   {
     id: 5,
-    dDay: 12,
-    title: '[2024 상반기 SK이노베이션] UX 디자이너 채용',
+    dDay: 50,
+    title: '[신성통상(주)] R&D본부 디자인팀 경력',
     category: 'UX',
-    career: ['신입', '1~3년차'],
+    career: ['3년차 이상'],
     imageUrl:
-      'https://s3-alpha-sig.figma.com/img/8b27/1ee9/fe6823b98f8d9fee57e77bba684c73ea?Expires=1704672000&Signature=ffM3ljiy7OPBL8yB7tYEnZNDknefqPnBgYqcaAROD~0TVszWb8upkU3ofaBqfZntftOjRTS5bD9hzcaFUXRxaV1cGuY8M5RcKXPJLPpd0gzEBUz3vCHVwkcQbA~4DyBmdyfZpBSo0zLjsSWXC8mwaDArvVqUI92wy5jjZNd7IMb1ZpNSjvvbTOQUT2WIjwX97KdJLOAve56W0Y~aK1DUpnPZd4OUEUj44foFQT5prMsb6-37Pu8QPWfKcqj5ryMv-BvuWpgrktZMSqUyH-Mboc-uf2yvDgM6GwbSVlhI9OATOm-ogOE5utAdF8zLsN3mWxpa6T0aJBaDiORfouCJIA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+      'https://s3-alpha-sig.figma.com/img/b1bf/c704/08adddc0b1f425fb0002bb6848230b64?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=fmyJJJOoM-9Mz-hKUzMh6gmufPQ6wvhz3t~Tr6WnBjq~O3hGHGVlDASYBl4h3AKbGLF~F9hp8cxohYn3XpMeDrY9PC8qqRXU6nPH5vjMhlT6gP7zyTxPCB4Qj-aw4XpoFS1s4b9oMVjie0wT5ILzx3M0Dr~o15b~xS0HfIHB2oMykH50ynTYhplF6UZV0aMO9O1hdN7zKpTUiS7U9wEOVxtnnK0bVZC8QIdboeQTSuKYdHD2MlXA0mCXWBgUOlMZ5MC58ExSHK~heGk16GGjjD6eVHLSsBW3TrF4IGCHc~FNMZNeSoJnyjxIFeVMR-169temLRgtBJ3ABmNdkQyXIQ__',
     company: 'SK이노베이션',
   },
   {
     id: 6,
-    title: '[카카오] 카카오프렌즈 공간디자인 VMD_어시스턴트 채용',
-    category: 'VMD',
+    title: '[크레텍책임] 디자인 신입/경력 채용',
+    category: '제품',
     career: ['신입'],
     imageUrl:
-      'https://s3-alpha-sig.figma.com/img/8b27/1ee9/fe6823b98f8d9fee57e77bba684c73ea?Expires=1704672000&Signature=ffM3ljiy7OPBL8yB7tYEnZNDknefqPnBgYqcaAROD~0TVszWb8upkU3ofaBqfZntftOjRTS5bD9hzcaFUXRxaV1cGuY8M5RcKXPJLPpd0gzEBUz3vCHVwkcQbA~4DyBmdyfZpBSo0zLjsSWXC8mwaDArvVqUI92wy5jjZNd7IMb1ZpNSjvvbTOQUT2WIjwX97KdJLOAve56W0Y~aK1DUpnPZd4OUEUj44foFQT5prMsb6-37Pu8QPWfKcqj5ryMv-BvuWpgrktZMSqUyH-Mboc-uf2yvDgM6GwbSVlhI9OATOm-ogOE5utAdF8zLsN3mWxpa6T0aJBaDiORfouCJIA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
-    company: '카카오',
+      'https://s3-alpha-sig.figma.com/img/8bb3/6eaa/5d3fab3c631e8e2bfc7caa49aa4094cf?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=B-M09ZpvgnvR7p6GJCsex5Dz62NQ4HppupkUF8Y5-3qnjVJygzMoE1KNjNOQ8ARAuq9TaDuvvRPPetyVxzho2J8ASrzg2-QjAfkOlC3B0qjOQy1nDNF4dcJUThQ-1NP66Ac2CRWU5WoN7W4eUGbb8oWXgyVmvG~H1Y6sauS1E~28mpTFU6mjG-elKK-lDLAnHo32SBmEw2sGr8wwSJoRMSp8eFX177y17cAxK96JA7I5i-DaqjRi45X7vJRmNIJf1pc73-C-rpHjcykbRzGVCLbwfzicb4iG7XQj5b1AMXTZ0mtf9Dmt8ih6A8RBaVL~ZoaINxIePY0Yvkhs2AzPjg__',
+    company: '크레텍책임',
   },
   {
     id: 7,
-    dDay: 40,
-    title: '[삼성웰스토리] 공간디자인 담당자 채용',
-    category: 'VMD',
+    title: '[애경산업] 2024 화장품컨텐츠 디자인 기획/제작 담당 계약직 채용',
+    category: '콘텐츠',
     career: ['5년차 이상'],
     imageUrl:
-      'https://s3-alpha-sig.figma.com/img/8b27/1ee9/fe6823b98f8d9fee57e77bba684c73ea?Expires=1704672000&Signature=ffM3ljiy7OPBL8yB7tYEnZNDknefqPnBgYqcaAROD~0TVszWb8upkU3ofaBqfZntftOjRTS5bD9hzcaFUXRxaV1cGuY8M5RcKXPJLPpd0gzEBUz3vCHVwkcQbA~4DyBmdyfZpBSo0zLjsSWXC8mwaDArvVqUI92wy5jjZNd7IMb1ZpNSjvvbTOQUT2WIjwX97KdJLOAve56W0Y~aK1DUpnPZd4OUEUj44foFQT5prMsb6-37Pu8QPWfKcqj5ryMv-BvuWpgrktZMSqUyH-Mboc-uf2yvDgM6GwbSVlhI9OATOm-ogOE5utAdF8zLsN3mWxpa6T0aJBaDiORfouCJIA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
-    company: '삼성웰스토리',
+      'https://s3-alpha-sig.figma.com/img/f3bf/f2df/b37de04c8a8e8b4cc9451cd8b5120020?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=IT6R2LjUGMSXA3THOFrIxhqg8OlaI6ciCqhutfswrepzAFJkdGD2L9nBFP9mq1Hw-O9UCJ9HX6njkTvogxxyn5UOO3VXZNh~UE2X7VLIyxMKvsvn6ba5923z-9C9p4YZRrHPdKNDU367UOsaTM7xLc49MeiOpSB5M6L1Q4SllcH3wzNZfnr4SSXac8zh5pXLJwO9JnxhVD4MtwRp1UOtP91RnO-8ehVaysDehjdjpPBIpeK84CyRY-EO297fxauJrXaUQvHWp95qQrab0UYBX8sWqfH1Y0tF8XKHWFn4PzwtvahN8hatCr1HE5jmk1fUMyGwapv006f5NpSncS4XKQ__',
+    company: '애경산업',
   },
   {
     id: 8,
-    title: '[이랜드리테일] 광고디자인 인턴십 채용',
+    title: '[(주)이프어데이] 웹디자인 신입 채용',
     category: '광고',
     career: ['신입'],
     imageUrl:
-      'https://s3-alpha-sig.figma.com/img/8b27/1ee9/fe6823b98f8d9fee57e77bba684c73ea?Expires=1704672000&Signature=ffM3ljiy7OPBL8yB7tYEnZNDknefqPnBgYqcaAROD~0TVszWb8upkU3ofaBqfZntftOjRTS5bD9hzcaFUXRxaV1cGuY8M5RcKXPJLPpd0gzEBUz3vCHVwkcQbA~4DyBmdyfZpBSo0zLjsSWXC8mwaDArvVqUI92wy5jjZNd7IMb1ZpNSjvvbTOQUT2WIjwX97KdJLOAve56W0Y~aK1DUpnPZd4OUEUj44foFQT5prMsb6-37Pu8QPWfKcqj5ryMv-BvuWpgrktZMSqUyH-Mboc-uf2yvDgM6GwbSVlhI9OATOm-ogOE5utAdF8zLsN3mWxpa6T0aJBaDiORfouCJIA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
-    company: '이랜드리테일',
+      'https://s3-alpha-sig.figma.com/img/612f/9ded/00fd05ece040eb287fd717f0743e3399?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PjWuIiXACSCE1wYKRoHKeFRO62QkBPSezidDm9EcRM1osScnHiASM~2Smr1YSOyoXC3lxfFYTpx3-bRnBpJL196b~4h4Fx8PMNpiu6H~JDYD0PRhjedfmKH2Ykqvv7Q9uRkKp4qYTHeEh7jafluMmJy6E7pXFG6Z6T010oCizymoBHNKfBDHCEwWYLUtu5MXcz6GYJPYXmXznXVAcXpUJHULYs8uCAjDF70siQzwfgQZrlMpHxSd4t~LLcf3blA9p~d8RWeYqWx3wTfSYl668sQtxK77IMq~0ZMaIo~ydTwLwPttmngdvVWpjoamTZeYFYyu5sNSLKC~lS-Tg4Dvpg__',
+    company: '이프어데이',
   },
 ];
 
