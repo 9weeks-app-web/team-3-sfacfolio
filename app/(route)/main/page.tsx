@@ -14,7 +14,7 @@ import CardContainer from './(components)/Card/CardContainer';
 import FindProjectCarousel from './(components)/FindProjectCard/FindProjectCarousel';
 import ProjectMatchingBanner from './(components)/FindProjectCard/ProjectMatchingBanner';
 import { portfolioCategories, projectCategories } from '@/constants';
-import { JobOfferDummy } from '@/dummy';
+import { JobOfferDummy, PortfolioDummy } from '@/dummy';
 import SpacQuizWrap from './(components)/SpacQuiz/SpacQuizWrap';
 import PortfolioCardCarousel from './(components)/PortfolioCard/PortfolioCardCarousel';
 
@@ -23,32 +23,15 @@ function MainPage() {
     <>
       <BannerCarousel />
 
-      {/* 포트폴리오 */}
+      {/* 맞춤 추천 포트폴리오 */}
       <SectionWrapper>
         <SectionHeader title='스팩폴리오 PICK!' />
         <CategoryButtonWrap type='button' categories={portfolioCategories} />
         <CardContainer>
-          <PortfolioCard />
-          <PortfolioCard />
-          <PortfolioCard />
-          <PortfolioCard />
+          {PortfolioDummy.map(portfolio => (
+            <PortfolioCard key={portfolio.id} {...portfolio} />
+          ))}
         </CardContainer>
-      </SectionWrapper>
-
-      <SectionWrapper>
-        <SectionHeader title='인기급상승 포트폴리오' />
-        <CategoryButtonWrap type='button' categories={portfolioCategories} />
-        <CardContainer>
-          <PortfolioCard />
-          <PortfolioCard />
-          <PortfolioCard />
-          <PortfolioCard />
-          <PortfolioCard />
-          <PortfolioCard />
-          <PortfolioCard />
-          <PortfolioCard />
-        </CardContainer>
-        <MoreButton label='포트폴리오 더보기' />
       </SectionWrapper>
 
       {/* 스팩폴리오 Pick */}

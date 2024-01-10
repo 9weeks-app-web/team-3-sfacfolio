@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import styles from '@/style/findProjectCarousle.module.css';
 import PortfolioCard from '../Card/PortfoiloCard/PortfolioCard';
+import { PortfolioDummy } from '@/dummy';
 
 const settings = {
   infinite: false,
@@ -37,14 +38,9 @@ function PortfolioCardCarousel() {
         className={`${styles.sliderWrapper} w-full px-[calc((100%-120px)/2)]`}
       >
         <Slider {...settings}>
-          <PortfolioCard />
-          <PortfolioCard />
-          <PortfolioCard />
-          <PortfolioCard />
-          <PortfolioCard />
-          <PortfolioCard />
-          <PortfolioCard />
-          <PortfolioCard />
+          {PortfolioDummy.map(portfolio => (
+            <PortfolioCard key={portfolio.id} {...portfolio} />
+          ))}
         </Slider>
       </div>
     </div>
