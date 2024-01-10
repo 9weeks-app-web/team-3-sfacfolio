@@ -4,7 +4,7 @@ interface PaginationProps {
   changePage: (page: number) => void;
 }
 
-export default function CommunityPagination({
+export default function Pagination({
   total = 0,
   page,
   changePage,
@@ -12,7 +12,7 @@ export default function CommunityPagination({
   const currentPage = parseInt(page);
 
   return (
-    <div className='mt-6 flex items-center justify-between'>
+    <div className='my-6 flex items-center justify-between'>
       <div>
         {currentPage > 1 && (
           <span
