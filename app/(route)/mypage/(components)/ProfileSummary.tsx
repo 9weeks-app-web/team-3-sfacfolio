@@ -8,8 +8,9 @@ import Share from '@images/Share.svg';
 import ProfileUtilButton from './ProfileUtilButton';
 import ProfileItem from './ProfileItem';
 import ProfileButton from './ProfileButton';
+import { MyProfileProps } from './ProfileDetail';
 
-function ProfileSummary() {
+function ProfileSummary({ setCurrentTab }: Omit<MyProfileProps, 'currentTab'>) {
   return (
     <div className='relative h-[550px] w-[954px] overflow-hidden rounded-t-lg'>
       <Image
@@ -54,7 +55,11 @@ function ProfileSummary() {
           </div>
           <div className='flex justify-between'>
             <ProfileButton text='프로필 편집' />
-            <ProfileButton text='제안 관리' option='white' />
+            <ProfileButton
+              text='제안 관리'
+              option='white'
+              setCurrentTab={setCurrentTab}
+            />
           </div>
         </div>
       </div>
