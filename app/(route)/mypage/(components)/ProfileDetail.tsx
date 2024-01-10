@@ -1,6 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import ProfileTab from './ProfileTab';
+import ProfileOffer from './contents/ProfileOffer';
 
 export const menus = {
   포트폴리오: ['나의 포트폴리오', '관심 포트폴리오'],
@@ -29,11 +30,11 @@ function ProfileDetail({ currentTab, setCurrentTab }: MyProfileProps) {
   }, [currentTab]);
 
   return (
-    <div className='w-[954px] rounded-b-lg border border-line-normal'>
+    <div className='w-[954px] rounded-b-lg border border-line-normal bg-white'>
       <ProfileTab currentTab={currentTab} setCurrentTab={setCurrentTab} />
-      <div className='p-4 pt-6'>
+      <div className='p-4 pt-0'>
         {currentTab ? (
-          <ul className='-ml-3 flex'>
+          <ul className='-ml-3 flex pt-6'>
             {menus[currentTab].map((item, idx) => {
               return (
                 <li key={item} className='flex items-center'>
@@ -55,7 +56,7 @@ function ProfileDetail({ currentTab, setCurrentTab }: MyProfileProps) {
             })}
           </ul>
         ) : (
-          <div></div> // TODO: 제안관리 구현 위치
+          <ProfileOffer />
         )}
       </div>
     </div>
