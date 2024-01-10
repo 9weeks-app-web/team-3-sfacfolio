@@ -18,15 +18,13 @@ export default function PortfolioCardFooter({
         김다인하늘
       </span>
       {참여인원 > 1 && (
-        <span className='text-label3 font-medium text-text-alternative'>
-          외 {참여인원 - 1}명
-        </span>
+        <span className='text-text-alternative'>외 {참여인원 - 1}명</span>
       )}
 
       <div className='ml-auto flex items-center gap-[14px] text-label2'>
         <div className='flex items-center'>
           <span className='mr-1'>
-            <HeartIcon size={20} color='#8E8E8E' />
+            <HeartIcon size={20} color='#c4c4c4' />
           </span>
           <span>2,132</span>
         </div>

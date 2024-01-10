@@ -37,16 +37,22 @@ export default function Card({
 
         <div className='absolute inset-0 flex h-full flex-col justify-end p-4'>
           <div
-            className={`absolute left-4 top-4 inline-block rounded-[4px] p-3 text-label2 font-bold leading-[14px] text-white shadow-lg ${badgeColor}`}
+            className={`absolute left-4 top-4 inline-block rounded-[4px] p-3 text-label2 font-bold leading-[14px] text-white shadow-lg ${badgeColor} ${
+              imageHover && 'opacity-0 duration-300 group-hover:opacity-100'
+            }`}
           >
             {badge}
           </div>
           {share && (
             <div className={`absolute right-4 top-4 h-6 w-6`}>
-              <Image src={IconBookmark} alt='bookmark' className='' />
+              <Image src={IconBookmark} alt='bookmark' />
             </div>
           )}
-          <div className={`${imageHover && 'hidden group-hover:block'}`}>
+          <div
+            className={`${
+              imageHover && 'opacity-0 duration-300 group-hover:opacity-100'
+            }`}
+          >
             {body}
           </div>
         </div>
