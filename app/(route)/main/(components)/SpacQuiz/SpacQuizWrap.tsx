@@ -1,9 +1,9 @@
-import SpacQuizBox from '../SpacQuizBox';
+import SpacQuizBox from '../../../quiz/(components)/SpacQuizBox';
 
-import SpacQuiz1 from '@images/SpacQuiz1.png';
-import SpacQuiz2 from '@images/SpacQuiz2.png';
-import SpacQuiz3 from '@images/SpacQuiz3.png';
-import SpacQuiz4 from '@images/SpacQuiz4.png';
+import SpacQuiz1 from '@images/SpacQuiz/SpacQuiz1.png';
+import SpacQuiz2 from '@images/SpacQuiz/SpacQuiz2.png';
+import SpacQuiz3 from '@images/SpacQuiz/SpacQuiz3.png';
+import SpacQuiz4 from '@images/SpacQuiz/SpacQuiz4.png';
 
 export default function SpacQuizWrap() {
   return (
