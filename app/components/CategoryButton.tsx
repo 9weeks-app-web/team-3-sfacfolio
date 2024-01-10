@@ -13,8 +13,10 @@ function CategoryButton({
 }: CategoryButtonProps) {
   return (
     <button
-      className={`rounded-full border border-line-normal px-[16px] py-[12px] text-label1 text-text-alternative transition-all ${className} ${
-        active ? 'bg-primary-heavy text-white' : 'bg-white'
+      className={`rounded-full border px-[16px] py-[12px] text-label1 text-text-alternative transition-all ${className} ${
+        active
+          ? 'border-primary-heavy bg-primary-heavy text-white'
+          : 'border-line-normal bg-white'
       } transition-all duration-300 hover:bg-primary-heavy hover:text-white`}
       onClick={onClick}
     >
