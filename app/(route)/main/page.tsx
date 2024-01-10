@@ -11,18 +11,13 @@ import RealTimeContainer from '../../components/RealTime/RealTimeContainer';
 import RealTimeCommunity from '../../components/RealTime/RealTimeCommunity';
 import RealTimeKeyword from '../../components/RealTime/RealTimeKeyword';
 import CardContainer from './(components)/Card/CardContainer';
-import ABTest from './(components)/ABTest';
 import FindProjectCarousel from './(components)/FindProjectCard/FindProjectCarousel';
 import ProjectMatchingBanner from './(components)/FindProjectCard/ProjectMatchingBanner';
 
-import {
-  portfolioCategories,
-  projectCategories,
-  communityCategories,
-} from '@/constants';
+import { portfolioCategories, projectCategories } from '@/constants';
 
 import { JobOfferDummy } from '@/dummy';
-import { PopularKeywordsDummy_MAIN } from '@/dummy';
+import SpacQuizWrap from './(components)/SpacQuiz/SpacQuizWrap';
 
 function MainPage() {
   return (
@@ -82,23 +77,23 @@ function MainPage() {
         />
       </SectionSliderWrapper>
 
-      {/* 커뮤니티 */}
+      {/* 스팩퀴즈 */}
       <SectionWrapper>
-        <SectionHeader title='디자인 저격수 되기! 맞춰봐 AB' more='/' />
-        <ABTest />
+        <SectionHeader title='스팩이들을 위한 디자인 인사이트!' more='/' />
+        <SpacQuizWrap />
       </SectionWrapper>
 
-      <SectionWrapper>
-        <SectionHeader title='실시간 인기 커뮤니티' more='/' />
-        <CategoryButtonWrap type='button' categories={communityCategories} />
+      {/* 커뮤니티 */}
+      <SectionWrapper className='bg-background-primary'>
+        <SectionHeader title='실시간 인기 커뮤니티' more='/community' />
         <RealTimeContainer>
-          <RealTimeCommunity title='핫한 게시글' />
-          <RealTimeKeyword keywords={PopularKeywordsDummy_MAIN} />
+          <RealTimeCommunity />
+          <RealTimeKeyword type='main' />
         </RealTimeContainer>
       </SectionWrapper>
 
       {/* 채용 공고 */}
-      <SectionWrapper className='bg-background-primary'>
+      <SectionWrapper>
         <SectionHeader title='새로 올라온 채용 공고' />
         <CategoryButtonWrap
           type='button'
