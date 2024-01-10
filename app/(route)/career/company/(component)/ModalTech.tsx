@@ -53,7 +53,7 @@ export default function ModalTech({ data, setData, onClose }: ModalProps) {
   };
 
   return (
-    <ModalLayout onApply={onApply}>
+    <ModalLayout onApply={onApply} onClose={onClose}>
       <ModalHeader
         title='테크'
         number={tempData.length === 0 ? 1 : tempData.length}

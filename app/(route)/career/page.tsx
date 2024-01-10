@@ -1,17 +1,18 @@
 import Image from 'next/image';
 import React from 'react';
+import Link from 'next/link';
 import careerBanner from '@images/career-banner.png';
 import SectionHeader from '../main/(components)/SectionHeader';
 import SectionWrapper from '../main/(components)/SectionWrapper';
 import CardContainer from '../main/(components)/Card/CardContainer';
 import JobOfferCard from '../main/(components)/Card/JobOfferCard/JobOfferCard';
-import CategoryButtonWrap from '../main/(components)/CategoryButtonWrap';
+import CategoryButtonWrap from '../../components/CategoryButtonWrap';
 import { careerCategories, portfolioCategories } from '@/constants';
 import SectionSliderWrapper from '@/(route)/main/(components)/SectionSliderWrapper';
 import MoreButton from '../main/(components)/MoreButton';
 import TechCardCarousel from './(component)/TechCard/TechCardCarousel';
-import { JobOfferDummy } from '@/dummy';
 import CompanyCardCarousel from './(component)/CompanyCard/CompanyCardCarousel';
+import { JobOfferDummy } from '@/dummy';
 
 export default function page() {
   return (
@@ -26,7 +27,7 @@ export default function page() {
         ></Image>
       </div>
       <SectionSliderWrapper
-        className='py-[80px]'
+        className='overflow-hidden py-[80px]'
         slider={<CompanyCardCarousel />}
       >
         <SectionHeader
@@ -46,7 +47,9 @@ export default function page() {
             <JobOfferCard key={jobOffer.id} {...jobOffer} />
           ))}
         </CardContainer>
-        <MoreButton label='채용 정보 더보기' />
+        <Link href={`/career/company`}>
+          <MoreButton label='채용 정보 더보기' />
+        </Link>
       </SectionWrapper>
       <SectionWrapper className='bg-white'>
         <SectionHeader title='맞춤 키워드로 보는 채용공고' />
@@ -61,7 +64,9 @@ export default function page() {
             <JobOfferCard key={jobOffer.id} {...jobOffer} />
           ))}
         </CardContainer>
-        <MoreButton label='채용 정보 더보기' />
+        <Link href={`/career/company`}>
+          <MoreButton label='채용 정보 더보기' />
+        </Link>
       </SectionWrapper>
       <SectionSliderWrapper
         className='overflow-hidden bg-background-primary py-20'

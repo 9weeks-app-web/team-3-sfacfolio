@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import LogoFolio from '@images/LogoFolio.svg';
 import Link from 'next/link';
@@ -10,7 +10,6 @@ import HeaderButton from './HeaderButton';
 import Bell from '@images/Bell.svg';
 import Search from '@images/Search.svg';
 import { usePathname, useRouter } from 'next/navigation';
-import FolioHeaderInput from './FolioHeaderInput'; // TODO: 컴포넌트 안쓰게 되면 삭제
 
 const menuItems = [
   { name: '홈', segment: 'main' },
@@ -25,14 +24,17 @@ function FolioHeader() {
   const pathname = usePathname();
   const router = useRouter();
   const { loggedIn, setLoggedIn } = useAuthStatus();
+  const [isOpen, setIsOpen] = useState(false);
 
-  const onLogout = () => {
+  const handleLogout = () => {
     auth.signOut();
     setLoggedIn(false);
     router.push('/signin');
   };
 
-  // useEffect(() => {}, [loggedIn]);
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
 
   return (
     <div className='box-border flex h-[62px] w-full justify-between border-b-2 border-b-line-normal bg-background-secondary px-20'>
@@ -74,10 +76,28 @@ function FolioHeader() {
           <Image src={Bell} alt='bell' width={24} height={24} />
         </button>
         {loggedIn && (
-          <div
-            onClick={onLogout}
-            className='h-10 w-10 cursor-pointer rounded-full bg-black'
-          ></div>
+          <div className='relative'>
+            <div
+              className='h-10 w-10 cursor-pointer rounded-full bg-black'
+              onClick={() => setIsOpen(!isOpen)}
+            ></div>
+            {isOpen && (
+              <div className='absolute right-0 mt-4 w-[156px] rounded-md border border-line-normal bg-white shadow-[0_4px_8px_0_rgba(0,0,0,0.15)]'>
+                <button
+                  className='h-12 w-full select-none border-b border-line-normal text-[18px] font-medium'
+                  onClick={() => router.push('/mypage')}
+                >
+                  프로필 보기
+                </button>
+                <button
+                  className='h-12 w-full select-none text-[18px] font-medium'
+                  onClick={handleLogout}
+                >
+                  로그아웃
+                </button>
+              </div>
+            )}
+          </div>
         )}
         {loggedIn ? (
           <HeaderButton href={'/'} className='py-[9px] text-caption1'>

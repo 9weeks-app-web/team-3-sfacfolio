@@ -1,10 +1,9 @@
-import Link from 'next/link';
+import MyProfile from './(components)/MyProfile';
 
 export default function MyPage() {
   return (
-    <>
-      <Link href={{ pathname: '/mypage/profileImage' }}>
-        profile image edit
-      </Link>
-    </>
-);
+    <div className='flex flex-col items-center pt-[50px]'>
+      <MyProfile />
+    </div>
+  );
+}

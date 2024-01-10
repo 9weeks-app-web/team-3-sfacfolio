@@ -29,7 +29,7 @@ export default function ModalYears({ data, setData, onClose }: ModalProps) {
   };
 
   return (
-    <ModalLayout onApply={onApply}>
+    <ModalLayout onApply={onApply} onClose={onClose}>
       <ModalHeader title='경력' onClose={onClose} onReset={onReset} />
       <div className='py-3'>
         <p className='text-[18px] font-bold text-primary-heavy'>

@@ -11,5 +11,10 @@ export interface CompanyHireType {
   applyMethod: string;
   applyPage?: string;
   welfare: string;
-  location: { country: string; region: string; address: string };
+  location: {
+    country: string;
+    region: string;
+    address: string;
+    center: { lat: number; lng: number };
+  };
 }

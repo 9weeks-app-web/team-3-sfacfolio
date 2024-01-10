@@ -59,7 +59,7 @@ export default function ModalJob({ data, setData, onClose }: ModalProps) {
   };
 
   return (
-    <ModalLayout onApply={onApply}>
+    <ModalLayout onApply={onApply} onClose={onClose}>
       <ModalHeader
         title='직무'
         number={tempData.length === 0 ? 1 : tempData.length}

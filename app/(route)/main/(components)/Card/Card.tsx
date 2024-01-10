@@ -7,7 +7,6 @@ interface CardProps {
   imageHover: boolean;
   badge: string;
   share?: boolean;
-  badgeColor: string;
   body: ReactElement;
   footer: ReactElement;
 }
@@ -17,7 +16,6 @@ export default function Card({
   imageHover,
   badge,
   share,
-  badgeColor,
   body,
   footer,
 }: CardProps) {
@@ -31,22 +29,28 @@ export default function Card({
           className={`before:absolute before:inset-0 before:rounded-[8px]  ${
             imageHover
               ? 'before:bg-black/0 before:transition before:duration-300 group-hover:before:bg-black/60'
-              : 'before:bg-black/60'
+              : 'from-black/0 to-black/60 before:bg-gradient-to-b'
           } `}
         ></div>
 
         <div className='absolute inset-0 flex h-full flex-col justify-end p-4'>
           <div
-            className={`absolute left-4 top-4 inline-block rounded-[4px] p-3 text-label2 font-bold leading-[14px] text-white shadow-lg ${badgeColor}`}
+            className={`absolute left-4 top-4 inline-block rounded-[4px] bg-white/20 p-3 text-label2 font-bold leading-[14px] text-white shadow-lg ${
+              imageHover && 'opacity-0 duration-300 group-hover:opacity-100'
+            }`}
           >
             {badge}
           </div>
           {share && (
             <div className={`absolute right-4 top-4 h-6 w-6`}>
-              <Image src={IconBookmark} alt='bookmark' className='' />
+              <Image src={IconBookmark} alt='bookmark' />
             </div>
           )}
-          <div className={`${imageHover && 'hidden group-hover:block'}`}>
+          <div
+            className={`${
+              imageHover && 'opacity-0 duration-300 group-hover:opacity-100'
+            }`}
+          >
             {body}
           </div>
         </div>

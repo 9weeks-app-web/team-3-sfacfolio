@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
 import BusinessStrategy from '@images/BusinessStrategy.svg';
-import Close from '@images/Close.svg';
 import ProjectButton from '../common/ProjectButton';
+import PlusIcon from '@/components/Icons/PlusIcon';
 
 function ProjectBanner() {
   return (
@@ -23,7 +23,7 @@ function ProjectBanner() {
           </ProjectButton>
           <ProjectButton color='transparent' size='big'>
             프로젝트 만들기
-            <Image src={Close} alt='프로젝트 만들기' width={18} height={18} />
+            <PlusIcon size={18} color='white' />
           </ProjectButton>
         </div>
       </div>
