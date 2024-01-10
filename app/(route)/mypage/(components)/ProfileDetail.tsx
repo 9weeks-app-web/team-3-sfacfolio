@@ -2,6 +2,11 @@
 import React, { useEffect, useState } from 'react';
 import ProfileTab from './ProfileTab';
 import ProfileOffer from './contents/ProfileOffer';
+import ProfilePortfolio from './contents/ProfilePortfolio';
+import ProfileProject from './contents/ProfileProject';
+import ProfileCommunity from './contents/ProfileCommunity';
+import ProfileQuiz from './contents/ProfileQuiz';
+import ProfileCareer from './contents/ProfileCareer';
 
 export const menus = {
   포트폴리오: ['나의 포트폴리오', '관심 포트폴리오'],
@@ -34,27 +39,34 @@ function ProfileDetail({ currentTab, setCurrentTab }: MyProfileProps) {
       <ProfileTab currentTab={currentTab} setCurrentTab={setCurrentTab} />
       <div className='p-4 pt-0'>
         {currentTab ? (
-          <ul className='-ml-3 flex pt-6'>
-            {menus[currentTab].map((item, idx) => {
-              return (
-                <li key={item} className='flex items-center'>
-                  {idx > 0 && idx < menus[currentTab].length && (
-                    <div className='h-6 w-[1px] bg-text-disable'></div>
-                  )}
-                  <span
-                    className={`px-3 py-2 text-xl font-bold leading-6 ${
-                      currentSubTab === item
-                        ? 'text-text-normal'
-                        : 'text-text-assitive'
-                    } ${menus[currentTab].length > 1 && 'cursor-pointer'}`}
-                    onClick={() => setCurrentSubTab(item)}
-                  >
-                    {item}
-                  </span>
-                </li>
-              );
-            })}
-          </ul>
+          <>
+            <ul className='-ml-3 flex pt-6'>
+              {menus[currentTab].map((item, idx) => {
+                return (
+                  <li key={item} className='flex items-center'>
+                    {idx > 0 && idx < menus[currentTab].length && (
+                      <div className='h-6 w-[1px] bg-text-disable'></div>
+                    )}
+                    <span
+                      className={`px-3 py-2 text-xl font-bold leading-6 ${
+                        currentSubTab === item
+                          ? 'text-text-normal'
+                          : 'text-text-assitive'
+                      } ${menus[currentTab].length > 1 && 'cursor-pointer'}`}
+                      onClick={() => setCurrentSubTab(item)}
+                    >
+                      {item}
+                    </span>
+                  </li>
+                );
+              })}
+            </ul>
+            {currentTab === '포트폴리오' && <ProfilePortfolio />}
+            {currentTab === '프로젝트' && <ProfileProject />}
+            {currentTab === '커뮤니티' && <ProfileCommunity />}
+            {currentTab === '스팩퀴즈' && <ProfileQuiz />}
+            {currentTab === '커리어' && <ProfileCareer />}
+          </>
         ) : (
           <ProfileOffer />
         )}
