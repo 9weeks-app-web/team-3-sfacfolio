@@ -1,5 +1,6 @@
 .wrapper :global .slick-slider {
   width: 100%;
+  overflow: hidden;
 }
 
 .sliderWrapper :global .slick-list {
