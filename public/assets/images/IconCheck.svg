@@ -1,0 +1,10 @@
+<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon/Check">
+<mask id="mask0_1094_66121" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24">
+<rect id="Bound Box" x="0.375" width="24" height="24" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_1094_66121)">
+<path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M21.0477 5.25265C21.4563 5.61357 21.4864 6.22799 21.1149 6.625L10.4707 18L3.73484 12.5468C3.31056 12.2033 3.25324 11.5907 3.6068 11.1786C3.96037 10.7664 4.59093 10.7107 5.01521 11.0542L10.2794 15.3159L19.6351 5.318C20.0066 4.92099 20.639 4.89174 21.0477 5.25265Z" fill="white"/>
+</g>
+</g>
+</svg>

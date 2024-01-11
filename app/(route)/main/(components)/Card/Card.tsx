@@ -8,7 +8,7 @@ interface CardProps {
   badge: string;
   share?: boolean;
   body: ReactElement;
-  footer: ReactElement;
+  footer?: ReactElement;
 }
 
 // imageHover 네이밍 변경 필요
@@ -21,7 +21,7 @@ export default function Card({
   footer,
 }: CardProps) {
   return (
-    <div className='h-[350px] w-[302px] cursor-pointer'>
+    <div className='w-[302px] cursor-pointer'>
       <div className='group relative mb-2 overflow-hidden rounded-[8px]'>
         <div
           className={`relative h-[302px] w-full overflow-hidden ${
@@ -66,7 +66,7 @@ export default function Card({
           </div>
         </div>
       </div>
-      {footer}
+      {footer && footer}
     </div>
   );
 }

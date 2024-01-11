@@ -1,13 +1,19 @@
-import React from 'react';
-import ApplyStatusItem from './ApplyStatusItem';
+import { useState } from 'react';
+import ApplyStatusItem from './StatusItem';
 import RightArrow from '@images/RightArrow.svg';
 import Image from 'next/image';
-import ApplyStatusTable from './ApplyStatusTable';
 import DropDownFilter from '@/components/DropDownFilter';
+import ApplyStatusTable from './ApplyStatusTable';
 
 const applyStatusMenus = ['지원 완료', '서류 통과', '최종 합격', '불합격'];
 
 function ApplyStatus() {
+  const [status, setStatus] = useState(applyStatusMenus[0]);
+
+  const handleStatusChange = (newStatus: string) => {
+    setStatus(newStatus);
+  };
+
   return (
     <div className='mt-4 flex flex-col gap-6'>
       <div className='flex w-full justify-center rounded-lg border border-line-normal bg-background-tertiary py-[22px]'>
@@ -18,7 +24,13 @@ function ApplyStatus() {
                 {idx > 0 && idx < applyStatusMenus.length && (
                   <Image src={RightArrow} alt='RightArrow' />
                 )}
-                <ApplyStatusItem key={menu} text={menu} count={1} />
+                <ApplyStatusItem
+                  key={menu}
+                  text={menu}
+                  count={1}
+                  active={status === menu}
+                  onClick={() => handleStatusChange(menu)}
+                />
               </>
             );
           })}

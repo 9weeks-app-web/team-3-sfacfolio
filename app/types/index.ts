@@ -93,3 +93,22 @@ interface JobOpeningType {
   type: string;
   company: string;
 }
+
+export interface ProfileOfferType {
+  id: number;
+  type: '채용' | '프로젝트';
+  title: string;
+  name: string;
+  date: string;
+  thumbnail: string;
+  tech: string;
+  job: string;
+  message: string;
+  workingMethod: string;
+  client: string;
+  period: string;
+  budget?: string;
+  link?: string;
+  file?: string;
+  progressStatus?: string;
+}
