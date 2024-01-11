@@ -11,6 +11,7 @@ interface CardProps {
   footer: ReactElement;
 }
 
+// imageHover 네이밍 변경 필요
 export default function Card({
   imageUrl,
   imageHover,
@@ -21,12 +22,22 @@ export default function Card({
 }: CardProps) {
   return (
     <div className='h-[350px] w-[302px] cursor-pointer'>
-      <div className='group relative mb-2'>
-        <div className='relative h-[302px] w-full overflow-hidden rounded-[8px]'>
-          <Image src={imageUrl} alt='company-image' fill objectFit='cover' />
+      <div className='group relative mb-2 overflow-hidden rounded-[8px]'>
+        <div
+          className={`relative h-[302px] w-full overflow-hidden ${
+            imageHover || 'duration-300 group-hover:scale-105'
+          }`}
+        >
+          <Image
+            src={imageUrl}
+            alt='company-image'
+            fill
+            objectFit='cover'
+            className=''
+          />
         </div>
         <div
-          className={`before:absolute before:inset-0 before:rounded-[8px]  ${
+          className={`before:absolute before:inset-0 before:rounded-[8px] ${
             imageHover
               ? 'before:bg-black/0 before:transition before:duration-300 group-hover:before:bg-black/60'
               : 'from-black/0 to-black/60 before:bg-gradient-to-b'

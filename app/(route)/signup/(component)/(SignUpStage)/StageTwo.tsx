@@ -121,6 +121,8 @@ export default function StageTwo({ setStage }: StageTwoProps) {
   const checkDuplicate = async () => {
     const { name } = getValues();
     try {
+      if (!name) throw new Error('닉네임을 입력해주세요.');
+
       const q = query(collection(db, 'users'), where('name', '==', name));
       const data = await getDocs(q);
       const newData = data.docs.map(doc => ({
@@ -166,7 +168,7 @@ export default function StageTwo({ setStage }: StageTwoProps) {
           <div className='mb-6 flex flex-col gap-3'>
             <label
               htmlFor={'name'}
-              className='text-[18px] font-bold text-text-assitive'
+              className='text-[18px] font-bold text-text-alternative'
             >
               닉네임
             </label>
