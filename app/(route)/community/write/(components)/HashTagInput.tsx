@@ -47,7 +47,10 @@ export default function HashTagInput({
           onChange={onChange}
           onKeyDown={e => {
             if (e.nativeEvent.isComposing) return;
+            if (hashTags.length > 5)
+              return alert('해시태그는 6개까지 설정 할 수 있습니다.');
             if (e.key === 'Enter') {
+              if (!hashTagInput) return;
               e.preventDefault();
               setHashTagsInput('');
               setHashTags(prev => [...prev, hashTagInput]);

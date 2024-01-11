@@ -1,7 +1,7 @@
 'use client';
-import PortfolioOwnerCard from './PortfolioOwnerCard';
 import Slider from 'react-slick';
-import Style from '@/style/PortfolioOwnerCarousel.module.css';
+import PortfolioUserCard from './PortfolioUserCard';
+import Style from '@/style/PortfolioUserCarousel.module.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -56,24 +56,30 @@ const owners = [
   },
 ];
 
-function PortfolioOwnerCardSlider() {
+function PortfolioUserSection() {
   const settings = {
     infinite: false,
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
     variableWidth: true,
+    arrows: false,
   };
 
   return (
-    <div className={`${Style.sliderWrapper} w-full pt-7 overflow-hidden`}>
-      <Slider {...settings}>
-        {owners.map(owner => (
-          <PortfolioOwnerCard owner={owner} />
-        ))}
-      </Slider>
+    <div className='w-full py-[44px] bg-text-normal'>
+      <div className='container pb-6'>
+        <span className='text-title font-bold text-white'>인기 스팩이들</span>
+      </div>
+      <div className={`${Style.sliderWrapper} px-[calc((100%-1280px)/2)]`}>
+        <Slider {...settings}>
+          {owners.map(owner => (
+            <PortfolioUserCard owner={owner} />
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 }
 
-export default PortfolioOwnerCardSlider;
+export default PortfolioUserSection;

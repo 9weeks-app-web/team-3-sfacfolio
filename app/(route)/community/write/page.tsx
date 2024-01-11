@@ -60,7 +60,7 @@ export default function page() {
         postedBy: auth.currentUser?.uid,
       });
 
-      router.push('/');
+      router.push('/community');
     } catch (error) {
       if (error instanceof Error) {
         console.log(error);
@@ -97,6 +97,12 @@ export default function page() {
             </button>
             <button
               type='submit'
+              onClick={e => {
+                // 엔더로 제출 막기
+                if (e.detail === 0) {
+                  e.preventDefault();
+                }
+              }}
               className='flex h-[48px] w-[120px] items-center justify-center rounded-[8px] border bg-primary-heavy py-4 font-bold text-white'
             >
               <Image src={IconEdit2} alt='logo-edit' className='mr-2' />
