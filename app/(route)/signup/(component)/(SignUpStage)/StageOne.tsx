@@ -4,20 +4,23 @@ import IconCheckedCircle from '@images/IconCheckedCircle.svg';
 import IconCheckedCircleWhite from '@images/IconCheckedCircleWhite.svg';
 import SignUpStageOneImage from '@images/SignUpStageOneImage.svg';
 import Image from 'next/image';
+import { UseFormSetValue } from 'react-hook-form';
+import { FormData } from '../SignUpForm';
 
 interface StageOneProps {
   setStage: React.Dispatch<React.SetStateAction<number>>;
+  setValue: UseFormSetValue<FormData>;
 }
 
-export default function StageOne({ setStage }: StageOneProps) {
+export default function StageOne({ setStage, setValue }: StageOneProps) {
   const [allTerms, setAllTerms] = useState(false);
   const [terms, setTerms] = useState({
     terms1: false,
     terms2: false,
     terms3: false,
+    terms4: false,
   });
-  const { terms1, terms2, terms3 } = terms;
-  const [terms4, setTerms4] = useState(false);
+  const { terms1, terms2, terms3, terms4 } = terms;
 
   useEffect(() => {
     setTerms(() =>
@@ -26,15 +29,20 @@ export default function StageOne({ setStage }: StageOneProps) {
             terms1: true,
             terms2: true,
             terms3: true,
+            terms4: true,
           }
         : {
             terms1: false,
             terms2: false,
             terms3: false,
+            terms4: false,
           },
     );
-    setTerms4(() => (allTerms ? true : false));
   }, [allTerms]);
+
+  useEffect(() => {
+    setValue('terms', terms);
+  }, [terms]);
 
   return (
     <div className='flex h-[calc(100vh-170px)]'>
@@ -137,7 +145,12 @@ export default function StageOne({ setStage }: StageOneProps) {
               <div className='flex items-center gap-2'>
                 <div
                   className='h-8 w-8 cursor-pointer'
-                  onClick={() => setTerms4(prev => !prev)}
+                  onClick={() =>
+                    setTerms(prev => ({
+                      ...prev,
+                      terms4: !prev.terms4,
+                    }))
+                  }
                 >
                   <Image
                     src={terms4 ? IconCheckedCircle : IconUnCheckedCircle}
@@ -153,7 +166,7 @@ export default function StageOne({ setStage }: StageOneProps) {
             onClick={() => setStage(prev => prev + 1)}
             className='mb-4 flex h-12 w-full items-center justify-center rounded-[8px] bg-primary-heavy py-4 text-white disabled:bg-slate-300'
             disabled={
-              JSON.stringify(terms) !==
+              JSON.stringify({ terms1, terms2, terms3 }) !==
               JSON.stringify({
                 terms1: true,
                 terms2: true,
