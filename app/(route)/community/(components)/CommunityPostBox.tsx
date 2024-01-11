@@ -27,11 +27,7 @@ export default function CommunityPostBox({ post }: CommunityPostBoxProps) {
 
   const DynamicEditor = dynamic(() => import('@/components/ToastViewer'), {
     ssr: false,
-    loading: () => (
-      <div className='container flex h-screen items-center justify-center p-5 text-center'>
-        <Loader />
-      </div>
-    ),
+    loading: () => <></>,
   });
 
   return (
