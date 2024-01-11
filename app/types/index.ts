@@ -1,4 +1,4 @@
-export {};
+import { Timestamp } from 'firebase/firestore';
 
 interface UserType {
   // TODO: 프로필 페이지 디자인에 따라 property 변경 가능
@@ -68,12 +68,12 @@ export interface CommunityPostType {
   id?: string;
   title: string;
   content: string;
-  tags: string[];
+  hashTags: string[];
   category: '질의응답' | '자유게시판' | '스팩 후기';
-  createdAt: string;
-  likes: number;
-  comments: CommunityCommentType[];
-  views: number;
+  publishedAt: Timestamp;
+  likes?: number;
+  comments?: CommunityCommentType[];
+  views?: number;
   thumbnail?: string;
 }
 

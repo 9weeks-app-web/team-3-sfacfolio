@@ -1,11 +1,13 @@
 import Image from 'next/image';
+import { Viewer } from '@toast-ui/react-editor';
 
-import styles from '@/style/community.module.css';
-import { CommunityPostType } from '@/types';
+import CommunityTag from './CommunityTag';
 import HeartIcon from '@/components/Icons/HeartIcon';
 import EyeIcon from '@/components/Icons/EyeIcon';
+
+import { CommunityPostType } from '@/types';
+import styles from '@/style/community.module.css';
 import IconMessage from '@images/IconMessage.svg';
-import CommunityTag from './CommunityTag';
 import { timeAgo } from '@/utils/dateUtils';
 
 interface CommunityPostBoxProps {
@@ -18,7 +20,7 @@ export default function CommunityPostBox({ post }: CommunityPostBoxProps) {
       ? post.content.substr(0, 60) + '...'
       : post.content;
 
-  const date = timeAgo(post.createdAt);
+  const date = timeAgo(post.publishedAt);
 
   return (
     <div
@@ -27,7 +29,9 @@ export default function CommunityPostBox({ post }: CommunityPostBoxProps) {
       <div className='flex w-full items-center'>
         <div className='w-[calc(100%-60px)] pr-4'>
           <p className='mb-2 text-[18px] font-medium'>{post.title}</p>
-          <p className='text-label1 text-text-alternative'>{content}</p>
+          <p className='text-label1 text-text-alternative'>
+            <Viewer initialValue={content} />
+          </p>
         </div>
         <div className='h-[60px] w-[60px] overflow-hidden rounded'>
           {post.thumbnail && (
@@ -44,7 +48,7 @@ export default function CommunityPostBox({ post }: CommunityPostBoxProps) {
       </div>
 
       <div className='my-4 flex gap-2'>
-        {post.tags.map(tag => (
+        {post.hashTags.map(tag => (
           <CommunityTag tag={tag} key={tag} />
         ))}
       </div>
@@ -58,15 +62,15 @@ export default function CommunityPostBox({ post }: CommunityPostBoxProps) {
         <div className='flex gap-3'>
           <div className='flex items-center justify-center gap-1 text-caption2 text-text-alternative'>
             <HeartIcon size={20} color='#C4C4C4' />
-            {post.likes.toLocaleString('ko-KR')}
+            {post.likes ? post.likes.toLocaleString('ko-KR') : '0'}
           </div>
           <div className='flex items-center justify-center gap-1 text-caption2 text-text-alternative'>
             <Image src={IconMessage} alt='' />
-            {post.comments.length.toLocaleString('ko-KR')}
+            {post.comments ? post.comments.length.toLocaleString('ko-KR') : '0'}
           </div>
           <div className='flex items-center justify-center gap-1 text-caption2 text-text-alternative'>
             <EyeIcon size={20} color='#C4C4C4' />
-            {post.views.toLocaleString('ko-KR')}
+            {post.views ? post.views.toLocaleString('ko-KR') : '0'}
           </div>
         </div>
       </div>

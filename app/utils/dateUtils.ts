@@ -1,3 +1,5 @@
+import { Timestamp } from 'firebase/firestore';
+
 export function calculateDaysBeforeDeadline(deadline: string) {
   const today = new Date();
   const deadlineDate = new Date(deadline);
@@ -8,9 +10,11 @@ export function calculateDaysBeforeDeadline(deadline: string) {
   return '마감 ' + daysLeft + '일 전';
 }
 
-export function timeAgo(inputDateStr: string): string {
+export function timeAgo(inputDateStr: Timestamp): string {
   // 현재 시간과 비교할 날짜를 Date 객체로 변환
-  const inputDate = new Date(inputDateStr);
+  const inputDate =
+    inputDateStr instanceof Timestamp ? inputDateStr.toDate() : inputDateStr;
+
   const now = new Date();
 
   // 시간 차이 계산

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useQuery } from 'react-query';
 import { useRouter, useSearchParams } from 'next/navigation';
 
@@ -11,7 +11,7 @@ import SearchInput from '../../components/SearchInput';
 import CommunityPostList from './(components)/CommunityPostList';
 import Pagination from '../../components/Pagination';
 
-import { fetchDummyPosts } from '@/api/community';
+import { fetchDummyPosts, fetchPosts } from '@/api/community';
 import Loader from '@/components/Loader';
 
 export interface menuType {
@@ -21,7 +21,7 @@ export interface menuType {
 
 const menu = [
   { name: '실시간 인기 글', path: 'hot' },
-  { name: '질의응답', path: 'qna' },
+  { name: 'QnA', path: 'qna' },
   { name: '자유게시판', path: 'free' },
   { name: '스팩 후기', path: 'review' },
 ];
@@ -34,11 +34,11 @@ export default function page() {
   const currentPage = parseInt(params.get('page') || '1');
   const currentCategory = params.get('category') || 'hot';
 
-  // React Query를 사용하여 더미 데이터 가져오기
+  // React Query를 사용하여 데이터 가져오기
   const queryKey = [`posts-${currentCategory}-${currentPage}`];
   const { data, isLoading, isError } = useQuery(
     queryKey,
-    () => fetchDummyPosts(currentPage, currentMenu),
+    () => fetchPosts(currentMenu, currentPage),
     { keepPreviousData: true },
   );
 
