@@ -3,7 +3,7 @@ import { menuType } from '../page';
 interface CommunityMenuProps {
   menu: menuType[];
   currentMenu: string;
-  setCurrentMenu: (menu: string) => void;
+  setCurrentMenu?: (menu: string) => void;
 }
 
 export default function CommunityMenu({
@@ -21,7 +21,7 @@ export default function CommunityMenu({
               currentMenu === item.name &&
               'bg-background-primary text-primary-heavy'
             }`}
-            onClick={() => setCurrentMenu(item.name)}
+            onClick={() => setCurrentMenu && setCurrentMenu(item.name)}
           >
             {item.name}
           </li>
