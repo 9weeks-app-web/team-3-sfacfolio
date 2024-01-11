@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import ApplyStatusItem from './ApplyStatusItem';
+import ApplyStatusItem from './StatusItem';
 import RightArrow from '@images/RightArrow.svg';
 import Image from 'next/image';
 import DropDownFilter from '@/components/DropDownFilter';
