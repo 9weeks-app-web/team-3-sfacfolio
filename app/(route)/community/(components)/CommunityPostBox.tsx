@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import { Viewer } from '@toast-ui/react-editor';
 
 import CommunityTag from './CommunityTag';
 import HeartIcon from '@/components/Icons/HeartIcon';
@@ -11,6 +10,8 @@ import { CommunityPostType } from '@/types';
 import styles from '@/style/community.module.css';
 import IconMessage from '@images/IconMessage.svg';
 import { timeAgo } from '@/utils/dateUtils';
+import dynamic from 'next/dynamic';
+import Loader from '@/components/Loader';
 
 interface CommunityPostBoxProps {
   post: CommunityPostType;
@@ -24,6 +25,15 @@ export default function CommunityPostBox({ post }: CommunityPostBoxProps) {
 
   const date = timeAgo(post.publishedAt);
 
+  const DynamicEditor = dynamic(() => import('@/components/ToastViewer'), {
+    ssr: false,
+    loading: () => (
+      <div className='container flex h-screen items-center justify-center p-5 text-center'>
+        <Loader />
+      </div>
+    ),
+  });
+
   return (
     <div
       className={`${styles.communityPostBox} w-full cursor-pointer rounded-lg border border-line-normal bg-white px-[22px] py-4 hover:bg-background-primary`}
@@ -32,7 +42,7 @@ export default function CommunityPostBox({ post }: CommunityPostBoxProps) {
         <div className='w-[calc(100%-60px)] pr-4'>
           <p className='mb-2 text-[18px] font-medium'>{post.title}</p>
           <p className='text-label1 text-text-alternative'>
-            <Viewer initialValue={content} />
+            <DynamicEditor html={content} />
           </p>
         </div>
         <div className='h-[60px] w-[60px] overflow-hidden rounded'>
