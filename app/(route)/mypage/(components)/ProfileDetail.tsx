@@ -1,6 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import ProfileTab from './ProfileTab';
+import Resume from './Resume/Resume';
 
 export const menus = {
   포트폴리오: ['나의 포트폴리오', '관심 포트폴리오'],
@@ -58,6 +59,7 @@ function ProfileDetail({ currentTab, setCurrentTab }: MyProfileProps) {
           <div></div> // TODO: 제안관리 구현 위치
         )}
       </div>
+      {currentSubTab === '이력서 관리' && <Resume />}
     </div>
   );
 }
