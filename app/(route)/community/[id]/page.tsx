@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import CommunityMenu from '../(components)/CommunityMenu';
 import { menu } from '../page';
