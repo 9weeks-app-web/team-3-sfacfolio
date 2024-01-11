@@ -9,13 +9,13 @@ const resumeTypes = ['필수 정보', '부가 정보'];
 function Resume() {
   const [selectedList, setSelectedList] = useState(resumeTypes[0]);
   return (
-    <div className='w-[954px] mx-auto bg-white'>
+    <div className='mx-auto w-full bg-white'>
       <ResumeHeader
         lists={resumeTypes}
         selectedList={selectedList}
         setSelectedList={setSelectedList}
       />
-      <div className='space-y-8 pt-9'>
+      <div>
         {selectedList === resumeTypes[0] && <RequiredResume />}
         {selectedList === resumeTypes[1] && <AdditionalResume />}
       </div>
