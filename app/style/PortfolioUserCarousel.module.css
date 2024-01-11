@@ -1,6 +1,5 @@
 .sliderWrapper :global .slick-slider {
   width: 100%;
-  transform: translateX(24px);
 }
 
 .sliderWrapper :global .slick-track {
@@ -9,7 +8,7 @@
 }
 
 .sliderWrapper :global .slick-slide {
-  padding-right: 8px;
+  padding-right: 16px;
   width: fit-content;
 }
 

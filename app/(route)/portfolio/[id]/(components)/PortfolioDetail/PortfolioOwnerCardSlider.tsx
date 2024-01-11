@@ -1,7 +1,7 @@
 'use client';
 import PortfolioOwnerCard from './PortfolioOwnerCard';
 import Slider from 'react-slick';
-import Style from '@/style/ProtfolioOwnerCarousel.module.css';
+import Style from '@/style/PortfolioOwnerCarousel.module.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
