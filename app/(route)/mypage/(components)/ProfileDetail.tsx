@@ -63,9 +63,7 @@ function ProfileDetail({ currentTab, setCurrentTab }: MyProfileProps) {
             </ul>
             {currentTab === '포트폴리오' && <ProfilePortfolio />}
             {currentTab === '프로젝트' && (
-              <ProfileProject
-              // currentSubTab={currentSubTab}
-              />
+              <ProfileProject currentSubTab={currentSubTab} />
             )}
             {currentTab === '커뮤니티' && (
               <ProfileCommunity currentSubTab={currentSubTab} />
