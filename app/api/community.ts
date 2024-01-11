@@ -31,7 +31,6 @@ export const fetchPosts = async (
   page = 1,
   itemsPerPage = 10,
 ) => {
-  console.log(page, category);
   let q;
   if (category === '실시간 인기 글') {
     q = query(collection(db, 'community'), orderBy('publishedAt', 'desc'));

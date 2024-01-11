@@ -17,7 +17,6 @@ export default function useSectionMove(sections: SectionType[]) {
   const handleSectionMove = (id: string) => {
     const sectionElement = document.getElementById(id);
     const sectionTop = sectionElement?.getBoundingClientRect().top as number;
-    console.log(sectionElement);
     window.scrollTo({
       top: window.scrollY + sectionTop - 180,
       behavior: 'smooth',

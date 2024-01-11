@@ -14,7 +14,6 @@ export default function ProfileOfferModal({
   offer,
   onClose,
 }: ProfileOfferModalProps) {
-  console.log(offer);
   return (
     <div className='fixed bottom-0 left-0 z-[1000] h-screen w-screen bg-black/60'>
       <div className='absolute left-1/2 top-1/2 w-[580px] -translate-x-1/2 -translate-y-1/2 rounded-lg bg-white'>
