@@ -28,7 +28,7 @@ function MainPage() {
         <SectionHeader title='스팩폴리오 PICK!' />
         <CategoryButtonWrap type='button' categories={portfolioCategories} />
         <CardContainer>
-          {PortfolioDummy.map(portfolio => (
+          {PortfolioDummy.slice(0, 8).map(portfolio => (
             <PortfolioCard key={portfolio.id} {...portfolio} />
           ))}
         </CardContainer>
