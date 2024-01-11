@@ -146,6 +146,7 @@ export default function CompanyPage() {
           <CardContainer>
             {JobOfferDummy.map(job => (
               <JobOfferCard
+                logo={job.logo}
                 key={job.id}
                 category={job.category}
                 career={job.career}
