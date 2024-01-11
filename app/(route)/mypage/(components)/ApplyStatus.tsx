@@ -31,12 +31,12 @@ function ApplyStatus() {
             filterOption='전체'
           />
           <ProfileDropDownFilter
-            filterCategory='열람여부'
+            filterCategory='마감여부'
             filterOption='전체'
           />
           <ProfileDropDownFilter
-            filterCategory='열람여부'
-            filterOption='전체'
+            filterCategory='기간설정'
+            filterOption='1개월'
           />
         </div>
         <button className='rounded-lg border border-primary-heavy px-[22.5px] py-4 font-bold leading-4 text-primary-heavy'>
