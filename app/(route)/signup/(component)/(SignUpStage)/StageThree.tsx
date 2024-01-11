@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect } from 'react';
 import SignUpStageThreeImage from '@images/SignUpStageThreeImage.svg';
 import Input from '@/components/Input/Input';
 import {
@@ -64,6 +64,10 @@ export default function StageThree({
       }
     }
   };
+
+  useEffect(() => {
+    setCheckedDuplicate(false);
+  }, [name]);
 
   return (
     <div className='flex h-[calc(100vh-170px)]'>
