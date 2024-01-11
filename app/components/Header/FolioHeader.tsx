@@ -10,6 +10,7 @@ import HeaderButton from './HeaderButton';
 import Bell from '@images/Bell.svg';
 import Search from '@images/Search.svg';
 import { usePathname, useRouter } from 'next/navigation';
+import AlarmDropDown from './DropDown/AlarmDropDown';
 import Avatar from '../Avatar';
 
 const menuItems = [
@@ -25,7 +26,8 @@ function FolioHeader() {
   const pathname = usePathname();
   const router = useRouter();
   const { loggedIn, setLoggedIn } = useAuthStatus();
-  const [isOpen, setIsOpen] = useState(false);
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const [isAlarmOpen, setIsAlarmOpen] = useState(false);
 
   const handleLogout = () => {
     auth.signOut();
@@ -34,7 +36,8 @@ function FolioHeader() {
   };
 
   useEffect(() => {
-    setIsOpen(false);
+    setIsProfileOpen(false);
+    setIsAlarmOpen(false);
   }, [pathname]);
 
   return (
@@ -69,16 +72,24 @@ function FolioHeader() {
           ))}
         </ul>
       </div>
-      <div className='flex h-[62px] items-center gap-4'>
+      <div className='relative flex h-[62px] items-center gap-4'>
         <button>
           <Image src={Search} alt='search' width={24} height={24} />
         </button>
-        <button>
+        <button
+          className='relative'
+          onClick={() => setIsAlarmOpen(pre => !pre)}
+        >
           <Image src={Bell} alt='bell' width={24} height={24} />
         </button>
+        {isAlarmOpen && <AlarmDropDown setIsAlarmOpen={setIsAlarmOpen} />}
         {loggedIn && (
           <div className='relative'>
             <div
+              className='h-10 w-10 cursor-pointer rounded-full bg-black'
+              onClick={() => setIsProfileOpen(!isProfileOpen)}
+            ></div>
+            {isProfileOpen && (
               className='h-10 w-10 cursor-pointer rounded-full'
               onClick={() => setIsOpen(!isOpen)}
             >
