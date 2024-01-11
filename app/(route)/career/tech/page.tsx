@@ -30,15 +30,8 @@ function TechPage() {
           </p>
         </div>
         <CardContainer>
-          {JobOfferDummy.map(job => (
-            <JobOfferCard
-              key={job.id}
-              category={job.category}
-              career={job.career}
-              title={job.title}
-              imageUrl={job.imageUrl}
-              company={job.company}
-            />
+          {JobOfferDummy.map(jobOffer => (
+            <JobOfferCard key={jobOffer.id} {...jobOffer} />
           ))}
         </CardContainer>
       </div>
