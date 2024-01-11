@@ -67,14 +67,16 @@ function PortfolioUserSection() {
   };
 
   return (
-    <div className='w-full py-[44px] bg-text-normal'>
+    <div className='w-full bg-text-normal py-[44px]'>
       <div className='container pb-6'>
-        <span className='text-title font-bold text-white'>인기 스팩이들</span>
+        <span className='text-title font-bold text-white'>
+          인기 크리에이터들
+        </span>
       </div>
       <div className={`${Style.sliderWrapper} px-[calc((100%-1280px)/2)]`}>
         <Slider {...settings}>
-          {owners.map(owner => (
-            <PortfolioUserCard owner={owner} />
+          {owners.map((owner, idx) => (
+            <PortfolioUserCard key={idx} owner={owner} />
           ))}
         </Slider>
       </div>
