@@ -70,7 +70,7 @@ export interface CommunityPostType {
   content: string;
   hashTags: string[];
   category: '질의응답' | '자유게시판' | '스팩 후기';
-  publishedAt: Timestamp;
+  publishedAt: Timestamp | Date;
   likes?: number;
   comments?: CommunityCommentType[];
   views?: number;

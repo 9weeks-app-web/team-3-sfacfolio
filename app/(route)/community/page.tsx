@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useQuery } from 'react-query';
 import { useRouter, useSearchParams } from 'next/navigation';
 
@@ -11,7 +11,7 @@ import SearchInput from '../../components/SearchInput';
 import CommunityPostList from './(components)/CommunityPostList';
 import Pagination from '../../components/Pagination';
 
-import { fetchDummyPosts, fetchPosts } from '@/api/community';
+import { fetchPosts } from '@/api/community';
 import Loader from '@/components/Loader';
 
 export interface menuType {

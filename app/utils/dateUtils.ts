@@ -10,10 +10,15 @@ export function calculateDaysBeforeDeadline(deadline: string) {
   return '마감 ' + daysLeft + '일 전';
 }
 
-export function timeAgo(inputDateStr: Timestamp): string {
+export function timeAgo(inputDateStr: Timestamp | Date): string {
   // 현재 시간과 비교할 날짜를 Date 객체로 변환
   const inputDate =
     inputDateStr instanceof Timestamp ? inputDateStr.toDate() : inputDateStr;
+
+  // inputDate가 Date 타입이 아니면 오류 처리
+  if (!(inputDate instanceof Date) || isNaN(inputDate.getTime())) {
+    throw new Error('inputDateStr must be a Date or a Firestore Timestamp');
+  }
 
   const now = new Date();
 
