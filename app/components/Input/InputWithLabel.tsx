@@ -9,6 +9,7 @@ interface InputWithLabelProps {
     'email' | 'name' | 'password' | 'confirmedPassword"'
   >;
   className?: string;
+  error?: string;
 }
 
 export default function InputWithLabel({
@@ -17,6 +18,7 @@ export default function InputWithLabel({
   placeholder,
   register,
   className,
+  error,
 }: InputWithLabelProps) {
   return (
     <div className={`${className} flex flex-col gap-3`}>
@@ -31,7 +33,7 @@ export default function InputWithLabel({
         type={type}
         placeholder={placeholder}
         autoComplete='off'
-        className={`h-12 w-full rounded-[8px] border border-line-normal bg-background-primary px-3.5 py-4 placeholder:text-text-assitive`}
+        className={`h-12 w-full rounded-[8px] border border-line-normal bg-background-primary px-3.5 py-4 outline-none placeholder:text-text-assitive ${error}`}
       />
     </div>
   );

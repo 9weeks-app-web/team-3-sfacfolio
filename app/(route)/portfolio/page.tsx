@@ -16,7 +16,7 @@ function PortfolioPage() {
         <SectionHeader title='인기급상승 포트폴리오' />
         <CategoryButtonWrap type='button' categories={portfolioCategories} />
         <CardContainer>
-          {PortfolioDummy.map(portfolio => (
+          {PortfolioDummy.slice(0, 8).map(portfolio => (
             <PortfolioCard key={portfolio.id} {...portfolio} />
           ))}
         </CardContainer>
@@ -26,12 +26,12 @@ function PortfolioPage() {
         <SectionHeader title='직군별 포트폴리오' />
         <CategoryButtonWrap type='button' categories={portfolioCategories} />
         <CardContainer>
-          {PortfolioDummy.map(portfolio => (
+          {PortfolioDummy.slice(0, 8).map(portfolio => (
             <PortfolioCard key={portfolio.id} {...portfolio} />
           ))}
         </CardContainer>
         <CardContainer>
-          {PortfolioDummy.map(portfolio => (
+          {PortfolioDummy.slice(0, 8).map(portfolio => (
             <PortfolioCard key={portfolio.id} {...portfolio} />
           ))}
         </CardContainer>
