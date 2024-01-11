@@ -71,7 +71,9 @@ function ProfileDetail({ currentTab, setCurrentTab }: MyProfileProps) {
               <ProfileCommunity currentSubTab={currentSubTab} />
             )}
             {currentTab === '스팩퀴즈' && <ProfileQuiz />}
-            {currentTab === '커리어' && <ProfileCareer />}
+            {currentTab === '커리어' && (
+              <ProfileCareer currentSubTab={currentSubTab} />
+            )}
           </>
         ) : (
           <ProfileOffer />
