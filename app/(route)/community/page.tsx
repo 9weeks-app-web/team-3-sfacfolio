@@ -19,7 +19,7 @@ export interface menuType {
   path: string;
 }
 
-const menu = [
+export const menu = [
   { name: '실시간 인기 글', path: 'hot' },
   { name: 'QnA', path: 'qna' },
   { name: '자유게시판', path: 'free' },
