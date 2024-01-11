@@ -80,7 +80,7 @@ export default function page() {
 
       <div className='container mb-[60px] flex justify-between'>
         {/* side section */}
-        <section className='sticky top-0'>
+        <section className='sticky top-[60px] h-fit'>
           <CommunityMenu
             menu={menu}
             currentMenu={currentMenu}
