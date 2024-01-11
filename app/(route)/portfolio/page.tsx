@@ -1,13 +1,12 @@
 import CategoryButtonWrap from '@/components/CategoryButtonWrap';
 import SectionHeader from '../main/(components)/SectionHeader';
 import SectionWrapper from '../main/(components)/SectionWrapper';
-import PortfolioBannerCarousel from './(components)/PortfolioBannerCarousel';
 import CardContainer from '../main/(components)/Card/CardContainer';
 import PortfolioCard from '../main/(components)/Card/PortfoiloCard/PortfolioCard';
+import PortfolioUserSection from './(components)/PortfolioUserSection';
+import PortfolioBannerCarousel from './(components)/PortfolioBannerCarousel';
 import { portfolioCategories } from '@/constants';
 import { PortfolioDummy } from '@/dummy';
-import PortfolioOwnerCardSlider from './[id]/(components)/PortfolioDetail/PortfolioOwnerCardSlider';
-import PortfolioUserSection from './(components)/PortfolioUserSection';
 
 function PortfolioPage() {
   return (
