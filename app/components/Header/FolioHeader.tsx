@@ -11,6 +11,7 @@ import Bell from '@images/Bell.svg';
 import Search from '@images/Search.svg';
 import { usePathname, useRouter } from 'next/navigation';
 import AlarmDropDown from './DropDown/AlarmDropDown';
+import Avatar from '../Avatar';
 
 const menuItems = [
   { name: '홈', segment: 'main' },
@@ -89,6 +90,12 @@ function FolioHeader() {
               onClick={() => setIsProfileOpen(!isProfileOpen)}
             ></div>
             {isProfileOpen && (
+              className='h-10 w-10 cursor-pointer rounded-full'
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              <Avatar src={auth.currentUser?.photoURL} />
+            </div>
+            {isOpen && (
               <div className='absolute right-0 mt-4 w-[156px] rounded-md border border-line-normal bg-white shadow-[0_4px_8px_0_rgba(0,0,0,0.15)]'>
                 <button
                   className='h-12 w-full select-none border-b border-line-normal text-[18px] font-medium'

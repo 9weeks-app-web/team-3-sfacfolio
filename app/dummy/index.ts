@@ -1,4 +1,4 @@
-import { CommunityPostType, KeywordType } from '@/types';
+import { KeywordType } from '@/types';
 
 export const JobOfferDummy = [
   {
@@ -94,22 +94,209 @@ export const PortfolioDummy = [
     category: 'BX 디자인',
     imageUrl:
       'https://s3-alpha-sig.figma.com/img/c94c/cacb/2d09b3d98aa59569209418b49d7f767b?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=i27EOFF~tBPc81uNFgJHgqEmgVkX-0YK3FWDEs8P0LGTQqlowoNGExdT-GQLNwWqP5nSnRX~-JGGHAGgGiR~aCglcGKHc03uKfH1MhGtdk-0GwtG46uHkgIsKMfbx-RVzkXxTK2x2Bo07~iYF8cw7spT~WZiHuOEtrP7Yt57STeETViczeBPOR1dFwQgqdFmrXqmbaXEYdahHLOVLYp8OPt2HUEjw7Rjbym3rL9Ne3xTVqEIRGnyODy0CXvLp61ZlSwMvNHQTubwIAay2lymrZD97COJ8-w9DevEBLnC84-nB1wfkMNIEGI1e0evdxUvroOYHDV~cYhtp7NOnX6aGQ__',
-    company: 'SK이노베이션',
     content: null,
     workers: [
       {
         id: 101,
         name: '채순공주',
-        userImage: '',
+        userImage:
+          'https://s3-alpha-sig.figma.com/img/ee00/6298/d341f9fa6113bf0ac3da8da4a8c6708b?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=kj4Eq6Nrupupq9Jf8dlEo2aqN4lyVhOK-z1B8M-7O-QM-toxezFb2gX0DndDiiPQbybqPC-4KjECvrGZkn9nR48P-9mCRHCd1uIf7OG1p41ahEprrVPo5k71tluXeR35MVbt8-jRztVlBQOAlmi9RUyRpwlPhu1dEPAYZZ0qjI6wqSix~XQnyMLd16a05xSy-l0sZWYDev3QTqCdk0m8Vt98Ou7QV-h1ZTeAOD6Je0a4j~FbpWzeidzTyYPYVvCGTrshbbsomPh1H6Nw7T6D-Iix~VaMlYy9pg5P1wwnuaJvXb6~I0aw7Y3TffQDfZjjEhytFt-DSw0ArZk~v0e4ag__',
       },
       {
-        id: 201,
+        id: 102,
         name: '박건우',
-        userImage: '',
+        userImage:
+          'https://s3-alpha-sig.figma.com/img/ece8/df92/d371531b922f3e8c0e8f0dfe4782d86e?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZF8gsi4k2d~VMJ9CqnIxIcHB-UBHXzLLBiuXT2wQUG9LHIsNxGVuQ0JaRTA8X0vBd0A1DYhbVwX1solI9ZVaK5XLKNKwD4hIrUf5xRLxu0ncEkyne-yqI~v5QvtNVJNTub7ZH4jwNUXcsTe2nLye10l0KQ1VsllZWeAeU1bLITf1i8Ta5FgmT944a06HxfC1OSeCFVRbOVVABgdt9rwRbFnNAAluuapidcxbSaa56GvIyLWkEbNs5YxtyAszrgDcZJhPduLYkvBtRfh4Hq2TCn1WOltX2Re~GFJeRqqJaSplwBYIUeQdZZ3-wv54xi43ehGb9vPVEZ5AatLSZaeC5g__',
       },
     ],
     like: 345,
     view: 2120,
+  },
+  {
+    id: 2,
+    title: '강남구청 - 강남친구들',
+    category: 'UX 디자인',
+    imageUrl:
+      'https://s3-alpha-sig.figma.com/img/0118/7b55/fc2a68260bb65e9dd6b0a095a48e9efe?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=pFL0VY81MOpagd-gTtx-y~p2wb96JaXdYBb4uvNr83xkQJYYG5K1m1cAnsHtfcELe8R8Xx9yQpMVbN82QT8uPjAZM-38tepVuVNEcUg8osZsy8ae2ihCJzh1qHdo1S72mdoKiL1wHkZ7FXXyGPvEP3ByzuXWAq3nixlQocfPo3TgL1x9fNKG3G7rdi1j0hTMsO2Sob~f4HFjLodNnUIdycWoWgcMfnDp4dlYyKI2EmB53u~5md~zeeMzbb9nAD1LTqSuDIIyz6JZTSk9WZi5HRQn73xc4H6l1CF3Hgb~r8nF7ygb6FhmGCHTDVtBGltemifv5w6DjRrCM2mNwswIiA__',
+    content: null,
+    workers: [
+      {
+        id: 103,
+        name: '순채공주',
+        userImage:
+          'https://s3-alpha-sig.figma.com/img/bd9a/0c85/aa2440c65257675813c5d849a8e9f8d8?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=T30ncXtHmvyRtO5BQLGRhs-ROQzczNEXmrR-ZwgNj-nVo34zyXwHGDKKOPEK8vAkfKJez-KIiLESwm7O3XlJRKuq1f4w61hsEk5Sbyusr63xvjHQMfhjDobvMlVk3A5rUjbSRHRp78OKCwllzqCsM9UGZlH8mSa051KVDRxR~w9JPLrF0OcMFaSQQLOzoeU1EQYKbsOtGqqxjnoz9YKPipexw62YQYFYEufAjxOsj83F3cf0vqta-wgImU0eIHHGzg-s50Vz3Sx2Vky29qBK86Vb~627IJp7ZUQVAYevobzvzDBcEQpP5wBKzyVpAXdAXZOvitl3gT403uR3XaaCyg__',
+      },
+      {
+        id: 104,
+        name: '홍길동',
+        userImage:
+          'https://s3-alpha-sig.figma.com/img/3e72/0d73/a5f4517b356cae1503df6e251226a2cb?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bzGPS4WJrP45o40JLOM3-D2GabsLXWKPyjDHOTNzl0R1ggu1pBIAXpPPzcv2rh2uFEoMq7SQZkEsrwn5hjDKzjA208oA0kPSv5scUx~qAhHceNrGp0jh08L0kXDGSOTJMj9rFMacocw8U-4poeE-eYnhtBVCw5UplCzl4kjIDa3P31PaVqmtQuUT18lKYe7SpCK5N4W3D82WXotVijvgpqXp5oFyRYSKNh7T1Inv246hi5LrMsnMT3XHuYZ-bXfwEC49SvHFyp5UVywlHzBhGOmg6fCS28kHazx6rpIVis0uhnq-a4Buogf4HvrDAYWF5d4DF62-dLr4W8WdKO9PjQ__',
+      },
+      {
+        id: 105,
+        name: '칠성사이다',
+        userImage:
+          'https://s3-alpha-sig.figma.com/img/248d/9c47/22e17b2464db9ca5dc592da4186579b0?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZBNS1U3CO7SMEe203W0KXHxrv8yEhUVmblxY1uKcSqbzMsJadzYWEyOhnUuwJjy4o4-dYFA2I-tgVUYE89XI0bRvp57H1HyH8Y1Lm5xTQTb4VJj0uJ6nRsNPpp1MWHpvRV8-3laNcp3aTer~BLR~MAVkuBF4lt9FLMvcA3LRHSOmMhEilWlDxzHb0dtIDkw5hroOvRUUoRYRfhNnLMNpASNPQUP57A9mOPSSAGXoJlCwYkbKwRb5kyfHHd6ko7QA3rZtpCIGB~j6AHvjTAql-Y8nvwcHl8IXv2p5XaTpxxKKO7JNPy~IeKDeFBZnc7Su6YaAAo8t67H1iDMKqYFBbg__',
+      },
+    ],
+    like: 187,
+    view: 3746,
+  },
+  {
+    id: 3,
+    title: '은평구청 - 은평구디자인',
+    category: 'UI 디자인',
+    imageUrl:
+      'https://s3-alpha-sig.figma.com/img/781d/2844/458c8cee881dd88b53ebf15b6ef026ad?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=J6x6bGo-elOapgoJmYzm64KnS9EvnWY-WMD7pm-ddop-SK2BZ-xSLgqbiD2m9rTfmwHN-8WG2cWlz7sP6IR-IlKjGlfzSUlH-lT689uypLMd9ZlLV08Z0PzVeEZDmnhgZ-M6nvNZ7DqociE0CAxAobuqhDBU1tXTpSfHxBW1xugGYWoY25-5PGLBLNV5MA7jOeHeCtUOV2lRbZsfBx1uhlE3bv0LEqZqEkCBqwwYbdJzc7aWDsx2Lm63KOM7GsLf9xAJyuPFpJh7DH-tu00jjFdZeqCFV5YWCL2ZL5sNm7sQ-8aLTnMrzoURcNgOjvkYhDNO17iAmJ8vyjnI71HIQg__',
+    content: null,
+    workers: [
+      {
+        id: 106,
+        name: '펩시콜라',
+        userImage:
+          'https://s3-alpha-sig.figma.com/img/5846/e7f2/8515ae6cfc1eb2e44bf1f0ee4e7d9dfe?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=mC07i3k1Szrr0lV07z9CCexDKPcjTKVDvkW7LOcf46qdTFqO5DgJhxhpS1tDkVM47gGcz4slXMHo1Zb~Rpypwj3LMKqsN3mKqCjh2HMXJx-TsXwOr8AA5HlMVhi-RUPkyL-3jLOSqBXOvx81BhHDNSFq7Y4EAz8Jtm6DlqQV9raxB6MVszl4~ydc4tTVGJdZbcp75o0jRD9p4qeizqxHaYdX7wfCq7yq48nct28ImYfJSj3Zgo-hBUe31fe8ksx3zKJKWedjC0Y-9MdPYXazAGUaFk6HFhMmFG6ACAiFmUdIJF50D2NpzFYdiZSshwUm~RZhulrgkOpR-WBZ50f1Tg__',
+      },
+    ],
+    like: 791,
+    view: 8912,
+  },
+  {
+    id: 4,
+    title: '마포구청 - 홍대디자인',
+    category: '일러스트',
+    imageUrl:
+      'https://s3-alpha-sig.figma.com/img/d31c/5322/47b1957d6ff51d13ce82fb9514baad47?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=m8jXEft4VuTvt~JUdcLh~4OaczeJglOtogDcrhH7J9k6B8XSAFpHTJtjKVB8m8DsSMpq2VyhZ5Rfp5sWwDDCIzWUJWJ0~GhDV3-pMg3wOoDWd2G1D4mF864t1ifi3cZn5Un36dAykbNhsviU-foBUAVrPGey9IQu0oiDHUJCaef-FHIyKfYlS3BJJKbWukUFrLgblHxRjc5zsB8QV3EBokogHQHtGcEtGHU2Q2zS13Bf37MmjNeWSXekyRBTjWrrnT89wU-NEnJ4LK1-HEylgtAqanyk38fPMPlRhOjxpXJo~fOwP03hC7w3UW5Rrwek7iQ8Ol8MjkM-R~9wE3rNbQ__',
+    content: null,
+    workers: [
+      {
+        id: 107,
+        name: '아사히드라이',
+        userImage:
+          'https://s3-alpha-sig.figma.com/img/b0cd/6111/3acf2fcc58bd46a88ec80ab6c22a8856?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=IEh-2NnWXjIRQQd~RGQGatzQET6kgEeYi67ifYUI8m4apc0ZfbA5ms~~bIfD-E0d86snIk2nOdGROP0azCP2CXyxfQV4QCJyg28cXMum4ZVcITQK4kHZSKzpAbw9eW4xP2sWR8-oa4H7ERNjZQDumBex0zeO3zRit20w75GNtbJdhnAtLU41xcVyp-jH0uNIkrNSsAKDAwT5FelJTFT7le13Iw-2ZaahNq5BJg0YvXTHG4cfmbVirYvPO9Q7zUevwptateOo09BH4sn6zxOXQdvEGI~dq7NkhS5BYiwmm-dx346WYJnp5ybitSN-PjkUMJT9~xiEBmpVcmt7Mh7hsQ__',
+      },
+      {
+        id: 106,
+        name: '펩시콜라',
+        userImage:
+          'https://s3-alpha-sig.figma.com/img/5846/e7f2/8515ae6cfc1eb2e44bf1f0ee4e7d9dfe?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=mC07i3k1Szrr0lV07z9CCexDKPcjTKVDvkW7LOcf46qdTFqO5DgJhxhpS1tDkVM47gGcz4slXMHo1Zb~Rpypwj3LMKqsN3mKqCjh2HMXJx-TsXwOr8AA5HlMVhi-RUPkyL-3jLOSqBXOvx81BhHDNSFq7Y4EAz8Jtm6DlqQV9raxB6MVszl4~ydc4tTVGJdZbcp75o0jRD9p4qeizqxHaYdX7wfCq7yq48nct28ImYfJSj3Zgo-hBUe31fe8ksx3zKJKWedjC0Y-9MdPYXazAGUaFk6HFhMmFG6ACAiFmUdIJF50D2NpzFYdiZSshwUm~RZhulrgkOpR-WBZ50f1Tg__',
+      },
+      {
+        id: 102,
+        name: '박건우',
+        userImage:
+          'https://s3-alpha-sig.figma.com/img/ece8/df92/d371531b922f3e8c0e8f0dfe4782d86e?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZF8gsi4k2d~VMJ9CqnIxIcHB-UBHXzLLBiuXT2wQUG9LHIsNxGVuQ0JaRTA8X0vBd0A1DYhbVwX1solI9ZVaK5XLKNKwD4hIrUf5xRLxu0ncEkyne-yqI~v5QvtNVJNTub7ZH4jwNUXcsTe2nLye10l0KQ1VsllZWeAeU1bLITf1i8Ta5FgmT944a06HxfC1OSeCFVRbOVVABgdt9rwRbFnNAAluuapidcxbSaa56GvIyLWkEbNs5YxtyAszrgDcZJhPduLYkvBtRfh4Hq2TCn1WOltX2Re~GFJeRqqJaSplwBYIUeQdZZ3-wv54xi43ehGb9vPVEZ5AatLSZaeC5g__',
+      },
+      {
+        id: 104,
+        name: '홍길동',
+        userImage:
+          'https://s3-alpha-sig.figma.com/img/3e72/0d73/a5f4517b356cae1503df6e251226a2cb?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bzGPS4WJrP45o40JLOM3-D2GabsLXWKPyjDHOTNzl0R1ggu1pBIAXpPPzcv2rh2uFEoMq7SQZkEsrwn5hjDKzjA208oA0kPSv5scUx~qAhHceNrGp0jh08L0kXDGSOTJMj9rFMacocw8U-4poeE-eYnhtBVCw5UplCzl4kjIDa3P31PaVqmtQuUT18lKYe7SpCK5N4W3D82WXotVijvgpqXp5oFyRYSKNh7T1Inv246hi5LrMsnMT3XHuYZ-bXfwEC49SvHFyp5UVywlHzBhGOmg6fCS28kHazx6rpIVis0uhnq-a4Buogf4HvrDAYWF5d4DF62-dLr4W8WdKO9PjQ__',
+      },
+    ],
+    like: 541,
+    view: 7821,
+  },
+  {
+    id: 5,
+    title: '강북구청 - 강북프렌즈',
+    category: 'BX 디자인',
+    imageUrl:
+      'https://s3-alpha-sig.figma.com/img/545a/542f/3111ae9692acf1b347c1dc311e499b52?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lq9IAE~nKwbCcLh72c7KFkxjLh7bJPgSGNFPhLYlrq39UQB7ZeUlGeNUWI4OpfgVViwhTC-wNJsWJYC30QmBGgWBsfcnV2leezAnkk8YsxJ4LoxQpzHGwY--ZEftxmtoCRVxNls3SHfl4q1m7gRBNKU8qQPLsqn7q7oDLX6mj-h-BuDkBSYizyDeb1ibJb030M3zlluX1INGuG9elyKydrEL1NnTr81k4Bi2CVy22OkmCu3gQTNuMh55ddlm-1FbhzrylPCeUrCJ4WT7Mlf~gMwt7QZsJRrWffJbUCndd3HiOMUsYnYKv3kYsXBxliIG2mGTPU0K3hFSZ2iYV-AOLg__',
+    content: null,
+    workers: [
+      {
+        id: 104,
+        name: '홍길동',
+        userImage:
+          'https://s3-alpha-sig.figma.com/img/3e72/0d73/a5f4517b356cae1503df6e251226a2cb?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bzGPS4WJrP45o40JLOM3-D2GabsLXWKPyjDHOTNzl0R1ggu1pBIAXpPPzcv2rh2uFEoMq7SQZkEsrwn5hjDKzjA208oA0kPSv5scUx~qAhHceNrGp0jh08L0kXDGSOTJMj9rFMacocw8U-4poeE-eYnhtBVCw5UplCzl4kjIDa3P31PaVqmtQuUT18lKYe7SpCK5N4W3D82WXotVijvgpqXp5oFyRYSKNh7T1Inv246hi5LrMsnMT3XHuYZ-bXfwEC49SvHFyp5UVywlHzBhGOmg6fCS28kHazx6rpIVis0uhnq-a4Buogf4HvrDAYWF5d4DF62-dLr4W8WdKO9PjQ__',
+      },
+      {
+        id: 102,
+        name: '박건우',
+        userImage:
+          'https://s3-alpha-sig.figma.com/img/ece8/df92/d371531b922f3e8c0e8f0dfe4782d86e?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZF8gsi4k2d~VMJ9CqnIxIcHB-UBHXzLLBiuXT2wQUG9LHIsNxGVuQ0JaRTA8X0vBd0A1DYhbVwX1solI9ZVaK5XLKNKwD4hIrUf5xRLxu0ncEkyne-yqI~v5QvtNVJNTub7ZH4jwNUXcsTe2nLye10l0KQ1VsllZWeAeU1bLITf1i8Ta5FgmT944a06HxfC1OSeCFVRbOVVABgdt9rwRbFnNAAluuapidcxbSaa56GvIyLWkEbNs5YxtyAszrgDcZJhPduLYkvBtRfh4Hq2TCn1WOltX2Re~GFJeRqqJaSplwBYIUeQdZZ3-wv54xi43ehGb9vPVEZ5AatLSZaeC5g__',
+      },
+      {
+        id: 101,
+        name: '채순공주',
+        userImage:
+          'https://s3-alpha-sig.figma.com/img/ee00/6298/d341f9fa6113bf0ac3da8da4a8c6708b?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=kj4Eq6Nrupupq9Jf8dlEo2aqN4lyVhOK-z1B8M-7O-QM-toxezFb2gX0DndDiiPQbybqPC-4KjECvrGZkn9nR48P-9mCRHCd1uIf7OG1p41ahEprrVPo5k71tluXeR35MVbt8-jRztVlBQOAlmi9RUyRpwlPhu1dEPAYZZ0qjI6wqSix~XQnyMLd16a05xSy-l0sZWYDev3QTqCdk0m8Vt98Ou7QV-h1ZTeAOD6Je0a4j~FbpWzeidzTyYPYVvCGTrshbbsomPh1H6Nw7T6D-Iix~VaMlYy9pg5P1wwnuaJvXb6~I0aw7Y3TffQDfZjjEhytFt-DSw0ArZk~v0e4ag__',
+      },
+    ],
+    like: 345,
+    view: 2120,
+  },
+  {
+    id: 6,
+    title: '강남구청 - 강남친구들',
+    category: 'UX 디자인',
+    imageUrl:
+      'https://s3-alpha-sig.figma.com/img/725c/8231/2e708d646f0a811c493082cd6334ab35?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NaY-wnj0tJ7rhpGby0CU6jUVpghI7bIbNC6GUUpJibTNtkqgAuDsiEsDci9HZPMoTju1pSA6gZNfK4z79KMY73JgNHuamfHf9psf-rOKIhDZ9Qemv~zdXo~~S~3kak3V3mBU22NhyyEWPWASVTeTIo-xsoFqHHIjYlCxM6ocSsd-fT0r8VmQxyJ1cbUrgttRYnvx7yhBfihIthVsqKgXXd03M0IPqqybzJ1ikKI84kbBxKkCnJm45CioaxdSbZQ9GlW5BEBlhI-1fXGLK4~cfvqGrfU~GbIslQLswohYzzbWHo6RNgB5lpkjcENi3BmgTfBHTvkOnPcu3WoNvuVBQQ__',
+    content: null,
+    workers: [
+      {
+        id: 105,
+        name: '칠성사이다',
+        userImage:
+          'https://s3-alpha-sig.figma.com/img/248d/9c47/22e17b2464db9ca5dc592da4186579b0?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZBNS1U3CO7SMEe203W0KXHxrv8yEhUVmblxY1uKcSqbzMsJadzYWEyOhnUuwJjy4o4-dYFA2I-tgVUYE89XI0bRvp57H1HyH8Y1Lm5xTQTb4VJj0uJ6nRsNPpp1MWHpvRV8-3laNcp3aTer~BLR~MAVkuBF4lt9FLMvcA3LRHSOmMhEilWlDxzHb0dtIDkw5hroOvRUUoRYRfhNnLMNpASNPQUP57A9mOPSSAGXoJlCwYkbKwRb5kyfHHd6ko7QA3rZtpCIGB~j6AHvjTAql-Y8nvwcHl8IXv2p5XaTpxxKKO7JNPy~IeKDeFBZnc7Su6YaAAo8t67H1iDMKqYFBbg__',
+      },
+      {
+        id: 103,
+        name: '순채공주',
+        userImage:
+          'https://s3-alpha-sig.figma.com/img/bd9a/0c85/aa2440c65257675813c5d849a8e9f8d8?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=T30ncXtHmvyRtO5BQLGRhs-ROQzczNEXmrR-ZwgNj-nVo34zyXwHGDKKOPEK8vAkfKJez-KIiLESwm7O3XlJRKuq1f4w61hsEk5Sbyusr63xvjHQMfhjDobvMlVk3A5rUjbSRHRp78OKCwllzqCsM9UGZlH8mSa051KVDRxR~w9JPLrF0OcMFaSQQLOzoeU1EQYKbsOtGqqxjnoz9YKPipexw62YQYFYEufAjxOsj83F3cf0vqta-wgImU0eIHHGzg-s50Vz3Sx2Vky29qBK86Vb~627IJp7ZUQVAYevobzvzDBcEQpP5wBKzyVpAXdAXZOvitl3gT403uR3XaaCyg__',
+      },
+      {
+        id: 104,
+        name: '홍길동',
+        userImage:
+          'https://s3-alpha-sig.figma.com/img/3e72/0d73/a5f4517b356cae1503df6e251226a2cb?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bzGPS4WJrP45o40JLOM3-D2GabsLXWKPyjDHOTNzl0R1ggu1pBIAXpPPzcv2rh2uFEoMq7SQZkEsrwn5hjDKzjA208oA0kPSv5scUx~qAhHceNrGp0jh08L0kXDGSOTJMj9rFMacocw8U-4poeE-eYnhtBVCw5UplCzl4kjIDa3P31PaVqmtQuUT18lKYe7SpCK5N4W3D82WXotVijvgpqXp5oFyRYSKNh7T1Inv246hi5LrMsnMT3XHuYZ-bXfwEC49SvHFyp5UVywlHzBhGOmg6fCS28kHazx6rpIVis0uhnq-a4Buogf4HvrDAYWF5d4DF62-dLr4W8WdKO9PjQ__',
+      },
+    ],
+    like: 991,
+    view: 1271,
+  },
+  {
+    id: 7,
+    title: '은평구청 - 은평구디자인',
+    category: 'UI 디자인',
+    imageUrl:
+      'https://s3-alpha-sig.figma.com/img/2332/67df/49bcc7b9ba81fe864095fcbfbac9732a?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=cYEnuk0pitXNac5d3oe2rL82f5S5oyKubVR0AluXQfu7iE8rv4EUp~Z1leSI55Aco6mEJKj~5C73FyqHEas3cRaVsMAiMJyqUus~EFqwNyfJLb4nzMlh3yHColXramztFEsxBuCTxOxfZxAYXhRsC2tNNPzM60oLmXW5ON5jatLw3owbFgQ9QJSz75Be6EqRAN54TitVXxiZs5lBZW6mV7BR-3OAtrBYEC0kKBfIiLrXYF9uhbeAQjFEgmMMfGJOEQ0owS~d2L~8iO6PjntIM5bGDa6RQ-VfOwsZIedP9Sf9SGkr-u8czZk2Uy6phPHUnFb6DgeLErHPGPGR89ARbg__',
+    content: null,
+    workers: [
+      {
+        id: 105,
+        name: '칠성사이다',
+        userImage:
+          'https://s3-alpha-sig.figma.com/img/248d/9c47/22e17b2464db9ca5dc592da4186579b0?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZBNS1U3CO7SMEe203W0KXHxrv8yEhUVmblxY1uKcSqbzMsJadzYWEyOhnUuwJjy4o4-dYFA2I-tgVUYE89XI0bRvp57H1HyH8Y1Lm5xTQTb4VJj0uJ6nRsNPpp1MWHpvRV8-3laNcp3aTer~BLR~MAVkuBF4lt9FLMvcA3LRHSOmMhEilWlDxzHb0dtIDkw5hroOvRUUoRYRfhNnLMNpASNPQUP57A9mOPSSAGXoJlCwYkbKwRb5kyfHHd6ko7QA3rZtpCIGB~j6AHvjTAql-Y8nvwcHl8IXv2p5XaTpxxKKO7JNPy~IeKDeFBZnc7Su6YaAAo8t67H1iDMKqYFBbg__',
+      },
+    ],
+    like: 2719,
+    view: 8781,
+  },
+  {
+    id: 8,
+    title: '마포구청 - 홍대디자인',
+    category: '일러스트',
+    imageUrl:
+      'https://s3-alpha-sig.figma.com/img/4cf3/ea47/595cee1139b5f99dd275591965fe91c1?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=p-7VHtnACZb-0JaXwwDyKYpguXeolD9CR3WJeZ7FFFCVXg7PQcXPdUL3oI6QRsJoYLLWjH4XY-kNU6GxiVMcJAmTOrfNCwDcDsOmG7LJzDV3Irr5gELhgZxwbNZFMRcHaXSo13vxlkijEGCD4Zs4nMoWvamkuLL~3obNVS2cfB0OtoqVY6-a3H7heQ8~n89lfVacYCTv4ibdbQcmfUvPabb9alj7pPASqBG2NTOOTOu2GVif9nWtD5VDAJIcBtr7Mj-zQZAQ~iP00DM3I4ImZaRvIYRV2Vr3Uolx0UymdSjMA~~yhQdKaHjnA7v8IyheDMQbiDpVTJx0H4Ahz0nN2Q__',
+    content: null,
+    workers: [
+      {
+        id: 103,
+        name: '순채공주',
+        userImage:
+          'https://s3-alpha-sig.figma.com/img/bd9a/0c85/aa2440c65257675813c5d849a8e9f8d8?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=T30ncXtHmvyRtO5BQLGRhs-ROQzczNEXmrR-ZwgNj-nVo34zyXwHGDKKOPEK8vAkfKJez-KIiLESwm7O3XlJRKuq1f4w61hsEk5Sbyusr63xvjHQMfhjDobvMlVk3A5rUjbSRHRp78OKCwllzqCsM9UGZlH8mSa051KVDRxR~w9JPLrF0OcMFaSQQLOzoeU1EQYKbsOtGqqxjnoz9YKPipexw62YQYFYEufAjxOsj83F3cf0vqta-wgImU0eIHHGzg-s50Vz3Sx2Vky29qBK86Vb~627IJp7ZUQVAYevobzvzDBcEQpP5wBKzyVpAXdAXZOvitl3gT403uR3XaaCyg__',
+      },
+      {
+        id: 104,
+        name: '홍길동',
+        userImage:
+          'https://s3-alpha-sig.figma.com/img/3e72/0d73/a5f4517b356cae1503df6e251226a2cb?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bzGPS4WJrP45o40JLOM3-D2GabsLXWKPyjDHOTNzl0R1ggu1pBIAXpPPzcv2rh2uFEoMq7SQZkEsrwn5hjDKzjA208oA0kPSv5scUx~qAhHceNrGp0jh08L0kXDGSOTJMj9rFMacocw8U-4poeE-eYnhtBVCw5UplCzl4kjIDa3P31PaVqmtQuUT18lKYe7SpCK5N4W3D82WXotVijvgpqXp5oFyRYSKNh7T1Inv246hi5LrMsnMT3XHuYZ-bXfwEC49SvHFyp5UVywlHzBhGOmg6fCS28kHazx6rpIVis0uhnq-a4Buogf4HvrDAYWF5d4DF62-dLr4W8WdKO9PjQ__',
+      },
+    ],
+    like: 141,
+    view: 221,
   },
 ];
 
@@ -124,258 +311,4 @@ export const PopularKeywordsDummy: KeywordType[] = [
   { content: '취업', rank: 'rise' },
   { content: '부트캠프 후기', rank: 'rise' },
   { content: '개발자 모집', rank: 'rise' },
-];
-
-export const CommunityPostDummy: CommunityPostType[] = [
-  {
-    title: '혹시 이번에 웅진씽크빅 합격 연락 받은사람?ㅜㅠ',
-    content:
-      '내가 이것저것 대외활동도 하고 면접도 나쁘지 않았는데, 아직 결과 안온듯,,ㅜㅠ 문자 받은사람있으신가요?',
-    tags: ['회사', '취업', '인턴', '신입', '채용', '면접'],
-    category: '질의응답',
-    createdAt: '2024-01-02 18:30',
-    likes: 224,
-    comments: [
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-    ],
-    views: 2680,
-  },
-  {
-    title: 'UXUI 인턴형 프로그램 1기 후기',
-    content:
-      '이번에 인턴형 프로그램 1기에 참여한 무순죽순채순입니다. 10월부터 사전 직무교육 후에 팀 프로젝트를 진행했습니다.',
-    tags: ['UX', '디자인', '인턴형프로그램', '후기', '취업', 'UI'],
-    category: '스팩 후기',
-    createdAt: '2024-01-02 18:30',
-    likes: 12,
-    comments: [
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-    ],
-    views: 1892,
-  },
-  {
-    title: '대학교에서 졸업준비위원회 한거 포폴에 넣어도 되나?',
-    content:
-      '내가 대학교에서 졸준위했는데 다같이 작업하긴 했는데 거의 내 디자인임. 그래서 포폴에 넣을건데 상관없나?',
-    tags: ['디자인', '포트폴리오', '졸업전시'],
-    category: '자유게시판',
-    createdAt: '2024-01-09 18:20',
-    likes: 23,
-    comments: [
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-    ],
-    views: 1720,
-    thumbnail:
-      'https://images.unsplash.com/photo-1609921212029-bb5a28e60960?q=80&w=2052&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  },
-  {
-    title: '서브프로젝트 성공적인 후기',
-    content:
-      '드디어 성공적인 서브 프로젝트를 진행했다. 솔직히 여기저기서 힘들다는 이야기 많았지만, 이정도 일 줄은,, 그래도 작업물 보면 뿌듯함.',
-    tags: ['서브프로젝트', '디자인', '후기'],
-    category: '자유게시판',
-    createdAt: '2024-01-02 18:30',
-    likes: 46,
-    comments: [
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-    ],
-    views: 1588,
-  },
-  {
-    title:
-      '이번에 개발자로 취업하고 싶어서 스팩에서 개발자 대외활동 신청할건데 같이할 사람',
-    content:
-      '나는 어느정도 기초만 할 줄 아는데, 더 배우고 싶은 마음도 있고, 새로운 사람들도 많이 만나보고 싶음...',
-    tags: ['개발자', '부트캠프', '대외활동', '취업'],
-    category: '자유게시판',
-    createdAt: '2024-01-02 18:30',
-    likes: 11,
-    comments: [
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-    ],
-    views: 1243,
-  },
-  {
-    title: 'UXUI 인턴형 프로그램 2기 후기',
-    content:
-      '내가 1기 놓치고 2기가 생각보다 금방 시작해서 지원했는데, 합격해서 진짜 열심히함. 1기보다 직무교육도 짧아서 걱정했는데, 나쁘지 않았음...',
-    tags: ['UX', '디자인', '인턴형프로그램', '후기', '취업', 'UI'],
-    category: '자유게시판',
-    createdAt: '2024-01-06 18:30',
-    likes: 187,
-    comments: [
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-    ],
-    views: 1176,
-    thumbnail:
-      'https://images.unsplash.com/photo-1609921212029-bb5a28e60960?q=80&w=2052&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  },
-  {
-    title: '회사 이직..그거 어떻게 하는건데..',
-    content:
-      '이직할건데 일한지 이제 1년 4개월 넘음, 지금하면 좀 그런가,, 다들 언제 이직했어ㅜㅠㅜㅠㅜㅠ',
-    tags: ['회사', '이직', '퇴사'],
-    category: '자유게시판',
-    createdAt: '2024-01-06 18:30',
-    likes: 20,
-    comments: [
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-    ],
-    views: 1023,
-  },
-  {
-    title: '개발자 부트캠프 후기',
-    content:
-      '개발자로 일하다가 쉬어갈겸, 부트캠프해서 실력 좀 키우고 왔는데, 역시 스팩 부트캠프는 진짜 믿고 하는 듯, 수준도 좋고 팀원들도 잘 만났음...',
-    tags: ['개발자', '부트캠프', '후기', '취업'],
-    category: '자유게시판',
-    createdAt: '2024-01-09 14:30',
-    likes: 12,
-    comments: [
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-    ],
-    views: 875,
-    thumbnail:
-      'https://images.unsplash.com/photo-1609921212029-bb5a28e60960?q=80&w=2052&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  },
-  {
-    title: '대학생 3학년인데 대외활동 2개함,,,',
-    content:
-      '미대생이라 과제가 너무 많은데 이번에 3학년 올라가는데 대외활동 두개함,,이게 맞는건가,,,',
-    tags: ['대학생', '디자인', '대외활동'],
-    category: '자유게시판',
-    createdAt: '2024-01-09 14:30',
-    likes: 21,
-    comments: [
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-    ],
-    views: 731,
-  },
-  {
-    title: '대기업을 퇴사한 이유',
-    content:
-      '저는 누구나 들으면 아는 대기업에서 디자이너로 일하고 있었습니다. 다른 사람들 모두 퇴사하는 이유가 있는데 저도 어린나이에도 불구하고 퇴사라...',
-    tags: ['UX', '디자인', '회사', '디자이너', 'UI'],
-    category: '자유게시판',
-    createdAt: '2024-01-09 14:30',
-    likes: 590,
-    comments: [
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-    ],
-    views: 650,
-  },
-  {
-    title: '서브 프로젝트가 경력으로 들어가나요?',
-    content:
-      '제가 이력서나 포폴에 서브프로젝트를 적으려하는데 이걸 경력으로 쳐주나요? 잘 모르겠어요ㅜㅠ',
-    tags: ['경력', '포트폴리오', '디자이너', '취업'],
-    category: '자유게시판',
-    createdAt: '2024-01-08 14:30',
-    likes: 12,
-    comments: [
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-    ],
-    views: 632,
-    thumbnail:
-      'https://images.unsplash.com/photo-1609921212029-bb5a28e60960?q=80&w=2052&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  },
-  {
-    title: 'UXUI 인턴형 프로그램 1기 후기',
-    content:
-      '이번에 인턴형 프로그램 1기에 참여한 무순죽순채순입니다. 10월부터 사전 직무교육 후에 팀 프로젝트를 진행했습니다.',
-    tags: ['UX', '디자인', '인턴형프로그램', '후기', '취업', 'UI'],
-    category: '스팩 후기',
-    createdAt: '2024-01-02 18:30',
-    likes: 10,
-    comments: [
-      { name: '', content: '', createdAt: '', likes: 0, comments: [] },
-    ],
-    views: 500,
-  },
 ];

@@ -3,16 +3,31 @@ import Card from '../Card';
 import PortfolioCardFooter from './PortfolioCardFooter/PortfolioCardFooter';
 import PortfolioCardBody from './PortfoiloCardBody/PortfolioCardBody';
 
-export default function PortfolioCard() {
-  const 참여인원 = 4;
+interface PortfolioCardProps {
+  id: number;
+  title: string;
+  category: string;
+  imageUrl: string;
+  content: null;
+  workers: {
+    id: number;
+    name: string;
+    userImage: string;
+  }[];
+  like: number;
+  view: number;
+}
+
+export default function PortfolioCard({ ...props }: PortfolioCardProps) {
+  const { title, category, workers, like, view } = props;
 
   return (
     <Card
-      imageUrl='https://s3-alpha-sig.figma.com/img/8b27/1ee9/fe6823b98f8d9fee57e77bba684c73ea?Expires=1704672000&Signature=ffM3ljiy7OPBL8yB7tYEnZNDknefqPnBgYqcaAROD~0TVszWb8upkU3ofaBqfZntftOjRTS5bD9hzcaFUXRxaV1cGuY8M5RcKXPJLPpd0gzEBUz3vCHVwkcQbA~4DyBmdyfZpBSo0zLjsSWXC8mwaDArvVqUI92wy5jjZNd7IMb1ZpNSjvvbTOQUT2WIjwX97KdJLOAve56W0Y~aK1DUpnPZd4OUEUj44foFQT5prMsb6-37Pu8QPWfKcqj5ryMv-BvuWpgrktZMSqUyH-Mboc-uf2yvDgM6GwbSVlhI9OATOm-ogOE5utAdF8zLsN3mWxpa6T0aJBaDiORfouCJIA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'
+      imageUrl={props.imageUrl}
       imageHover={true}
       badge='UXUI 인턴형 프로그램 과정'
-      body={<PortfolioCardBody />}
-      footer={<PortfolioCardFooter 참여인원={참여인원} />}
+      body={<PortfolioCardBody title={title} category={category} />}
+      footer={<PortfolioCardFooter workers={workers} view={view} like={like} />}
     />
   );
 }

@@ -1,4 +1,4 @@
-import { CommunityPostDummy } from '@/dummy';
+import { CommunityPostDummy } from '@/dummy/community';
 
 export const fetchDummyPosts = async (
   page: number,
