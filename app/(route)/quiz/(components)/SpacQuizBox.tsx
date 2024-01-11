@@ -1,14 +1,22 @@
+import Link from 'next/link';
 import Image, { StaticImageData } from 'next/image';
 
 interface SpacQuizBoxProps {
+  id: number;
   title: string[] | string;
   date: string;
   image: StaticImageData;
 }
 
-export default function SpacQuizBox({ title, date, image }: SpacQuizBoxProps) {
+export default function SpacQuizBox({
+  id,
+  title,
+  date,
+  image,
+}: SpacQuizBoxProps) {
   return (
-    <div
+    <Link
+      href={{ pathname: `/quiz/${id}` }}
       className={`relative h-[302px] w-[302px] cursor-pointer overflow-hidden rounded-lg border border-line-normal`}
     >
       <Image
@@ -31,6 +39,6 @@ export default function SpacQuizBox({ title, date, image }: SpacQuizBoxProps) {
           <p className='text-[20px] font-bold text-text-normal'>{title}</p>
         )}
       </div>
-    </div>
+    </Link>
   );
 }

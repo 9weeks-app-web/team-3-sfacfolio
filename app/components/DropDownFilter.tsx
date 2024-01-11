@@ -2,15 +2,12 @@ import React from 'react';
 import Down from '@images/Down.svg';
 import Image from 'next/image';
 
-interface ProfileDropDownFilterProps {
+interface DropDownFilterProps {
   filterCategory: string;
   filterOption: string;
 }
 
-function ProfileDropDownFilter({
-  filterCategory,
-  filterOption,
-}: ProfileDropDownFilterProps) {
+function DropDownFilter({ filterCategory, filterOption }: DropDownFilterProps) {
   return (
     <div className='flex items-center gap-[11px] text-lg'>
       <span className='text-text-alternative'>{filterCategory}</span>
@@ -22,4 +19,4 @@ function ProfileDropDownFilter({
   );
 }
 
-export default ProfileDropDownFilter;
+export default DropDownFilter;
