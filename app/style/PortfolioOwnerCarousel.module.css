@@ -1,0 +1,22 @@
+.sliderWrapper :global .slick-slider {
+  width: 100%;
+  transform: translateX(24px);
+}
+
+.sliderWrapper :global .slick-track {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.sliderWrapper :global .slick-slide {
+  padding-right: 8px;
+  width: fit-content;
+}
+
+.sliderWrapper :global .slick-slide:last-of-type {
+  padding-right: 0;
+}
+
+.sliderWrapper :global .slick-list {
+  overflow: visible;
+}
