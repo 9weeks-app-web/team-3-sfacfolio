@@ -24,10 +24,10 @@ export default function CommunityBanner() {
           스팩만의 솔직한 후기를 볼 수 있어요!
         </p>
         <div className='flex gap-4'>
-          <button className='rounded-full border border-black bg-black px-5 py-[14px] text-[18px] font-bold text-white'>
+          <button className='rounded-lg border border-black bg-black px-5 py-[14px] text-[18px] font-bold text-white'>
             스팩 후기 보러 가기
           </button>
-          <button className='flex items-center justify-center gap-3 rounded-full border border-black px-5 py-[14px] text-[18px] font-bold'>
+          <button className='flex items-center justify-center gap-3 rounded-lg border border-black px-5 py-[14px] text-[18px] font-bold'>
             커뮤니티 글쓰기 <PlusIcon size={18} color='black' />
           </button>
         </div>
