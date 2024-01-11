@@ -32,12 +32,12 @@ function RealTimeKeyword({
     </div>
   ) : (
     <div
-      className={`w-[267px] rounded-lg border-2 border-line-normal leading-6 text-text-normal`}
+      className={`relative w-[267px] overflow-hidden rounded-lg border-2 border-line-normal leading-6 text-text-normal`}
     >
       <div className={`px-6 py-4 text-subTitle font-bold text-text-strong`}>
         인기 키워드
       </div>
-      <div className={`border-t-2 pt-5`}>
+      <div className={`hide-scrollbar h-[380px] overflow-scroll pt-3`}>
         {keywords?.map((keyword, index) => (
           <RealTimeKeywordItem
             keyword={keyword}
@@ -46,6 +46,7 @@ function RealTimeKeyword({
             type={type}
           />
         ))}
+        <div className='absolute bottom-0 left-0 h-[100px] w-full bg-gradient-to-b from-transparent to-white'></div>
       </div>
     </div>
   );

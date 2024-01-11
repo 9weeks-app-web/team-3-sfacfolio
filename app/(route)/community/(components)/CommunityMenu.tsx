@@ -12,7 +12,7 @@ export default function CommunityMenu({
   setCurrentMenu,
 }: CommunityMenuProps) {
   return (
-    <ul className='my-[60px] w-[267px]'>
+    <ul className='mb-[30px] mt-[60px] w-[267px]'>
       {menu.map((item: menuType) => {
         return (
           <li
