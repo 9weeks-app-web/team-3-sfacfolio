@@ -25,7 +25,7 @@
   bottom: 24px;
   left: 50%;
   right: 50%;
-  width: 100%;
+  width: max-content;
   display: flex;
   align-items: center;
   gap: 8px;
